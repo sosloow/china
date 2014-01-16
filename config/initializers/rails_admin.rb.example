@@ -1,4 +1,4 @@
-# RailsAdmin config file. Generated on January 15, 2014 20:32
+# RailsAdmin config file. Generated on January 16, 2014 17:59
 # See github.com/sferik/rails_admin for more informations
 
 RailsAdmin.config do |config|
@@ -69,10 +69,11 @@ RailsAdmin.config do |config|
   #     configure :description, :text 
   #     configure :created_at, :datetime 
   #     configure :updated_at, :datetime 
-  #     configure :image_file_name, :string 
-  #     configure :image_content_type, :string 
-  #     configure :image_file_size, :integer 
-  #     configure :image_updated_at, :datetime 
+  #     configure :image_file_name, :string         # Hidden 
+  #     configure :image_content_type, :string         # Hidden 
+  #     configure :image_file_size, :integer         # Hidden 
+  #     configure :image_updated_at, :datetime         # Hidden 
+  #     configure :image, :paperclip 
 
   #   # Cross-section configuration:
 
@@ -108,20 +109,21 @@ RailsAdmin.config do |config|
 
   #   # Found associations:
 
-
+  #     configure :products_category, :belongs_to_association 
 
   #   # Found columns:
 
   #     configure :id, :integer 
   #     configure :title, :string 
   #     configure :description, :text 
-  #     configure :category_id, :integer 
+  #     configure :products_category_id, :integer         # Hidden 
   #     configure :created_at, :datetime 
   #     configure :updated_at, :datetime 
-  #     configure :image_file_name, :string 
-  #     configure :image_content_type, :string 
-  #     configure :image_file_size, :integer 
-  #     configure :image_updated_at, :datetime 
+  #     configure :image_file_name, :string         # Hidden 
+  #     configure :image_content_type, :string         # Hidden 
+  #     configure :image_file_size, :integer         # Hidden 
+  #     configure :image_updated_at, :datetime         # Hidden 
+  #     configure :image, :paperclip 
 
   #   # Cross-section configuration:
 
@@ -159,6 +161,7 @@ RailsAdmin.config do |config|
 
   #     configure :parent, :belongs_to_association 
   #     configure :subcategories, :has_many_association 
+  #     configure :products, :has_many_association 
 
   #   # Found columns:
 
@@ -168,10 +171,11 @@ RailsAdmin.config do |config|
   #     configure :parent_id, :integer         # Hidden 
   #     configure :created_at, :datetime 
   #     configure :updated_at, :datetime 
-  #     configure :image_file_name, :string 
-  #     configure :image_content_type, :string 
-  #     configure :image_file_size, :integer 
-  #     configure :image_updated_at, :datetime 
+  #     configure :image_file_name, :string         # Hidden 
+  #     configure :image_content_type, :string         # Hidden 
+  #     configure :image_file_size, :integer         # Hidden 
+  #     configure :image_updated_at, :datetime         # Hidden 
+  #     configure :image, :paperclip 
 
   #   # Cross-section configuration:
 
@@ -252,7 +256,7 @@ RailsAdmin.config do |config|
 
   #   # Found associations:
 
-
+  #     configure :questions, :has_many_association 
 
   #   # Found columns:
 

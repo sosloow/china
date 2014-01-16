@@ -1,9 +1,13 @@
 China::Application.routes.draw do
 
+  
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+  get 'brand/:id', to: "brand#show"
+  get 'category/:id', to: "category#show"
   root to: 'landing#index'
 
   get "landing/index"
-  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+  
   devise_for :users
 
   # The priority is based upon order of creation: first created -> highest priority.

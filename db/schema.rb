@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140115135408) do
+ActiveRecord::Schema.define(version: 20140116123028) do
 
   create_table "brands", force: true do |t|
     t.string   "title"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20140115135408) do
   create_table "products", force: true do |t|
     t.string   "title"
     t.text     "description"
-    t.integer  "category_id"
+    t.integer  "sub_category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image_file_name"
@@ -36,21 +36,7 @@ ActiveRecord::Schema.define(version: 20140115135408) do
     t.datetime "image_updated_at"
   end
 
-  add_index "products", ["category_id"], name: "index_products_on_category_id"
-
-  create_table "products_categories", force: true do |t|
-    t.string   "title"
-    t.text     "description"
-    t.integer  "parent_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
-  end
-
-  add_index "products_categories", ["parent_id"], name: "index_products_categories_on_parent_id"
+  add_index "products", ["sub_category_id"], name: "index_products_on_sub_category_id"
 
   create_table "question_categories", force: true do |t|
     t.string   "title"
@@ -80,6 +66,25 @@ ActiveRecord::Schema.define(version: 20140115135408) do
   end
 
   add_index "rails_admin_histories", ["item", "table", "month", "year"], name: "index_rails_admin_histories"
+
+  create_table "sub_categories", force: true do |t|
+    t.string   "title"
+    t.integer  "top_category_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "sub_categories", ["top_category_id"], name: "index_sub_categories_on_top_category_id"
+
+  create_table "top_categories", force: true do |t|
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

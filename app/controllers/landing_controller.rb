@@ -2,6 +2,6 @@ class LandingController < ApplicationController
   def index
     @question_categories = QuestionCategory.all
 
-    @prod_cats = ProductsCategory.where(parent_id: nil)
+    @top_cats = TopCategory.all
   end
 end

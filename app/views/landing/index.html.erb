@@ -19,10 +19,11 @@
   <% end %>
 </div>
 <div class="catalog">
-  <% @prod_cats.each do |cat| %>
+  <% @top_cats.each do |cat| %>
   <div class="top-category">
     <h3><%= cat.title %></h3>
-    <% cat.subcategories.each do |subcat| %>
+    <%= image_tag cat.image.url(:medium) %>
+    <% cat.sub_categories.each do |subcat| %>
     <span><%= subcat.title %></span>
     <% end %>
   </div>

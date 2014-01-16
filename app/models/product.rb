@@ -5,5 +5,7 @@ class Product < ActiveRecord::Base
   before_validation { self.image.clear if self.delete_image == '1' }
 
   validates :title, presence: true
-  validates :body, presence: true
+  validates :description, presence: true
+
+  belongs_to :sub_category
 end

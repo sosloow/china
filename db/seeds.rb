@@ -19,12 +19,13 @@ q_cats.each do |cat|
                    question_category: cat}]
 end
 
-p_cats = ProductsCategory.create [{title: 'Одежда'}, {title: 'Текстиль для дома'}]
+p_cats = TopCategory.create [{title: 'Одежда'}, {title: 'Текстиль для дома'}]
 p_cats.each do |cat|
-  subcats = ProductsCategory.create [{title: 'Женская', parent: cat},
-                                     {title: 'Мужская', parent: cat}]
+  subcats = SubCategory.create [{title: 'Женская', top_category: cat},
+                                     {title: 'Мужская', top_category: cat}]
+
   subcats.each do |subcat|
-    Product.create [{title: 'Чехол для объектива', products_category: subcat},
-                    {title: 'Сумка для фототехники', products_category: subcat}}]
+    Product.create [{title: 'Чехол для объектива', description: 'Чехол для объектива', sub_category: subcat},
+                    {title: 'Сумка для фототехники', title: 'Сумка для фототехники', sub_category: subcat}]
   end
 end
