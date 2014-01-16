@@ -1,0 +1,39 @@
+ru:
+  activerecord:
+    models:
+      brand:
+        zero: производителей
+        one: производитель
+        few: производителя
+        many: производителей
+        other: производители
+      user:
+        zero: пользователей
+        one: пользователь
+        few: производителя
+        many: производителей
+        other: пользователи
+      question:
+        zero: вопросов
+        one: вопрос
+        few: вопроса
+        many: вопросов
+        other: вопросы
+      product:
+        zero: товаров
+        one: товар
+        few: товара
+        many: товаров
+        other: товары
+      products_category:
+        zero: категорий
+        one: категория
+        few: категории
+        many: категорий
+        other: категории
+      question_category:
+        zero: категории вопросов
+        one: категория вопросов
+        few: категории вопросов
+        many: категорий вопросов
+        other: категории вопросов

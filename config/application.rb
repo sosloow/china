@@ -15,7 +15,10 @@ module China
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
     # config.time_zone = 'Central Time (US & Canada)'
-    config.i18n.available_locales = :ru    
+    config.i18n.available_locales = :en, :ru
     config.i18n.default_locale = :ru
+    config.i18n.enforce_available_locales = true
+    I18n.enforce_available_locales = false
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
   end
 end
