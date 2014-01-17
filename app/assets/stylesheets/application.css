@@ -11,3 +11,196 @@
  *= require_self
  *= require_tree .
  */
+
+
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+  min-height: 100%;
+  height:100%;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* cancel selection */
+
+.content_block h2, .arrow {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* common */
+
+.underline {text-decoration:none; border-bottom:1px; border-style:solid; line-height:1.2; cursor:pointer;}
+.dotted {text-decoration:none; border-bottom:1px; border-style:dotted; line-height:1.2; cursor:pointer;}
+.blue {border-color:rgba(50,120,234,0.5); color:rgba(50,120,234,1);}
+.blue:hover {border-color:rgba(50,120,234,0.7); color:rgba(50,120,234,1);}
+.darkblue {border-color:rgba(30,87,179,0.5); color:rgba(30,87,179,1);}
+.darkblue:hover {border-color:rgba(30,87,179,0.7); color:rgba(30,87,179,1);}
+.black {border-color:rgba(0,0,0,0.5); color:#000000;}
+.black:hover {border-color:rgba(0,0,0,0.5); color:#000000;}
+.orange {border-color:rgba(239,60,22,0.5); color:rgba(239,60,22,1);}
+
+.uppercase {text-transform: uppercase; letter-spacing: 0.7px;}
+a, .clear_link {text-decoration:none; border-bottom: 1px solid white;}
+
+.clear {clear:both;}
+.loader {margin-left:-9999px; background: ;}
+
+.centered {min-width:1000px; max-width:1400px; margin:0 auto 0;}
+
+input[type=checkbox] {display:none;}
+
+/* header */
+
+#header {width:100%; height:129px; background-image: url('/assets/header_bg.png'); background-repeat: repeat-x;}
+.header {width:100%;}
+.header_logo {width:25%; max-width:20%; height:124px; float:left; padding-left:81px; background-image: url('/assets/logo.png'); background-repeat: no-repeat; background-position: 3px center; line-height: 0.95;}
+.header_logo h1 {font-family: "Jura"; font-size: 48px; font-weight: 500; padding-top:28px; letter-spacing: -1.2px;}
+.header_logo h3 {font-family: "Open Sans"; font-size: 14px; padding-left:4px; letter-spacing: -0.3px;}
+
+.header .menu {width:45%; height:124px; padding-top:39px; float:left;}
+.header .top_menu {line-height:1.5;}
+.header .top_menu li {float:left; margin-right:25px;}
+.header .menu a {font-family: "Open Sans"; font-size:11px; font-weight: 600;}
+.header .docs_example {padding-left:15px; background-image: url('/assets/docs_example.png'); background-repeat: no-repeat; background-position: left center;}
+
+.header .order_part {height:124px; padding-top:39px; float:right; padding-right:2%; font-size: 11px;}
+.header .order_part .phone {margin-bottom:9px; font-family: "Open Sans"; font-size: 22px;}
+
+/* map */
+
+#map {position: relative; width:100%; height:610px; margin-top:-29px; background-color: lightblue; z-index:-1;}
+
+/* calculator */
+input[type=checkbox] + label {
+	height: 21px;
+	background-image: url('/assets/calculate_checkbox.png');
+	background-repeat: no-repeat;
+	background-position: left top;
+	cursor: pointer;
+	padding-left: 30px;
+	display: inline-block;
+	max-width: 29%;
+	vertical-align: top;
+	line-height: 20px;
+	font-family: "Open Sans"; font-size:14px;
+}
+#calculator {margin-top:-190px; background-image: url('/assets/calculate.jpg'); background-repeat: no-repeat; background-position: 237px 0; 
+
+height: 750px;
+
+}
+.calculator {background-image: url('/assets/calculate_bg.png'); background-repeat: no-repeat; background-size: 100%;}
+.calculator input[type=text] {margin-top:13px; margin-bottom:13px; background-color: white; border:1px solid #a0a0a0; font-family: "Open Sans"; font-size:16px; padding:8px 5px 8px 10px;}
+.calculator .big {width:217px; margin-right:18px;}
+.calculator .small {width:85px; margin:0 3px 0 17px;}
+.calculator .title {font-family: "Open Sans"; font-size:18px; font-weight: 600; padding-top: 4px;}
+.calculator .present {padding-left:25px; min-height:21px; background-image: url('/assets/present.png'); background-repeat: no-repeat;}
+.calculator .point {width:44%; float:left; padding-left:21px; min-height:19px; background-image: url('/assets/point.png'); background-repeat: no-repeat;}
+.calculator .top {height: 149px; padding: 41px 20px 0 73px; background-image: url('/assets/point.png'); background-repeat: no-repeat;}
+.calculator .top .left_part {width: 57%; float: left;}
+.calculator .top .right_part {width: 43%; float: left;}
+.calculator .top .point input[type=text] {width: 85%;}
+.calculator .top .present {font-family: "Open Sans"; font-size:16px;}
+.calculator .top .left_part input[type=checkbox] + label {margin-right: 22px;}
+.checkboxes_line {margin-top:4px; padding-left:21px;}
+
+/* content_block */
+
+.content_block h2 {font-family: "Open Sans"; font-size:22px; font-weight: 600; padding-bottom:20px;}
+
+/* how */
+
+#how {margin-bottom:40px;}
+.how {}
+.how_picture {width:806px; height:147px; margin-left:-10px; background-image: url('/assets/how_picture.png'); background-repeat: no-repeat;}
+.how_menu {margin:10px 0 30px 8px;}
+.how_menu .arrow {font-family: "Open Sans"; font-size:12px; font-weight: 600; width:281px; height:84px; line-height: 84px; vertical-align: middle; white-space: nowrap; float:left; text-align:center; color:white; background-image: url('/assets/how_arrow.png'); background-repeat: no-repeat; background-position: center; cursor:pointer; margin-left: -10px;}
+.how_menu .arrow:hover {background-image: url('/assets/how_arrow_hover.png');}
+.how_menu .arrow:active {background-image: url('/assets/how_arrow_active.png');}
+.how .how_text {font-family: "Open Sans"; font-size:14px; line-height: 1.45; letter-spacing: -0.1px; padding-right:50px;}
+
+/* questions */
+
+#questions {}
+.questions {}
+.tabs {border-radius:5px; background-color: #78a3e8; float:left; overflow: hidden; margin-bottom:10px;}
+.tabs .tab {color:white; background-color: #1e57b3; padding:15px; float:left; cursor:pointer; font-family: "Open Sans"; font-size:14px; font-weight: 600; margin-right:1px; border:1px solid #1e57b3; ;}
+.tabs .tab:hover {background-color: #3678e3; border:1px solid #3678e3;}
+.tabs .active, .tabs .active:hover {background-color: #ffba00; color:#a34f05; border:1px solid #ffa800; margin-right:0px;}
+
+.questions_container {width:80%; height:400px; float:left; }
+.questions_list {width:18%; height:400px; float:left; margin-right:2%;}
+.questions_list li {text-indent: -20px; padding:7px 35px 18px 0;background-image: url('/assets/questions.png'); background-repeat: no-repeat; background-position: right bottom;}
+.questions_list .active {background-position: right top;}
+.questions_list .active a {color:#ff5618;}
+.answer {float:left; width:60%; padding-top:5px; padding-bottom:10px;}
+
+/* catalog */
+
+#catalog {}
+#catalog .block {}
+#catalog .block .image {width:115px; height:115px; float:left; margin-right:10px; overflow: hidden;}
+#catalog .block .image img {width:115px; height:auto;}
+#catalog .block h4 {}
+#catalog .block .links {}
+#catalog .block .links:hover {}
+
+
+/* footer */
+.ask_form {float:left; width:20%; height:400px;}
+
+#footer {}
+#footer h5 {}
+#footer .russia {}
+#footer .china {}
+#footer .delimeter {}
+#footer .contacts {}
+#footer .contacts .phone {}
+#footer .jam {}

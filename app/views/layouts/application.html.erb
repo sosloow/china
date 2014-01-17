@@ -19,23 +19,25 @@
 	<div class="loader"></div>
 
 	<div id="header">
-		<div class="header_logo">
-			<div class="logo"></div>
-			<h1>Континент</h1>
-			<h3>Грузоперевозки из Китая</h3>
-		</div>	
-		<div class="menu">
-			<ul class="top_menu">
-				<li><a href="" class="underline blue uppercase">грузоперевозки</a></li>
-				<li><a href="" class="underline blue uppercase">дополнительные услуги</a></li>
-				<li><a href="" class="underline blue uppercase">полезные материалы</a></li>
-				<li><a href="" class="underline blue uppercase">контакты</a></li>
-			</ul>
-			<div class="docs_example"><a href="" class="underline black uppercase">образцы документов</a></div>
-		</div>
-		<div class="order_part">
-			<div class="phone">8 800 2000 600</div>
-			<a href="" id="order_form_button" class="dotted orange">заказать звонок</a>
+		<div class="header centered">
+			<div class="header_logo">
+				<a class="black clear_link" href="/"><h1>Континент</h1></a>
+				<h3>Грузоперевозки из Китая</h3>
+			</div>	
+			<div class="menu">
+				<ul class="top_menu">
+					<li><a href="" class="underline blue uppercase">грузоперевозки</a></li>
+					<li><a href="" class="underline blue uppercase">дополнительные услуги</a></li>
+					<li><a href="" class="underline blue uppercase">полезные материалы</a></li>
+					<li><a href="" class="underline blue uppercase">контакты</a></li>
+					<li><span class="docs_example"><a href="" class="underline black uppercase">образцы документов</a></span></li>
+				</ul>
+			</div>
+			<div class="order_part">
+				<div class="phone">8 800 2000 600</div>
+				<a href="" id="order_form_button" class="dotted orange uppercase">заказать звонок</a>
+			</div>
+			<div class="clear"></div>
 		</div>
 	</div>
 
@@ -44,32 +46,46 @@
 	</div>
 	
 	<div id="calculator">
+		<div class="calculator centered">
 		<form action="" method="post" class="main_form">
 			<div class="top">
 				<div class="left_part">
-					<div class="title present blue uppercase">Что везем</div><br>
-					<input type="text" placeholder="Описание груза">
-					<input type="text" placeholder="Вес"> кг
-					<input type="text" placeholder="Объем"> М<sup>3</sup>
-					<input type="checkbox" id="" hidden/>
-	          		<label for="">Негабаритный</label>
-	          		<input type="checkbox" id="" hidden/>
-	          		<label for="">Сборный</label>
-	          		<input type="checkbox" id="" hidden/>
-	          		<label for="">Контроль качества и количества</label>
+					<div class="present">
+						<div class="title darkblue uppercase">Что везем</div>
+						<input class="big" type="text" placeholder="Описание груза">
+						<input class="small" type="text" placeholder="Вес"> кг
+						<input class="small" type="text" placeholder="Объем"> м&sup3;
+					</div>
+					<div class="clear"></div>
+					<div class="checkboxes_line">
+						<input type="checkbox" id="small" hidden/>
+	      		<label for="small">Негабаритный</label>
+	      		<input type="checkbox" id="merged" hidden/>
+	      		<label for="merged">Сборный</label>
+	      		<input type="checkbox" id="check" hidden/>
+	      		<label for="check">Контроль качества и количества</label>
+	        </div>
 				</div>
 				<div class="right_part">
-					<div class="title point blue uppercase">Откуда</div>
-					<div class="title point blue uppercase">Куда</div>
-					<input type="text">
-					<input type="text">
-					<input type="checkbox" id="" hidden/>
-	          		<label for="">Доставка до пункта отправки</label>
-	          		<input type="checkbox" id="" hidden/>
-	          		<label for="">Доставка по адресу получателя</label>
-	          		<input type="checkbox" id="" hidden/>
-	          		<label for="">Срочный</label>
+					<div class="point">
+						<div class="title darkblue uppercase">Откуда</div>
+						<input type="text">
+				  </div>
+				  <div class="point">
+						<div class="title darkblue uppercase">Куда</div>
+						<input type="text">
+					</div>
+					<div class="clear"></div>
+					<div class="checkboxes_line">
+						<input type="checkbox" id="delivery_from" hidden/>
+	      		<label for="delivery_from">Доставка до пункта отправки</label>
+	      		<input type="checkbox" id="delivery_to" hidden/>
+	      		<label for="delivery_to">Доставка по адресу получателя</label>
+	      		<input type="checkbox" id="delivery_fast" hidden/>
+	      		<label for="delivery_fast">Срочный</label>
+      		</div>
 				</div>
+				<div class="clear"></div>
 			</div>
 
 			<div class="down">
@@ -84,13 +100,13 @@
 						Перевозки морем – это дешевый, надежный и практичный метод доставки. Перевозка грузов морским транспортом более экономична, чем авиатрансфер, но занимает более продолжительное время.
 					</div>
 					<div class="price_block">
-						<div class="title blue uppercase">Предварительная стоимость:</div>
+						<div class="title darkblue uppercase">Предварительная стоимость:</div>
 						<div class="price">~30 000 Р</div>
 					</div>
 				</div>
 
 				<div class="right_part">
-					<div class="title blue">Дополнительные услуги</div>
+					<div class="title darkblue">Дополнительные услуги</div>
 					<input type="checkbox" id="" hidden/>
 	          		<label for="">Поиск товаров и производителей</label>
 	          		<input type="checkbox" id="" hidden/>
@@ -114,6 +130,7 @@
 				</div>
 			</div>
 		</form>
+		</div>
 	</div>
 
 	<%= yield %>
