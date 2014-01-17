@@ -1,5 +1,5 @@
 class CategoryController < ApplicationController
   def show
-    @cat = SubCategory.find(params['id'])
+    @cat = SubCategory.friendly.find(params['title'])
   end
 end

@@ -64,7 +64,11 @@
       <h4 class="blue uppercase"><%= cat.title %></h4>
       <div class="links">
         <% cat.sub_categories.each do |subcat| %>
-        <span class="sub_links_level_1"><a href="" class="gray underline"></a></span>
+        <span class="sub_links_level_1">
+          <%= link_to subcat.title, 
+             subcat,
+             {class: "gray underline"} %>
+        </span>
         <% end %>
       </div>
     </div>

@@ -36,9 +36,12 @@ gem 'rails_admin'
 gem 'devise-i18n-views'
 gem 'rails-i18n'
 
+gem 'friendly_id'
+
 gem 'capistrano', group: :development
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
   gem 'debugger'
+  gem 'factory_girl_rails'
 end

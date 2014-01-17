@@ -3,7 +3,7 @@ China::Application.routes.draw do
   
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   get 'brand/:id', to: "brand#show"
-  get 'category/:id', to: "category#show"
+  get 'category/:title', to: "category#show", as: 'sub_category'
   root to: 'landing#index'
 
   get "landing/index"

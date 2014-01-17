@@ -1,5 +1,8 @@
+# -*- coding: utf-8 -*-
 require 'spec_helper'
 
 describe SubCategory do
-  pending "add some examples to (or delete) #{__FILE__}"
+  before :each do
+    @cat = SubCategory.create(title: 'Одежда')
+  end
 end
