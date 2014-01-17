@@ -8,6 +8,8 @@ class Brand < ActiveRecord::Base
   before_validation { self.image.clear if self.delete_image == '1' }
 
   validates :title, presence: true
+  validates_attachment :image, content_type: {content_type:
+    ["image/jpg", "image/gif", "image/png"]}
 
   has_many :products
   has_many :sub_categories, through: :products

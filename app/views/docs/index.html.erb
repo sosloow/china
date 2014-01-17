@@ -1,0 +1,5 @@
+<% @docs.each do |doc| %>
+<%= doc.title %>
+<%= doc.description %>
+<%= image_tag extension_image(doc.file.url) %>
+<% end %>

@@ -6,6 +6,8 @@ class Product < ActiveRecord::Base
 
   validates :title, presence: true
   validates :description, presence: true
+  validates_attachment :image, content_type: {content_type:
+    ["image/jpg", "image/gif", "image/png"]}
 
   belongs_to :sub_category
   belongs_to :brand
