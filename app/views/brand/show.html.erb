@@ -1,2 +1,11 @@
-<h1>Brand#show</h1>
-<p>Find me in app/views/brand/show.html.erb</p>
+<%= @brand.title %>
+<%= image_tag @brand.image(:medium) %>
+<%= @brand.description %>
+<% @brand.sub_categories.each do |cat| %>
+<%= cat.title %>
+<% end %>
+<% @brand.products.each do |product| %>
+<%= product.title %>
+<%= image_tag product.image(:medium) %>
+<%= product.description %>
+<% end %>

@@ -1,6 +1,6 @@
 <%= @cat.title %>
 <% @cat.brands.each do |brand| %>
 <%= image_tag brand.image(:medium) %>
-<%= brand.title %>
+<%= link_to "#{brand.title} →", brand %>
 <%= brand.description %>
 <% end %>

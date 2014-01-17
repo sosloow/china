@@ -1,4 +1,7 @@
 class Brand < ActiveRecord::Base
+  extend FriendlyId
+  friendly_id :title
+
   has_attached_file :image, styles: {medium: '150x150>'}
 
   attr_accessor :delete_image
@@ -6,5 +9,6 @@ class Brand < ActiveRecord::Base
 
   validates :title, presence: true
 
-  has_and_belongs_to_many :sub_categories
+  has_many :products
+  has_many :sub_categories, through: :products
 end

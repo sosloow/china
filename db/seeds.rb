@@ -23,9 +23,11 @@ p_cats = TopCategory.create [{title: 'Одежда'}, {title: 'Текстиль 
 p_cats.each do |cat|
   subcats = SubCategory.create [{title: 'Женская', top_category: cat},
                                      {title: 'Мужская', top_category: cat}]
-
+  brands = Brand.create([{title: 'Sumka'}, {title: 'Chehol'}])
   subcats.each do |subcat|
-    Product.create [{title: 'Чехол для объектива', description: 'Чехол для объектива', sub_category: subcat},
-                    {title: 'Сумка для фототехники', title: 'Сумка для фототехники', sub_category: subcat}]
+    Product.create [{title: 'Чехол для объектива', description: 'Чехол для объектива',
+                      sub_category: subcat, brand: brands[0]},
+                    {title: 'Сумка для фототехники', title: 'Сумка для фототехники',
+                      sub_category: subcat, brand: brands[1]}]
   end
 end

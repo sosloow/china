@@ -3,5 +3,6 @@ class SubCategory < ActiveRecord::Base
   friendly_id :title
 
   belongs_to :top_category
-  has_and_belongs_to_many :brands
+  has_many :products
+  has_many :brands, through: :products
 end

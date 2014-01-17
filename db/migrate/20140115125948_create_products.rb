@@ -3,7 +3,8 @@ class CreateProducts < ActiveRecord::Migration
     create_table :products do |t|
       t.string :title
       t.text :description
-      t.references :sub_category, index: true
+      t.belongs_to :sub_category
+      t.belongs_to :brand
 
       t.timestamps
     end

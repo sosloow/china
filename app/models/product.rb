@@ -8,4 +8,5 @@ class Product < ActiveRecord::Base
   validates :description, presence: true
 
   belongs_to :sub_category
+  belongs_to :brand
 end
