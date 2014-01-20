@@ -38,6 +38,8 @@ gem 'rails-i18n'
 
 gem 'friendly_id'
 
+gem 'jquery-ui-rails'
+
 gem 'capistrano', group: :development
 
 group :development, :test do

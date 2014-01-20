@@ -15,3 +15,6 @@ $ ->
       $(this).html('<p></p>')
       $(this).find('p').text('Заявка отправлена!')
       $(this).fadeIn()
+
+  $('#q-tabs').tabs(active: 0);
+  $('#how-tabs').tabs(active: 0);

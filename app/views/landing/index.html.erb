@@ -1,6 +1,6 @@
 <div id="map">
 </div>
-  
+
 <div id="calculator">
   <div class="calculator centered">
     <div class="main_form">
@@ -76,7 +76,7 @@
         <div class="clear"></div>
         <div class="order_form">
           <div class="left">
-            <p>Мы посчитаем точную стоимость доставки с учетом указанных вами данных и перезвоним вам в течении нескольких минут.</p> 
+            <p>Мы посчитаем точную стоимость доставки с учетом указанных вами данных и перезвоним вам в течении нескольких минут.</p>
             <p class="number">Номер специалиста:<br>8 800 2000 600</p>
           </div>
           <div class="right">
@@ -94,47 +94,61 @@
   </div>
 </div>
 <div id="how">
-  <div class="how content_block centered">
+  <div class="how content_block centered" id="how-tabs">
     <h2 class="blue uppercase">Как мы работаем</h2>
     <div class="how_picture"></div>
     <ul class="how_menu">
-      <li class="arrow active uppercase">Поиск товаров</li>
-      <li class="arrow hover uppercase">Подготовка груза</li>
-      <li class="arrow uppercase">Транспортировка</li>
-      <li class="arrow uppercase">Получение товара</li>
+      <li class="arrow active uppercase"><a href="#how-tabs-1">Поиск товаров</a></li>
+      <li class="arrow hover uppercase"><a href="#how-tabs-2">Подготовка груза</a></li>
+      <li class="arrow uppercase"><a href="#how-tabs-3">Транспортировка</a></li>
+      <li class="arrow uppercase"><a href="#how-tabs-4">Получение товара</a></li>
       <div class="clear"></div>
     </ul>
-    <div class="how_text">
+    <div class="how_text" id="how-tabs-1">
       Ни для кого не секрет, что производство товаров с наименьшими издержками чаще всего находится в китае. Большинство брендов с мировым именем, такие как Microsoft, Apple, Prada уже давно перенесли свои производственные базы в Китай. <br>Наша роль — помочь вам найти необходимый товар и транспортировать его в Россию. Не обладая информацией об уровне внутренних цен на товары  многие иностранные поставщики преобретают продукт по завышенной цене. Договариться с производителями о самых низких оптовых ценах — задача не из простых, наш опыт успешного  сотрудничества в этой сфере поможет вам избежать любых сложностей. <br>Вам необязательно ехать в Китай, чтобы все прошло гладко. Проводимые нами экспертизы и сравнения продуктов от разных производителей, образцы товаров, высылаемые почтой, обеспечат ваше спокойствие за качество преобретаемого продукта. <br>Для желающих лично проконтролировать выбор и доставку товаров — мы организуем туры с переводчиком, проводим экскурсии по Китаю. Мы организуем личное знакомство с производителями, посещение различных ярмарок — таких в Китае достаточно. Вы принемаете решения, мы обеспечиваем вас квалифицированной поддержкой: переводчик, юристы и специалисты по грузоперевозкам.
+    </div>
+    <div class="how_text" id="how-tabs-2">
+      Ни для кого не секрет, что производство товаров с наименьшими издержками чаще всего находится в китае. Большинство брендов с мировым именем, такие как Microsoft, Apple, Prada уже давно перенесли свои производственные базы в Китай. <br>Наша роль — помочь вам найти необходимый товар и транспортировать его в Россию. Не обладая информацией об уровне внутренних цен на товары  многие иностранные поставщики преобретают продукт по завышенной цене. Договариться с производителями о самых низких оптовых ценах — задача не из простых, наш опыт успешного  сотрудничества в этой сфере поможет вам избежать любых сложностей.
+    </div>
+    <div class="how_text" id="how-tabs-3">
+      Для желающих лично проконтролировать выбор и доставку товаров — мы организуем туры с переводчиком, проводим экскурсии по Китаю. Мы организуем личное знакомство с производителями, посещение различных ярмарок — таких в Китае достаточно. Вы принемаете решения, мы обеспечиваем вас квалифицированной поддержкой: переводчик, юристы и специалисты по грузоперевозкам.
+    </div>
+    <div class="how_text" id="how-tabs-4">
+      Вам необязательно ехать в Китай, чтобы все прошло гладко. Проводимые нами экспертизы и сравнения продуктов от разных производителей, образцы товаров, высылаемые почтой, обеспечат ваше спокойствие за качество преобретаемого продукта. <br>Для желающих лично проконтролировать выбор и доставку товаров — мы организуем туры с переводчиком, проводим экскурсии по Китаю. Мы организуем личное знакомство с производителями, посещение различных ярмарок — таких в Китае достаточно. Вы принемаете решения, мы обеспечиваем вас квалифицированной поддержкой: переводчик, юристы и специалисты по грузоперевозкам.
     </div>
   </div>
 </div>
 
 <div id="questions">
-  <div class="questions content_block centered">
+  <div class="questions content_block centered" id="q-tabs">
     <h2 class="blue uppercase">Вопросы</h2>
     <ul class="tabs">
-      <li class="tab uppercase active">Активную сделать не забыть!</li>
-      <% @question_categories.each do |category| %>
-      <li class="tab uppercase"><%= category.title %></li>
+      <% @question_categories.each_with_index do |category, i| %>
+      <li class="tab uppercase">
+        <a href="<%= "#q-tabs-#{i+1}" %>"><%= category.title %></a>
+      </li>
       <% end %>
     </ul>
     <div class="clear"></div>
-    <% @question_categories.each do |category| %>
-    <div class="questions_container">
+    <% @question_categories.each_with_index do |category, i| %>
+    <div class="questions_container"  id="<%= "q-tabs-#{i+1}" %>">
+      <script>
+        $(function() {
+          $("<%= "#q-tabs-#{i+1}" %>").tabs();
+        });
+      </script>
       <ul class="questions_list">
-        <li class="active">
-          <a href="" class="blue dotted"><span class="clear_link">&mdash; Активная ссылка</a>
-        </li>
-        <% category.questions.each do |question| %>
+        <% category.questions.each_with_index do |question, j| %>
         <li>
-          <a href="" class="blue dotted"><span class="clear_link">&mdash; </span><%= question.title %></a>
+          <a href="<%= "#q-tabs-#{i+1}-#{j+1}" %>" class="blue dotted">
+            <span class="clear_link">&mdash; </span><%= question.title %>
+          </a>
         </li>
         <% end %>
       </ul>
-      <% category.questions.each do |question| %>
-      <div class="answer" id="question-<%= question.id %>">
-        <%= question.body %> 
+      <% category.questions.each_with_index do |question, j| %>
+      <div class="answer" id="<%= "q-tabs-#{i+1}-#{j+1}" %>">
+        <%= question.body %>
       </div>
       <% end %>
     </div>
@@ -155,7 +169,7 @@
     <div class="links">
       <% cat.sub_categories.each do |subcat| %>
       <span class="sub_links_level_1">
-        <%= link_to subcat.title, 
+        <%= link_to subcat.title,
             subcat,
             {class: "gray underline"} %>
       </span>
