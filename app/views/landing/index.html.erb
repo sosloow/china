@@ -3,7 +3,7 @@
   
 <div id="calculator">
   <div class="calculator centered">
-    <form action="" method="post" class="main_form">
+    <div class="main_form">
       <div class="top">
         <div class="left_part">
           <div class="present">
@@ -80,15 +80,17 @@
             <p class="number">Номер специалиста:<br>8 800 2000 600</p>
           </div>
           <div class="right">
-            <form action="">
-              <input type="text" class="uppercase" placeholder="ИМЯ">
-              <input class="dark_blue uppercase" type="text" placeholder="ТЕЛЕФОН">
-              <input type="submit" value="ОТПРАВИТЬ ЗАЯВКУ">
-            </form>
+            <%= form_for Order.new, remote: true do |f| %>
+            <%= f.text_field :name, class: "uppercase", placeholder:
+            "имя", required: true %>
+            <%= f.text_field :phone, class: "uppercase", placeholder:
+            "телефон", required: true %>
+            <%= f.submit "отправить заявку" %>
+            <% end %>
           </div>
         </div>
       </div>
-    </form>
+    </div>
   </div>
 </div>
 <div id="how">
@@ -137,12 +139,7 @@
       <% end %>
     </div>
     <% end %>
-    <form action="" method="post" class="ask_form">
-      <input type="text" placeholder="ИМЯ">
-      <input type="text" placeholder="НОМЕР ТЕЛЕФОНА">
-      <textarea name="" id="" cols="30" rows="10">ВОПРОС</textarea>
-      <input type="submit" value="СПРОСИТЬ У ЭКСПЕРТА">
-    </form>
+    <%= render "order_form" %>
     <div class="clear"></div>
   </div>
 </div>

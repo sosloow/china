@@ -16,11 +16,13 @@
         <p class="number">Номер специалиста:<br>8 800 2000 600</p>
       </div>
       <div class="right">
-        <form action="">
-          <input type="text" class="uppercase" placeholder="ИМЯ">
-          <input class="uppercase" type="text" placeholder="ТЕЛЕФОН">
-          <input type="submit" value="ОТПРАВИТЬ ЗАЯВКУ">
-        </form>
+        <%= form_for Order.new, remote: true do |f| %>
+        <%= f.text_field :name, class: "uppercase", placeholder:
+            "имя", required: true %>
+        <%= f.text_field :phone, class: "uppercase", placeholder:
+            "телефон", required: true %>
+        <%= f.submit "отправить заявку" %>
+        <% end %>
       </div>
     </div>
   </div>

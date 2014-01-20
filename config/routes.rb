@@ -1,5 +1,8 @@
 China::Application.routes.draw do
+  get "order/create"
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
+  resources :orders
 
   get 'docs', to: 'docs#index', as: 'docs'
   get 'services', to: 'landing#services', as: 'services'
@@ -8,7 +11,7 @@ China::Application.routes.draw do
   root to: 'landing#index'
 
   get "landing/index"
-  
+
   devise_for :users
 
   # The priority is based upon order of creation: first created -> highest priority.
