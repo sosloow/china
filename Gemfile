@@ -31,7 +31,7 @@ gem "paperclip", "3.4.2"
 gem 'thin'
 
 gem 'cancan'
-gem "devise"
+gem 'devise'
 gem 'rails_admin'
 gem 'devise-i18n-views'
 gem 'rails-i18n'
@@ -39,6 +39,7 @@ gem 'rails-i18n'
 gem 'friendly_id'
 
 gem 'jquery-ui-rails'
+gem 'twitter-bootstrap-rails'
 
 gem 'capistrano', group: :development
 
