@@ -248,7 +248,7 @@ height: 750px;
 
 /* expert */
 
-.expert {width:120px; padding:40px 20px; float:left;}
+.expert {width:120px; padding:40px 20px; float:left; background-image: url('/assets/small_arrow.png'); background-repeat: no-repeat; background-position: 100% 80px;}
 .expert img {width:115px; height:115px; margin-bottom:20px;}
 .expert .name {font-style: italic; font-size: 14px;}
 
