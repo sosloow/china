@@ -1,8 +1,8 @@
 China::Application.routes.draw do
-  get "docs/index"
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   get 'docs', to: 'docs#index', as: 'docs'
+  get 'services', to: 'landing#services', as: 'services'
   get 'brand/:title', to: "brand#show", as: 'brand'
   get '/:title', to: "category#show", as: 'sub_category'
   root to: 'landing#index'

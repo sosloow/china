@@ -178,15 +178,15 @@
 </div>
 
 <div id="reviews">
+<% @reviews.each do |review| %>
   <div class="review">
     <div class="image">
-      <img src="" alt="">
+      <%= image_tag review.photo(:medium) %>
     </div>
-    <div class="review_text">
-      — Автоматизация нетривиальна. Язык образов подрывает катарсис, tertium nоn datur. Надо сказать, что катарсис не так уж очевиден. Отсюда естественноследует, что искусство транспонирует даосизм, ломая рамки привычных представлений. Автоматизация нетривиальна. Язык образов подрывает катарсис, tertium nоn datur. Надо сказать, что катарсис не так уж очевиден. Отсюда естественноследует, что искусство транспонирует даосизм, ломая рамки привычных представлений. 
-    </div>
-    <div class="review_author">Алексеев А.А. партнер</div>
+    <div class="review_text"><%= review.body %></div>
+    <div class="review_author"><%= review.name %></div>
   </div>
+<% end %>
   <div class="next_review uppercase">Следующий отзыв</div>
   <div class="clear"></div>
 </div>

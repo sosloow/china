@@ -1,0 +1,32 @@
+<div class="services">
+  <div class="questions content_block centered">
+    <h2 class="blue uppercase">Дополнительные услуги</h2>
+    <div class="questions_container">
+      <ul class="questions_list">
+        <li class="active">
+          <a href="" class="blue dotted"><span class="clear_link">&mdash; Активная ссылка</a>
+        </li>
+        <% @services.each do |service| %>
+        <li>
+          <a href="" class="blue dotted">
+            <span data-id="<%= "service-#{service.id}" %>" 
+                  class="clear_link">&mdash; </span><%= service.name %>
+          </a>
+        </li>
+        <% end %>
+      </ul>
+      <% @services.each do |service| %>
+      <div class="answer" data-id="service-<%= service.id %>">
+        <%= service.body %> 
+      </div>
+      <% end %>
+    </div>
+    <form action="" method="post" class="ask_form">
+      <input type="text" placeholder="ИМЯ">
+      <input type="text" placeholder="НОМЕР ТЕЛЕФОНА">
+      <textarea name="" id="" cols="30" rows="10">ВОПРОС</textarea>
+      <input type="submit" value="СПРОСИТЬ У ЭКСПЕРТА">
+    </form>
+    <div class="clear"></div>
+  </div>
+</div>

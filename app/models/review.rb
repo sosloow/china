@@ -7,5 +7,5 @@ class Review < ActiveRecord::Base
   validates :name, presence: true
   validates :body, presence: true
   validates_attachment :photo, content_type: {content_type:
-    ["image/jpg", "image/gif", "image/png"]}
+    ["image/jpg", "image/jpeg", "image/gif", "image/png"]}
 end

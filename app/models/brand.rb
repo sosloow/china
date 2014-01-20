@@ -9,7 +9,7 @@ class Brand < ActiveRecord::Base
 
   validates :title, presence: true
   validates_attachment :image, content_type: {content_type:
-    ["image/jpg", "image/gif", "image/png"]}
+    ["image/jpg", "image/jpeg", "image/gif", "image/png"]}
 
   has_many :products
   has_many :sub_categories, through: :products
