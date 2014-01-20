@@ -239,7 +239,7 @@ height: 750px;
 /* docs */
 
 #docs {padding: 0 40px;}
-.left_part {width:60%; float:left; margin-right:20px;}
+#docs .left_part {width:60%; float:left; margin-right:20px;}
 .document {position: relative; height:65px; border-bottom:1px solid #c3c3c3;}
 .document .image {margin-top:5px; width:40px; height:40px; float:left; margin-right:30px;}
 .document .doc_title {display: inline-block; font-size: 14px; }

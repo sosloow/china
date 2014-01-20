@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 20140117122907) do
     t.string   "title"
     t.text     "description"
     t.integer  "sub_category_id"
+    t.integer  "brand_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image_file_name"
@@ -59,8 +60,6 @@ ActiveRecord::Schema.define(version: 20140117122907) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
   end
-
-  add_index "products", ["sub_category_id"], name: "index_products_on_sub_category_id"
 
   create_table "question_categories", force: true do |t|
     t.string   "title"
