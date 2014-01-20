@@ -1,11 +1,83 @@
-<%= @brand.title %>
-<%= image_tag @brand.image(:medium) %>
-<%= @brand.description %>
-<% @brand.sub_categories.each do |cat| %>
-<%= cat.title %>
-<% end %>
-<% @brand.products.each do |product| %>
-<%= product.title %>
-<%= image_tag product.image(:medium) %>
-<%= product.description %>
-<% end %>
+<%#= @brand.title %>
+<%#= image_tag @brand.image(:medium) %>
+<%#= @brand.description %>
+<%# @brand.sub_categories.each do |cat| %>
+<%#= cat.title %>
+<%# end %>
+<%# @brand.products.each do |product| %>
+<%#= product.title %>
+<%#= image_tag product.image(:medium) %>
+<%#= product.description %>
+<%# end %>
+
+<div id="brand" class="content_block centered">
+	<h2 class="blue uppercase"><%= @brand.title %></h2>
+	<div class="path">
+		<a class="black underline" href="/">Главная</a> /
+		<a class="black underline" href="/">Фото, видео, оптика</a> /
+		<a class="black underline" href="/">сумки, чехлы</a> /
+		<a class="black underline" href="/">«<%= @brand.title %>»</a>
+	</div>
+
+	<div class="block">
+    <div class="image">
+      <img src="http://localhost:3000/system/top_categories/images/000/000/004/medium/slider_text_newest.png?1389969879" alt="">
+    </div>
+    <h4 class="blue uppercase">Что чаще всего везут из Китая? →</h4>
+    <div class="gray">
+        <p>Автоматизация нетривиальна. Язык образов подрывает катарсис, tertium nоn datur. Надо сказать, что катарсис не так уж очевиден. Отсюда естественно следует, что искусство транспонирует. Надо сказать, что катарсис не так уж очевиден. Отсюда естественно</p>
+    </div>
+  </div>
+
+    <div class="block">
+    	<div class="gray_form">
+    		<div class="left">
+          <p>Свяжитесь с нами, чтобы получить прайс-лист и узнать условия доставки.</p> 
+          <p class="number">Номер специалиста:<br>8 800 2000 600</p>
+        </div>
+        <div class="right">
+          <form action="">
+            <input type="text" class="uppercase" placeholder="ИМЯ">
+            <input class="uppercase" type="text" placeholder="ТЕЛЕФОН">
+            <input type="submit" value="ОТПРАВИТЬ ЗАЯВКУ">
+          </form>
+        </div>
+    	</div>
+    </div>
+
+    <div class="clear"></div>
+
+		<h2 class="blue uppercase">ТОВАРЫ</h2>
+
+		<div class="block">
+    <div class="image">
+      <img src="http://localhost:3000/system/top_categories/images/000/000/004/medium/slider_text_newest.png?1389969879" alt="">
+    </div>
+    <h4 class="blue uppercase">Что чаще всего везут из Китая? →</h4>
+    <div class="gray">
+        <p>Автоматизация нетривиальна. Язык образов подрывает катарсис, tertium nоn datur. Надо сказать, что катарсис не так уж очевиден. Отсюда естественно следует, что искусство транспонирует. Надо сказать, что катарсис не так уж очевиден. Отсюда естественно</p>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="image">
+      <img src="http://localhost:3000/system/top_categories/images/000/000/004/medium/slider_text_newest.png?1389969879" alt="">
+    </div>
+    <h4 class="blue uppercase">Что чаще всего везут из Китая? →</h4>
+    <div class="gray">
+        <p>Автоматизация нетривиальна. Язык образов подрывает катарсис, tertium nоn datur. Надо сказать, что катарсис не так уж очевиден. Отсюда естественно следует, что искусство транспонирует. Надо сказать, что катарсис не так уж очевиден. Отсюда естественно</p>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="image">
+      <img src="http://localhost:3000/system/top_categories/images/000/000/004/medium/slider_text_newest.png?1389969879" alt="">
+    </div>
+    <h4 class="blue uppercase">Что чаще всего везут из Китая? →</h4>
+    <div class="gray">
+        <p>Автоматизация нетривиальна. Язык образов подрывает катарсис, tertium nоn datur. Надо сказать, что катарсис не так уж очевиден. Отсюда естественно следует, что искусство транспонирует. Надо сказать, что катарсис не так уж очевиден. Отсюда естественно</p>
+    </div>
+  </div>
+
+	<div class="clear"></div>
+</div>

@@ -1,5 +1,27 @@
-<% @docs.each do |doc| %>
-<%= doc.title %>
-<%= doc.description %>
-<%= image_tag extension_image(doc.file.url) %>
-<% end %>
+<div id="docs" class="content_block centered">
+	<h2 class="blue uppercase">Образцы документов</h2>
+	<div class="left_part">
+		<% @docs.each do |doc| %>
+		<div class="document">
+			<div class="image">
+				<%= image_tag extension_image(doc.file.url) %>
+			</div>
+			<h3 class="doc_title blue underline"><%= doc.title %></h3>
+			<p class="doc_description black"><%= doc.description %></p>
+			<a class="download_link" href="<%= doc.file.url %>"></a>
+		</div>
+		<% end %>
+	</div>
+	<div class="expert">
+		<img src="http://localhost:3000/system/top_categories/images/000/000/004/medium/slider_text_newest.png?1389969879" alt="">
+		<div class="name">Алексеев А.А., <br>менеджер</div>
+	</div>
+	<form action="" method="post" class="ask_form">
+      <input type="text" placeholder="ИМЯ">
+      <input type="text" placeholder="НОМЕР ТЕЛЕФОНА">
+      <textarea name="" id="" cols="30" rows="10">ВОПРОС</textarea>
+      <input type="submit" value="СПРОСИТЬ У ЭКСПЕРТА">
+    </form>
+	<div class="clear"></div>
+	<br>
+</div>

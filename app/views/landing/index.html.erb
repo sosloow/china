@@ -1,94 +1,97 @@
 <div id="map">
-  
 </div>
-
+  
 <div id="calculator">
   <div class="calculator centered">
     <form action="" method="post" class="main_form">
       <div class="top">
-	<div class="left_part">
-	  <div class="present">
-	    <div class="title darkblue uppercase">Что везем</div>
-	    <input class="big" type="text" placeholder="Описание груза">
-	    <input class="small" type="text" placeholder="Вес"> кг
-	    <input class="small" type="text" placeholder="Объем"> м&sup3;
-	  </div>
-	  <div class="clear"></div>
-	  <div class="checkboxes_line">
-	    <input type="checkbox" id="small" hidden/>
-	    <label for="small">Негабаритный</label>
-	    <input type="checkbox" id="merged" hidden/>
-	    <label for="merged">Сборный</label>
-	    <input type="checkbox" id="check" hidden/>
-	    <label for="check">Контроль качества и количества</label>
-	  </div>
-	</div>
-	<div class="right_part">
-	  <div class="point">
-	    <div class="title darkblue uppercase">Откуда</div>
-	    <input type="text">
-	  </div>
-	  <div class="point">
-	    <div class="title darkblue uppercase">Куда</div>
-	    <input type="text">
-	  </div>
-	  <div class="clear"></div>
-	  <div class="checkboxes_line">
-	    <input type="checkbox" id="delivery_from" hidden/>
-	    <label for="delivery_from">Доставка до пункта отправки</label>
-	    <input type="checkbox" id="delivery_to" hidden/>
-	    <label for="delivery_to">Доставка по адресу получателя</label>
-	    <input type="checkbox" id="delivery_fast" hidden/>
-	    <label for="delivery_fast">Срочный</label>
-      	  </div>
-	</div>
-	<div class="clear"></div>
+        <div class="left_part">
+          <div class="present">
+            <div class="title darkblue uppercase">Что везем</div>
+            <input class="big" type="text" placeholder="Описание груза">
+            <input class="small" type="text" placeholder="Вес"> кг
+            <input class="small" type="text" placeholder="Объем"> м&sup3;
+          </div>
+          <div class="clear"></div>
+          <div class="checkboxes_line">
+            <input type="checkbox" id="small" hidden/>
+            <label for="small">Негабаритный</label>
+            <input type="checkbox" id="merged" hidden/>
+            <label for="merged">Сборный</label>
+            <input type="checkbox" id="check" hidden/>
+            <label for="check">Контроль качества и количества</label>
+          </div>
+        </div>
+        <div class="right_part">
+          <div class="point">
+            <div class="title darkblue uppercase">Откуда</div>
+            <input type="text">
+          </div>
+          <div class="point">
+            <div class="title darkblue uppercase">Куда</div>
+            <input type="text">
+          </div>
+          <div class="clear"></div>
+          <div class="checkboxes_line">
+            <input type="checkbox" id="delivery_from" hidden/>
+            <label for="delivery_from">Доставка до пункта отправки</label>
+            <input type="checkbox" id="delivery_to" hidden/>
+            <label for="delivery_to">Доставка по адресу получателя</label>
+            <input type="checkbox" id="delivery_fast" hidden/>
+            <label for="delivery_fast">Срочный</label>
+          </div>
+        </div>
+        <div class="clear"></div>
       </div>
 
       <div class="down">
-	<div class="left_part">
-	  <ul class="selectors">
-	    <li class="ship active">40 дней<br>от 5 000 Р</li>
-	    <li class="train">25 дней<br>от 15 000 Р</li>
-	    <li class="auto hover">15 дней<br>от 25 000 Р</li>
-	    <li class="plain">3 дня<br>от 50 000 Р</li>
-	  </ul>
-	  <div class="selector_description">
-	    Перевозки морем – это дешевый, надежный и практичный метод доставки. Перевозка грузов морским транспортом более экономична, чем авиатрансфер, но занимает более продолжительное время.
-	  </div>
-	  <div class="price_block">
-	    <div class="title darkblue uppercase">Предварительная стоимость:</div>
-	    <div class="price">~30 000 Р</div>
-	  </div>
-	</div>
+        <div class="left_part">
+          <ul class="selectors">
+            <li class="active"><div class="icon ship"></div>40 дней<br>от 5 000 Р</li>
+            <li><div class="icon train"></div>25 дней<br>от 15 000 Р</li>
+            <li><div class="icon auto"></div>15 дней<br>от 25 000 Р</li>
+            <li><div class="icon plane"></div>3 дня<br>от 50 000 Р</li>
+          </ul>
+          <div class="clear"></div>
+          <div class="selector_description lightred">
+            Перевозки морем – это дешевый, надежный и практичный метод доставки. Перевозка грузов морским транспортом более экономична, чем авиатрансфер, но занимает более продолжительное время.
+          </div>
+          <div class="price_block">
+            <div class="title darkblue uppercase">Предварительная стоимость:</div>
+            <div class="price lightred">~30 000 Р</div>
+          </div>
+        </div>
 
-	<div class="right_part">
-	  <div class="title darkblue">Дополнительные услуги</div>
-	  <input type="checkbox" id="" hidden/>
-	  <label for="">Поиск товаров и производителей</label>
-	  <input type="checkbox" id="" hidden/>
-	  <label for="">Экспертиза товара</label>
-	  <input type="checkbox" id="" hidden/>
-	  <label for="">Временное складирование</label>
-	  <input type="checkbox" id="" hidden/>
-	  <label for="">Организация поездки в китай</label>
-	</div>
-
-	<div class="order_form">
-	  <div class="left">
-	    <p>Мы посчитаем точную стоимость доставки с учетом указанных вами данных и перезвоним вам в течении нескольких минут.</p> 
-	    <p class="small">Номер специалиста:<br>8 800 2000 600</p>
-	  </div>
-	  <div class="right">
-	    <input type="text" placeholder="ИМЯ">
-	    <input class="dark_blue" type="text" placeholder="НОМЕР ТЕЛЕФОНА">
-	    <input type="submit" value="ОТПРАВИТЬ ЗАЯВКУ">
-	  </div>
-	</div>
+        <div class="right_part">
+          <div class="big_title darkblue">Дополнительные услуги</div>
+          <input type="checkbox" id="search" hidden/>
+          <label for="search">Поиск товаров и производителей</label><br>
+          <input type="checkbox" id="checking" hidden/>
+          <label for="checking">Экспертиза товара</label><br>
+          <input type="checkbox" id="stock" hidden/>
+          <label for="stock">Временное складирование</label><br>
+          <input type="checkbox" id="travel" hidden/>
+          <label for="travel">Организация поездки в китай</label>
+        </div>
+        <div class="clear"></div>
+        <div class="order_form">
+          <div class="left">
+            <p>Мы посчитаем точную стоимость доставки с учетом указанных вами данных и перезвоним вам в течении нескольких минут.</p> 
+            <p class="number">Номер специалиста:<br>8 800 2000 600</p>
+          </div>
+          <div class="right">
+            <form action="">
+              <input type="text" class="uppercase" placeholder="ИМЯ">
+              <input class="dark_blue uppercase" type="text" placeholder="ТЕЛЕФОН">
+              <input type="submit" value="ОТПРАВИТЬ ЗАЯВКУ">
+            </form>
+          </div>
+        </div>
       </div>
     </form>
   </div>
 </div>
+>>>>>>> 71ee1aac3ab113923b1df1680cdf422bcc6dae98
 
 <div id="how">
   <div class="how content_block centered">
@@ -140,53 +143,52 @@
       <input type="text" placeholder="ИМЯ">
       <input type="text" placeholder="НОМЕР ТЕЛЕФОНА">
       <textarea name="" id="" cols="30" rows="10">ВОПРОС</textarea>
-      <input type="submit" placeholder="СПРОСИТЬ У ЭКСПЕРТА">
+      <input type="submit" value="СПРОСИТЬ У ЭКСПЕРТА">
     </form>
     <div class="clear"></div>
   </div>
 </div>
 
-  <div id="catalog" class="content_block centered">
-    <h2 class="blue uppercase">Каталог</h2>
-    <% @top_cats.each do |cat| %>
-    <div class="block">
-      <div class="image">
-        <%= image_tag cat.image.url(:medium) %>
-      </div>
-      <h4 class="blue uppercase"><%= cat.title %></h4>
-      <div class="links">
-        <% cat.sub_categories.each do |subcat| %>
-        <span class="sub_links_level_1">
-          <%= link_to subcat.title, 
-             subcat,
-             {class: "gray underline"} %>
-        </span>
-        <% end %>
-      </div>
+<div id="catalog" class="content_block centered">
+  <h2 class="blue uppercase">Каталог</h2>
+  <% @top_cats.each do |cat| %>
+  <div class="block">
+    <div class="image">
+      <%= image_tag cat.image.url(:medium) %>
     </div>
-    <% end %>
-    <div class="clear"></div>
+    <h4 class="blue uppercase"><%= cat.title %></h4>
+    <div class="links">
+      <% cat.sub_categories.each do |subcat| %>
+      <span class="sub_links_level_1">
+        <%= link_to subcat.title, 
+            subcat,
+            {class: "gray underline"} %>
+      </span>
+      <% end %>
+    </div>
   </div>
+  <% end %>
+  <div class="clear"></div>
+  <span class="blue uppercase dotted">показать еще</span>
+</div>
 
-  <div id="about">
-    <div class="left">
+<div id="about">
+  <div class="right" class="content_block">
+    <h2 class="white uppercase white_line">О компании</h2>
+    <p class="white">Представьте, что вы заказываете комплектующие для своего производства на несколько миллионов рублей. Для вас важно все: сроки, коммиссия за переводы, местонахождение груза. Вы хотите довериться квалифицированным специалистам и быть спокойным за результат? — Мы всегда остаёмся на связи.</p>
+  </div>
+</div>
+
+<div id="reviews">
+  <div class="review">
+    <div class="image">
       <img src="" alt="">
     </div>
-    <div class="right" class="content_block">
-      <h2 class="white uppercase white_line">О компании</h2>
-      <p>Представьте, что вы заказываете комплектующие для своего производства на несколько миллионов рублей. Для вас важно все: сроки, коммиссия за переводы, местонахождение груза. Вы хотите довериться квалифицированным специалистам и быть спокойным за результат? — Мы всегда остаёмся на связи.</p>
+    <div class="review_text">
+      — Автоматизация нетривиальна. Язык образов подрывает катарсис, tertium nоn datur. Надо сказать, что катарсис не так уж очевиден. Отсюда естественноследует, что искусство транспонирует даосизм, ломая рамки привычных представлений. Автоматизация нетривиальна. Язык образов подрывает катарсис, tertium nоn datur. Надо сказать, что катарсис не так уж очевиден. Отсюда естественноследует, что искусство транспонирует даосизм, ломая рамки привычных представлений. 
     </div>
+    <div class="review_author">Алексеев А.А. партнер</div>
   </div>
-
-  <div id="reviews">
-    <div class="review">
-      <div class="image">
-        <img src="" alt="">
-      </div>
-      <div class="review_text">
-        — Автоматизация нетривиальна. Язык образов подрывает катарсис, tertium nоn datur. Надо сказать, что катарсис не так уж очевиден. Отсюда естественноследует, что искусство транспонирует даосизм, ломая рамки привычных представлений. Автоматизация нетривиальна. Язык образов подрывает катарсис, tertium nоn datur. Надо сказать, что катарсис не так уж очевиден. Отсюда естественноследует, что искусство транспонирует даосизм, ломая рамки привычных представлений. 
-      </div>
-      <div class="review_author">Алексеев А.А. партнер</div>
-    </div>
-    <div class="next_review">Следующий отзыв</div>
-  </div>
+  <div class="next_review uppercase">Следующий отзыв</div>
+  <div class="clear"></div>
+</div>
