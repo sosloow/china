@@ -5,7 +5,7 @@
     <div class="image">
       <%= image_tag brand.image(:medium) %>
     </div>
-    <h4 class="blue uppercase"><%= link_to "#{brand.title} →", brand %></h4>
+    <h4><%= link_to "#{brand.title} →", brand, class: "blue uppercase clear_link" %></h4>
     <div class="gray">
       <p><%= brand.description %></p>
     </div>

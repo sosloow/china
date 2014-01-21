@@ -39,7 +39,7 @@ gem 'rails-i18n'
 gem 'friendly_id'
 
 gem 'jquery-ui-rails'
-gem 'twitter-bootstrap-rails'
+# gem 'twitter-bootstrap-rails'
 
 gem 'capistrano', group: :development
 

@@ -1,23 +1,32 @@
 <div class="services" id="s-tabs">
   <div class="questions content_block centered">
     <h2 class="blue uppercase">Дополнительные услуги</h2>
-    <div class="questions_container">
-      <ul class="questions_list">
-        <% @services.each_with_index do |service, i| %>
-        <li>
-          <a href="<%= "#s-tabs-#{i+1}" %>" class="blue dotted">
-            <span class="clear_link">&mdash; </span><%= service.name %>
-          </a>
-        </li>
-        <% end %>
-      </ul>
-      <% @services.each_with_index do |service, i| %>
-      <div class="answer" id="<%= "q-tabs-#{i+1}" %>">
-        <%= service.body %> 
+    <div class="right_part">
+      <div class="expert">
+        <img src="" alt="">
+        <div class="name">Алексеев А.А., <br>менеджер</div>
       </div>
-      <% end %>
+      <%= render "landing/order_form" %>
     </div>
-    <%= render "order_form" %>
+    <div class="left_part">
+      <div class="questions_container">
+        <ul class="questions_list">
+          <% @services.each_with_index do |service, i| %>
+          <li>
+            <a href="<%= "#s-tabs-#{i+1}" %>" class="blue dotted">
+              <span class="clear_link">&mdash; </span><%= service.name %>
+            </a>
+          </li>
+          <% end %>
+        </ul>
+        <% @services.each_with_index do |service, i| %>
+        <div class="answer" id="<%= "q-tabs-#{i+1}" %>">
+          <%= service.body %> 
+        </div>
+        <% end %>
+      </div>
+    </div>
+    
     <div class="clear"></div>
   </div>
 </div>
