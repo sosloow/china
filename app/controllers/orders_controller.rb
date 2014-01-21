@@ -3,6 +3,7 @@ class OrdersController < ApplicationController
     @order = Order.new(order_params)
 
     if @order.save
+      OrderMailer.new_order(@order).deliver
       render json: {controller: 'landing', action: 'index', status: :created, location: @order }
     else
       render json: {json: @order.errors, status: :unprocessable_entity }
