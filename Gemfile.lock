@@ -249,7 +249,7 @@ DEPENDENCIES
   rails (= 4.0.2)
   rails-i18n
   rails_admin
-  rake
+  rake (= 10.1.1)
   rspec-rails (~> 3.0.0.beta)
   sdoc
   sqlite3
