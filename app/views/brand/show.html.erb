@@ -17,9 +17,9 @@
       </div>
       <div class="right">
         <%= form_for Order.new, remote: true do |f| %>
-        <%= f.text_field :name, class: "uppercase", placeholder:
+        <%= f.text_field :name, placeholder:
             "имя", required: true %>
-        <%= f.text_field :phone, class: "uppercase", placeholder:
+        <%= f.text_field :phone, placeholder:
             "телефон", required: true %>
         <%= f.submit "отправить заявку" %>
         <% end %>

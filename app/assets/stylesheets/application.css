@@ -108,7 +108,7 @@ input[type=checkbox] {display:none;}
 
 /* header */
 
-#header {height:129px; background-image:url('/assets/header_bg.png'); background-repeat:repeat-x;}
+#header {position: relative; height:129px; background-image:url('/assets/header_bg.png'); background-repeat:repeat-x;}
 .header {}
 .header_logo {width:25%; max-width:280px; height:124px; float:left; padding-left:81px; background-image:url('/assets/logo.png'); background-repeat:no-repeat; background-position:3px center; line-height:0.95;}
 .header_logo h1 {font-family:"Jura"; font-size:48px; font-weight:500; padding-top:28px; letter-spacing:-1.2px;}
@@ -122,6 +122,20 @@ input[type=checkbox] {display:none;}
 
 .header .order_part {height:124px; padding-top:39px; float:right; padding-right:2%; font-size:11px;}
 .header .order_part .phone {margin-bottom:9px; font-family:"Open Sans"; font-size:22px;}
+
+/* popup */
+
+#popup_form {position:absolute; top:90px; right:108px;}
+#popup_form {width:377px; height:181px; padding:30px 20px 30px; background-image:url('/assets/order_form.png'); background-repeat:no-repeat; line-height:1.25;}
+#popup_form .left {width:49%; margin-right:1%; float:left;}
+#popup_form .left p {color:#bf8c00; font-size:14px;}
+#popup_form .right {width:49%; float:left;}
+#popup_form .right input[type=text] {text-transform: uppercase; width:168px; float:left; margin:0px 0px 20px 0px; outline:none; background-color:white; border:1px solid #bf8c00; font-size:16px; padding:8px 5px 8px 10px; color:black;}
+#popup_form .right input[type=text]::-webkit-input-placeholder {color:black;}
+#popup_form .right input[type=text]:-moz-placeholder {color:black;}
+#popup_form .right input[type=submit] {text-transform: uppercase; width:182px; height:50px; border:0; outline:none; background-image:url('/assets/order_form_submit.png'); background-repeat:no-repeat; background-position:center; background-color:transparent; color:white; cursor:pointer; border-radius: 5px;}
+#popup_form .right input[type=submit]:hover {background-image:url('/assets/order_form_submit_hover.png');}
+#popup_form .right input[type=submit]:active {background-image:url('/assets/order_form_submit_active.png');}
 
 /* map */
 

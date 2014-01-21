@@ -43,6 +43,20 @@
         </div>
         <div class="clear"></div>
       </div>
+      <div id="popup_form">
+        <div class="left">
+          <p>Мы поможем расчитать точную стоимость доставки учитывая все особенности вашего заказа. Наш специалист ответит на все вопросы.</p>
+        </div>
+        <div class="right">
+          <%= form_for Order.new, remote: true do |f| %>
+          <%= f.text_field :name, placeholder:
+              "имя", required: true %>
+          <%= f.text_field :phone, placeholder:
+              "номер телефона", required: true %>
+          <%= f.submit "заказать" %>
+          <% end %>
+        </div>
+      </div>
     </div>
     
     <%= yield %>
