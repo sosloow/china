@@ -1,4 +1,4 @@
-<div class="services" id="s-tabs">
+<div class="services">
   <div class="questions content_block centered">
     <h2 class="blue uppercase">Дополнительные услуги</h2>
     <div class="right_part">
@@ -9,7 +9,7 @@
       <%= render "landing/order_form" %>
     </div>
     <div class="left_part">
-      <div class="questions_container">
+      <div class="questions_container" id="s-tabs">
         <ul class="questions_list">
           <% @services.each_with_index do |service, i| %>
           <li>
@@ -20,7 +20,7 @@
           <% end %>
         </ul>
         <% @services.each_with_index do |service, i| %>
-        <div class="answer" id="<%= "q-tabs-#{i+1}" %>">
+        <div class="answer" id="<%= "s-tabs-#{i+1}" %>">
           <%= service.body %> 
         </div>
         <% end %>

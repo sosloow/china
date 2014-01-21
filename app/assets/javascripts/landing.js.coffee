@@ -18,3 +18,4 @@ $ ->
 
   $('#q-tabs').tabs(active: 0);
   $('#how-tabs').tabs(active: 0);
+  $('#s-tabs').tabs(active: 0);
