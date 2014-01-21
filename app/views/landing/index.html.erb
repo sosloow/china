@@ -208,16 +208,20 @@
   </div>
 </div>
 
-<div id="reviews">
-<% @reviews.each do |review| %>
-  <div class="review">
-    <div class="image">
-      <%= image_tag review.photo(:medium) %>
+<div id="reviews" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <% @reviews.each do |review| %>
+    <div class="review item <%= 'active' if review==@reviews.first %>">
+      <div class="image">
+        <%= image_tag review.photo(:medium) %>
+      </div>
+      <div class="review_text"><%= review.body %></div>
+      <div class="review_author"><%= review.name %></div>
     </div>
-    <div class="review_text"><%= review.body %></div>
-    <div class="review_author"><%= review.name %></div>
+    <% end %>
   </div>
-<% end %>
-  <div class="next_review uppercase">Следующий отзыв</div>
+  <a class="right carousel-control" href="#reviews" data-slide="next">
+    <div class="next_review uppercase">Следующий отзыв</div>
+  </a>
   <div class="clear"></div>
 </div>
