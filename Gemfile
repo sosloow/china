@@ -29,6 +29,7 @@ end
 gem "paperclip", "3.4.2"
 
 gem 'thin'
+gem 'unicorn'
 
 gem 'cancan'
 gem 'devise'
@@ -42,7 +43,9 @@ gem 'jquery-ui-rails'
 gem 'jquery-turbolinks'
 gem 'twitter-bootstrap-rails'
 
-gem 'capistrano', group: :development
+group :development do
+  gem 'capistrano', '2.14.2' 
+end
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
