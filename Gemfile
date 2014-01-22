@@ -28,6 +28,8 @@ end
 
 gem "paperclip", "3.4.2"
 
+gem 'rake', '10.1.1'
+gem 'therubyracer'
 gem 'thin'
 gem 'unicorn'
 
