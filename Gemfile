@@ -46,7 +46,7 @@ gem 'jquery-turbolinks'
 gem 'twitter-bootstrap-rails'
 
 group :development do
-  gem 'capistrano', '2.14.2' 
+  gem 'capistrano', '~> 2.15.5'
 end
 
 group :development, :test do
