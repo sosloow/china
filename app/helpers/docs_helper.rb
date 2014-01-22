@@ -3,11 +3,11 @@ module DocsHelper
     ext = File.extname(file)
     case ext
     when /docx?/
-      "/assets/word.png"
+      "/images/word.png"
     when /xlsx?/
-      "/assets/excel.png"
+      "/images/excel.png"
     else
-      "/assets/word.png"
+      "/images/word.png"
     end
 end
 end
