@@ -298,7 +298,7 @@ input[type=checkbox]:checked + label {background-image:url('/assets/calculate_ch
 /* reviews */
 
 #reviews {position:relative; width:70%; margin:0 auto 0; height:200px; padding:75px 0 30px;}
-.review {position:absolute; top:0 bottom:0; right:220px; margin:auto;}
+.review {position:absolute; top:0; bottom:0; right:220px; margin:auto;}
 .review .image {width:120px; height:120px; overflow:hidden; margin-right:25px; float:left; }
 .review .image img {width:120px; height:auto;}
 .review .review_text {text-indent:-20px; font-family:"Open Sans"; font-size:14px; line-height:1.5;}
