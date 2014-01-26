@@ -40,6 +40,7 @@ gem 'devise-i18n-views'
 gem 'rails-i18n'
 
 gem 'friendly_id'
+gem 'geocoder'
 
 gem 'jquery-ui-rails'
 gem 'jquery-turbolinks'
@@ -53,4 +54,5 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
   gem 'debugger'
   gem 'factory_girl_rails'
+  gem 'rb-readline'
 end

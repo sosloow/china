@@ -75,6 +75,7 @@ GEM
       railties (>= 3.2, < 5.0)
     friendly_id (5.0.2)
       activerecord (~> 4.0.0)
+    geocoder (1.1.9)
     haml (4.0.5)
       tilt
     highline (1.6.20)
@@ -160,6 +161,7 @@ GEM
       thor (>= 0.18.1, < 2.0)
     raindrops (0.12.0)
     rake (10.1.1)
+    rb-readline (0.5.1)
     rdoc (4.1.1)
       json (~> 1.4)
     ref (1.0.5)
@@ -246,6 +248,7 @@ DEPENDENCIES
   devise-i18n-views
   factory_girl_rails
   friendly_id
+  geocoder
   jbuilder (~> 1.2)
   jquery-rails
   jquery-turbolinks
@@ -255,6 +258,7 @@ DEPENDENCIES
   rails-i18n
   rails_admin
   rake (= 10.1.1)
+  rb-readline
   rspec-rails (~> 3.0.0.beta)
   sdoc
   sqlite3
