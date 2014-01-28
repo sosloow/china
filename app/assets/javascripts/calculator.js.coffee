@@ -24,8 +24,13 @@ $(document).on 'ready page:load', ->
 
     constructor: (@scope, @http) ->
       @scope.countTotalPrice = @countTotalPrice
+      @scope.cityClick = @cityClick
       @scope.km = 0
       @scope.transport = 'ship'
+
+      console.log(@map = $('.angular-google-map-container')[0])
+      @directionsDisplay = new google.maps.DirectionsRenderer()
+      
       
       @http.get('/cities')
         .success (data) =>
@@ -50,14 +55,24 @@ $(document).on 'ready page:load', ->
           # animation: 2
       
     countTotalPrice: =>
-      
       totalPrice = (@scope.kg || 0) * @prices.kg
 
       totalPrice += @prices.dop.search if @scope.dopSearch
       totalPrice += @prices.dop.checking if @scope.dopChecking
       totalPrice += @prices.dop.travel if @scope.dopTravel
       totalPrice += @prices.dop.stock if @scope.dopStock
-      
       return totalPrice
 
-    
+    cityClick: (city) =>
+      if @scope.endPoint
+        @scope.endPoint = null
+        @scope.startPoint = city      
+      else if @scope.startPoint && @scope.startPoint!=city
+        @scope.endPoint = city
+        @drawPath(@scope.startPoint, @scope.endPoint)
+      else
+        @scope.startPoint = city
+
+    drawPath: (start, end) ->
+      s = new google.maps.LatLng(start.latitude, start.longitude)
+      e = new google.maps.LatLng(end.latitude, end.longitude)

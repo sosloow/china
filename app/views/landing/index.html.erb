@@ -3,7 +3,7 @@
 <google-map center="map.center" options="map.options"
             zoom="map.zoom" draggable="map.draggable">
   <marker ng-repeat="city in cities" coords="city"
-          icon="marker.icon" options="marker.options">
+          icon="marker.icon" click="cityClick(city)" options="marker.options">
   </marker>
 </google-map>
 </div>
