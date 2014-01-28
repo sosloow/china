@@ -75,9 +75,22 @@
             </div>
           </div>
           <div class="clear"></div>
-          <div class="selector_description lightred">
+          <div class="selector_description lightred" ng-show="transport=='ship'">
             Перевозки морем – это дешевый, надежный и практичный метод доставки. Перевозка грузов морским транспортом более экономична, чем авиатрансфер, но занимает более продолжительное время.
           </div>
+          <div class="selector_description lightred" ng-show="transport=='train'">
+            Перевозки поездами – это дешевый, надежный и практичный метод доставки. Перевозка грузов морским транспортом более экономична, чем авиатрансфер, но занимает более продолжительное время.
+          </div>
+          <div class="selector_description lightred" ng-show="transport=='auto'">
+            Перевозки газэлами – это дешевый, надежный и практичный метод доставки. Перевозка грузов морским транспортом более экономична, чем авиатрансфер, но занимает более продолжительное время.
+          </div>
+          <div class="selector_description lightred" ng-show="transport=='plane'">
+            Перевозки самилетами – это дешевый, надежный и практичный метод доставки. Перевозка грузов морским транспортом более экономична, чем авиатрансфер, но занимает более продолжительное время.
+          </div>
+          <input id="ship" ng-model="transport" value="ship" type="radio"/>
+          <input id="train" ng-model="transport" value="train" type="radio"/>
+          <input id="auto" ng-model="transport" value="auto" type="radio"/>
+          <input id="plain" ng-model="transport" value="plane" type="radio"/>
           <div class="price_block">
             <div class="title darkblue uppercase">Предварительная стоимость:</div>
             <div class="price lightred">~{{countTotalPrice()}} Р</div>
@@ -119,6 +132,7 @@
   </div>
 </div>
 </div>
+
 <div id="how">
   <div class="how content_block centered" id="how-tabs">
     <h2 class="blue uppercase">Как мы работаем</h2>

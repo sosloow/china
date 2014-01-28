@@ -25,6 +25,7 @@ $(document).on 'ready page:load', ->
     constructor: (@scope, @http) ->
       @scope.countTotalPrice = @countTotalPrice
       @scope.km = 0
+      @scope.transport = 'ship'
       
       @http.get('/cities')
         .success (data) =>
@@ -36,7 +37,8 @@ $(document).on 'ready page:load', ->
           longitude: 61 },
         options: {
           disableDefaultUI: true,
-          scrollwheel: false },
+          scrollwheel: false,
+          draggable: true },
         zoom: 4,
         draggable: true
       }
@@ -49,7 +51,7 @@ $(document).on 'ready page:load', ->
       
     countTotalPrice: =>
       
-      totalPrice = (@scope.kg || 0) * @prices.kg + (@scope.m3 || 0) * @prices.m3
+      totalPrice = (@scope.kg || 0) * @prices.kg
 
       totalPrice += @prices.dop.search if @scope.dopSearch
       totalPrice += @prices.dop.checking if @scope.dopChecking
