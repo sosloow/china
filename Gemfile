@@ -45,6 +45,7 @@ gem 'geocoder'
 gem 'jquery-ui-rails'
 gem 'jquery-turbolinks'
 gem 'twitter-bootstrap-rails'
+gem 'angularjs-rails'
 
 group :development do
   gem 'capistrano', '~> 2.15.5'

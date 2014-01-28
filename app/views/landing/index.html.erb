@@ -1,3 +1,4 @@
+<div ng-controller="CalcCtrl as calc">
 <div id="map">
 </div>
 
@@ -30,8 +31,8 @@
           <div class="present">
             <div class="title darkblue uppercase">Что везем</div>
             <input class="big" type="text" placeholder="Описание груза">
-            <input class="small" type="text" placeholder="Вес"> кг
-            <input class="small" type="text" placeholder="Объем"> м&sup3;
+            <input class="small" type="text" ng-model="kg" integer placeholder="Вес"> кг
+            <input class="small" type="text" ng-model="m3" integer placeholder="Объем"> м&sup3;
           </div>
           <div class="checkboxes_line">
             <input type="checkbox" id="small" hidden/>
@@ -75,19 +76,22 @@
           </div>
           <div class="price_block">
             <div class="title darkblue uppercase">Предварительная стоимость:</div>
-            <div class="price lightred">~30 000 Р</div>
+            <div class="price lightred">~{{countTotalPrice()}} Р</div>
           </div>
         </div>
-
         <div class="right_part">
           <div class="big_title darkblue">Дополнительные услуги</div>
-          <input type="checkbox" id="search" hidden/>
+          <input type="checkbox" id="search"
+                 ng-model="dopSearch" hidden/>
           <label for="search">Поиск товаров и производителей</label><br>
-          <input type="checkbox" id="checking" hidden/>
+          <input type="checkbox" id="checking"
+                 ng-model="dopChecking" hidden/>
           <label for="checking">Экспертиза товара</label><br>
-          <input type="checkbox" id="stock" hidden/>
+          <input type="checkbox" id="stock"
+                 ng-model="dopStock" hidden/>
           <label for="stock">Временное складирование</label><br>
-          <input type="checkbox" id="travel" hidden/>
+          <input type="checkbox" id="travel"
+                 ng-model="dopTravel" hidden/>
           <label for="travel">Организация поездки в китай</label>
         </div>
         <div class="clear"></div>
@@ -109,6 +113,7 @@
       </div>
     </div>
   </div>
+</div>
 </div>
 <div id="how">
   <div class="how content_block centered" id="how-tabs">

@@ -15,5 +15,6 @@
 //= require jquery_ujs
 //= require jquery.ui.tabs
 //= require twitter/bootstrap/bootstrap-carousel
+//= require angular
 //= require turbolinks
 //= require_tree .

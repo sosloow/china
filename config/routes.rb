@@ -1,10 +1,12 @@
 China::Application.routes.draw do
+  get "cities/index"
   get "order/create"
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   resources :orders
 
   get 'docs', to: 'docs#index', as: 'docs'
+  get 'cities', to: 'cities#index'
   get 'services', to: 'landing#services', as: 'services'
   get 'brand/:title', to: "brand#show", as: 'brand'
   get '/:title', to: "category#show", as: 'sub_category'
