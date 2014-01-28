@@ -46,6 +46,8 @@ gem 'jquery-ui-rails'
 gem 'jquery-turbolinks'
 gem 'twitter-bootstrap-rails'
 gem 'angularjs-rails'
+gem 'underscore-rails'
+gem 'gmaps4rails'
 
 group :development do
   gem 'capistrano', '~> 2.15.5'

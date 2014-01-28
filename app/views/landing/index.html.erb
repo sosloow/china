@@ -1,12 +1,16 @@
 <div ng-controller="CalcCtrl as calc">
 <div id="map">
+<google-map center="map.center" options="map.options"
+            zoom="map.zoom" draggable="map.draggable">
+  <marker ng-repeat="city in cities" coords="city"
+          icon="marker.icon" options="marker.options">
+  </marker>
+</google-map>
 </div>
-
 <div id="calculator" class="centered">
   <div class="calculator">
     <div class="main_form">
       <div class="top">
-
         <div class="right_part">
           <div class="point">
             <div class="title darkblue uppercase">Откуда</div>

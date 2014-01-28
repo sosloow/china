@@ -14,6 +14,9 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require jquery.ui.tabs
+//= require jquery.ui.slider
+//= require underscore
+//= require gmaps/google
 //= require twitter/bootstrap/bootstrap-carousel
 //= require angular
 //= require turbolinks

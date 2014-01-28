@@ -154,7 +154,8 @@ input[type=checkbox] {display:none;}
 
 /* map */
 
-#map {position:relative; height:610px; margin-top:-29px; background-color:lightblue; z-index:-1;}
+#map {position:relative; height:610px; margin-top:-29px; background-color:lightblue; z-index:0;}
+.angular-google-map-container { margin-top:-29px; height: 610px; width: 1400px }
 
 /* calculator */
 
