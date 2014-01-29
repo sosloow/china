@@ -18,6 +18,7 @@
 //= require underscore
 //= require gmaps/google
 //= require twitter/bootstrap/bootstrap-carousel
+//= require angular-ui-bootstrap
 //= require angular
 //= require turbolinks
 //= require_tree .

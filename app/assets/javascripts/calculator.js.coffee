@@ -1,7 +1,7 @@
-@app = angular.module("Calculator", ['google-maps'])
+@app = angular.module("China", ['google-maps', 'ui.bootstrap'])
 
-$(document).on 'ready page:load', ->
-  angular.bootstrap($('[ng-controller]')[0], ['Calculator'])
+# $(document).on 'ready page:load', ->
+#   angular.bootstrap($('[ng-controller]')[0], ['Calculator'])
 
 @app.directive 'integer', ->
   require: 'ngModel'
@@ -130,3 +130,4 @@ $(document).on 'ready page:load', ->
             deferred.resolve response.rows[0].elements[0].distance.text
 
       return deferred.promise
+
