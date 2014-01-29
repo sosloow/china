@@ -11,52 +11,80 @@ $(document).on 'ready page:load', ->
 
 @app.controller 'CalcCtrl',
   class CalcCtrl
-    @$inject = ['$scope', '$http']
+    @$inject = ['$scope', '$http', '$q']
 
     prices:
-      m3: 500
-      kg: 5
+      train:
+        scale:
+          0: 7
+          10: 7
+          50: 6
+          100: 5
+          500: 4.5
+        insurance: 0.02
+      auto:
+        scale:
+          0: 8
+          10: 8
+          50: 7
+          100: 6.5
+        insurance: 0.02
+      ship:
+        scale:
+          0: 3
+      plane:
+        scale:
+          0: 12
+          30: 11
+          60: 10
       dop:
         search: 1000
         checking: 1000
         stock: 1000
         travel: 1000
+      exchangeRate: 30
 
-    constructor: (@scope, @http) ->
+    constructor: (@scope, @http, @q) ->
       @scope.countTotalPrice = @countTotalPrice
       @scope.cityClick = @cityClick
       @scope.km = 0
       @scope.transport = 'ship'
+      @scope.path = [{latitude: 0, longitude: 0}, {latitude: 0, longitude: 0}]
 
-      console.log(@map = $('.angular-google-map-container')[0])
-      @directionsDisplay = new google.maps.DirectionsRenderer()
-      
-      
+      @icon =
+        normal: '/images/point.png'
+        active: '/images/china.png'
+
       @http.get('/cities')
         .success (data) =>
           @scope.cities = data
+          for i in [0...@scope.cities.length]
+            @scope.cities[i].icon = @icon.normal
 
-      @scope.map = {
-        center: {
-          latitude: 55,
-          longitude: 61 },
-        options: {
-          disableDefaultUI: true,
-          scrollwheel: false,
-          draggable: true },
-        zoom: 4,
+      @scope.map =
+        center:
+          latitude: 55
+          longitude: 61
+        options:
+          disableDefaultUI: true
+          scrollwheel: false
+          draggable: true
+        zoom: 4
         draggable: true
-      }
 
       @scope.marker =
-        icon: '/images/point.png',
         options:
           cursor: 'pointer'
-          # animation: 2
-      
-    countTotalPrice: =>
-      totalPrice = (@scope.kg || 0) * @prices.kg
 
+    countTotalPrice: =>
+      kg = @scope.kg || 0
+      prices = @prices[@scope.transport]
+      price = 0
+      for own weight, wprice of prices.scale
+        price = wprice if kg > parseInt(weight)
+
+      totalPrice = kg * price * @prices.exchangeRate
+      totalPrice += totalPrice * prices.insurance if prices.insurance
       totalPrice += @prices.dop.search if @scope.dopSearch
       totalPrice += @prices.dop.checking if @scope.dopChecking
       totalPrice += @prices.dop.travel if @scope.dopTravel
@@ -64,15 +92,41 @@ $(document).on 'ready page:load', ->
       return totalPrice
 
     cityClick: (city) =>
+      @scope.path = []
       if @scope.endPoint
+        @scope.endPoint.icon = @icon.normal
         @scope.endPoint = null
-        @scope.startPoint = city      
+        @scope.startPoint.icon = @icon.normal
+        @scope.startPoint = city
+        @scope.startPoint.icon = @icon.active
       else if @scope.startPoint && @scope.startPoint!=city
         @scope.endPoint = city
-        @drawPath(@scope.startPoint, @scope.endPoint)
+        @scope.endPoint.icon = @icon.active
+        distance = @findDistance()
+        distance.then (result) =>
+          @scope.distance = result
+        @scope.path = @drawPath @scope.startPoint, @scope.endPoint
       else
         @scope.startPoint = city
+        @scope.startPoint.icon = @icon.active
 
     drawPath: (start, end) ->
-      s = new google.maps.LatLng(start.latitude, start.longitude)
-      e = new google.maps.LatLng(end.latitude, end.longitude)
+      [{latitude: start.latitude, longitude: start.longitude},
+        {latitude: end.latitude, longitude: end.longitude}]
+
+    findDistance: =>
+      deferred = @q.defer()
+      s = new google.maps.LatLng(@scope.startPoint.latitude, @scope.startPoint.longitude)
+      e = new google.maps.LatLng(@scope.endPoint.latitude, @scope.endPoint.longitude)
+      service = new google.maps.DistanceMatrixService()
+      service.getDistanceMatrix
+        origins: [s]
+        destinations: [e]
+        travelMode: google.maps.TravelMode.DRIVING
+        avoidHighways: false
+        avoidTolls: false,
+        (response, status) =>
+          if (status == google.maps.DistanceMatrixStatus.OK)
+            deferred.resolve response.rows[0].elements[0].distance.text
+
+      return deferred.promise

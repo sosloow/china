@@ -1,10 +1,13 @@
 <div ng-controller="CalcCtrl as calc">
 <div id="map">
 <google-map center="map.center" options="map.options"
-            zoom="map.zoom" draggable="map.draggable">
+            zoom="map.zoom" draggable="true">
   <marker ng-repeat="city in cities" coords="city"
-          icon="marker.icon" click="cityClick(city)" options="marker.options">
+          icon="city.icon" click="cityClick(city)" 
+          options="marker.options">
   </marker>
+  <polyline path="path" geodesic="true">
+</polyline>
 </google-map>
 </div>
 <div id="calculator" class="centered">
@@ -14,11 +17,11 @@
         <div class="right_part">
           <div class="point">
             <div class="title darkblue uppercase">Откуда</div>
-            <input type="text">
+            <input type="text" ng-model="startPoint.query">
           </div>
           <div class="point">
             <div class="title darkblue uppercase">Куда</div>
-            <input type="text">
+            <input type="text" ng-model="endPoint.query">
           </div>
           <div class="clear"></div>
           <div class="checkboxes_line">
