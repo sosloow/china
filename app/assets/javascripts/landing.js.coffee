@@ -30,3 +30,10 @@ $ ->
 
   $('.carousel').carousel interval: false
 
+  @app.controller 'ReviewsCtrl', 
+    class ReviewsCtrl
+      @$inject = ['$scope', '$http']
+
+      constructor: (@scope, @http) ->
+        @scope.myInterval = 5000
+        @scope.reviews = []
