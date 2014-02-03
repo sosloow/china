@@ -277,10 +277,10 @@ input[type=checkbox]:checked + label {background-image:url('/images/calculate_ch
 
 #catalog {padding-bottom:50px;}
 .block {width:48%; float:left; padding:10px 2% 40px 0;}
-.block .image {width:115px; height:115px; float:left; margin-right:10px; overflow:hidden;}
+.block .image {width:115px; height:115px; float:left; margin-right:10px; overflow:hidden; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;}
 .block .image img {width:115px; height:auto;}
 .block h4 {font-family:"Open Sans"; font-size:14px; font-weight:600; padding-bottom:20px;}
-.block .links {font-family:"Open Sans"; font-size:14px; }
+.block .links {font-family:"Open Sans"; font-size:14px; line-height: 22px;}
 .block .links:hover {}
 
 /* docs */
@@ -310,13 +310,13 @@ input[type=checkbox]:checked + label {background-image:url('/images/calculate_ch
 
 /* reviews */
 
-#reviews {position:relative;  margin:0 auto 0; height:200px; padding:75px 30px 30px; min-width:930px;}
+#reviews {position:relative;  margin:0 auto 0; height:200px; padding:75px 80px 30px; min-width:830px;}
 .review {position:absolute; top:0; bottom:0; right:220px; margin:auto;}
 .review .image {width:120px; height:120px; overflow:hidden; margin-right:25px; float:left; }
 .review .image img {width:120px; height:auto;}
 .review .review_text {text-indent:-18px; font-family:"Open Sans"; font-size:14px; line-height:1.5; margin-left: 130px; margin-right: 220px;}
 .review .review_author {margin-top:10px; font-style:italic; font-family:"Open Sans"; font-size:14px;}
-.next_review {position:absolute; width:192px; height:50px; top:100px; right:30px;  background-image:url('/images/review_next.png'); background-repeat:no-repeat; background-position:center; text-align:center; color:#ff481b; line-height:50px; vertical-align:middle; cursor:pointer; font-family:"Open Sans"; font-size:12px; font-weight:600;}
+.next_review {position:absolute; width:192px; height:50px; top:100px; right:80px;  background-image:url('/images/review_next.png'); background-repeat:no-repeat; background-position:center; text-align:center; color:#ff481b; line-height:50px; vertical-align:middle; cursor:pointer; font-family:"Open Sans"; font-size:12px; font-weight:600;}
 .next_review:hover {background-image:url('/images/review_next_hover.png'); color:white;}
 .next_review:active {background-image:url('/images/review_next_active.png'); color:white;}
 
