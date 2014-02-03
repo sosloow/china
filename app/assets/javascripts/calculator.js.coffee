@@ -1,7 +1,7 @@
 @app = angular.module("China", ['google-maps', 'ui.bootstrap'])
 
-# $(document).on 'ready page:load', ->
-#   angular.bootstrap($('[ng-controller]')[0], ['Calculator'])
+$(document).on 'ready page:load', ->
+  angular.bootstrap($('[ng-controller]')[0], ['Calculator'])
 
 @app.directive 'integer', ->
   require: 'ngModel'

@@ -57,9 +57,7 @@
       <div class="down">
         <div class="left_part">
           <div class="selectors">
-            <div class="visual">
-              <div class="active"></div>
-            </div>
+            <div class="visual"></div>
 
             <div class="prices">
               <div class="price lightred">40 дней<br>от 5 000 Р</div>
@@ -70,30 +68,38 @@
             </div>
 
             <div class="images">
-              <div class="image"><div class="icon ship"></div></div>
-              <div class="image"><div class="icon train"></div></div>
-              <div class="image"><div class="icon auto"></div></div>
-              <div class="image"><div class="icon plane"></div></div>
+              <input id="ship" ng-model="transport" value="ship" type="radio" hidden/>
+              <label for="ship" class="image">
+                <div class="icon ship"></div>
+              </label>
+              <input id="train" ng-model="transport" value="train" type="radio" hidden/>
+              <label for="train" class="image">
+                <div class="icon train"></div>
+              </label>
+              <input id="auto" ng-model="transport" value="auto" type="radio" hidden/>
+              <label for="auto" class="image">
+                <div class="icon auto"></div>
+              </label>
+              <input id="plain" ng-model="transport" value="plane" type="radio" hidden/>
+              <label for="plain" class="image">
+                <div class="icon plane"></div>
+              </label>
               <div class="clear"></div>
             </div>
           </div>
           <div class="clear"></div>
           <div class="selector_description lightred" ng-show="transport=='ship'">
-            Перевозки морем – это дешевый, надежный и практичный метод доставки. Перевозка грузов морским транспортом более экономична, чем авиатрансфер, но занимает более продолжительное время.
+            Перевозка морским путем, это самый дешевый и долгий способ доставки от 40 до 60 дней. Груз перевозится только в контейнерах.
           </div>
           <div class="selector_description lightred" ng-show="transport=='train'">
-            Перевозки поездами – это дешевый, надежный и практичный метод доставки. Перевозка грузов морским транспортом более экономична, чем авиатрансфер, но занимает более продолжительное время.
+            Перевозка по железным дорогам занимает от 14 до 26 дней.
           </div>
           <div class="selector_description lightred" ng-show="transport=='auto'">
-            Перевозки газэлами – это дешевый, надежный и практичный метод доставки. Перевозка грузов морским транспортом более экономична, чем авиатрансфер, но занимает более продолжительное время.
+            Грузовой автотранспорт может забрать и доставить груз из любой точки страны.
           </div>
           <div class="selector_description lightred" ng-show="transport=='plane'">
-            Перевозки самилетами – это дешевый, надежный и практичный метод доставки. Перевозка грузов морским транспортом более экономична, чем авиатрансфер, но занимает более продолжительное время.
+            Самый дорогой и быстрый способ доставки от 3 до 12 дней.
           </div>
-          <input id="ship" ng-model="transport" value="ship" type="radio"/>
-          <input id="train" ng-model="transport" value="train" type="radio"/>
-          <input id="auto" ng-model="transport" value="auto" type="radio"/>
-          <input id="plain" ng-model="transport" value="plane" type="radio"/>
           <div class="price_block">
             <div class="title darkblue uppercase">Предварительная стоимость:</div>
             <div class="price lightred">~{{countTotalPrice()}} Р</div>
