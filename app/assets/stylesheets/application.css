@@ -264,13 +264,13 @@ input[type=checkbox]:checked + label {background-image:url('/images/calculate_ch
 .tabs .tab:hover {background-color:#3678e3; border:1px solid #3678e3;}
 .tabs .active, .tabs .active:hover {background-color:#ffba00; color:#a34f05; border:1px solid #ffa800; margin-right:0px;}
 .tabs .ui-tabs-active, .tabs .ui-tabs-active:hover {background-color:#ffba00; color:#a34f05; border:1px solid #ffa800; margin-right:0px;}
-.questions_container {height:400px; margin-right:310px;}
-.questions_list {width:220px; height:400px; float:left; margin-right:20px; background-image:url('/images/questions_simple.png'); background-repeat:repeat-y; background-position:right bottom;}
+.questions_container {padding-bottom:30px; margin-right:310px;}
+.questions_list {width:220px; min-height:200px; padding-bottom:30px; float:left; margin-right:20px; background-image:url('/images/questions_simple.png'); background-repeat:repeat-y; background-position:right bottom;}
 .questions_list li {text-indent:-20px; padding:0px 25px 18px 0;/*background-image:url('/images/questions_simple.png'); background-repeat:repeat-y; background-position:right bottom;*/}
 .questions_list .active {background-image:url('/images/questions.png'); background-repeat:no-repeat; background-position:right center;}
-.questions_list .active a {border-color:rgba(239,060,022,0.5); color:rgba(239,060,022,1);}
+.questions_list .active a {border-color:rgba(239,060,022,0.5); color:rgba(239,060,022,1); line-height: 18px;}
 .questions_list .ui-tabs-active {background-image:url('/images/questions.png'); background-repeat:no-repeat; background-position:right center;}
-.questions_list .ui-tabs-active a {border-color:rgba(239,060,022,0.5); color:rgba(239,060,022,1); line-height: 18px; }
+.questions_list .ui-tabs-active a {border-color:rgba(239,060,022,0.5); color:rgba(239,060,022,1);}
 .answer {padding-top:5px; padding-bottom:10px; line-height: 20px;}
 
 /* catalog */
@@ -335,7 +335,7 @@ input[type=checkbox]:checked + label {background-image:url('/images/calculate_ch
 /* brand */
 
 #brand {}
-.gray_form {width:412px; height:173px; padding:40px 40px 50px; background-image:url('/images/gray_form.png'); background-repeat:no-repeat; line-height:1.25;}
+.gray_form {position: relative; width:412px; height:173px; padding:40px 40px 50px; background-image:url('/images/gray_form.png'); background-repeat:no-repeat; line-height:1.25;}
 .gray_form .left {width:42%; margin-right:3%; float:left;}
 .gray_form .left p {font-family:"Open Sans"; font-size:14px; padding-bottom:20px;}
 .gray_form .left .number {font-family:"Open Sans"; font-size:12px;}

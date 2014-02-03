@@ -3,13 +3,21 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 # 
 $ ->
-  $('.order_form, .gray_form').bind 'ajax:success', ->
-    $(this).find('.left').fadeOut()
+  $('.order_form').bind 'ajax:success', ->
+    $(this).find('.left').css('visibility','hidden')
+    form_wrapper = $(this)
     form = $(this).find('.right')
-    form.fadeOut ->
-      form.html('<p class="after_text white"></p>')
-      form.find('p').html('спасибо! <br><br> наш специалист<br> свяжется с вами<br>в ближайшее время')
-      form.fadeIn()
+    form.css('visibility','hidden')
+    $(this).append('<p class="after_text white">спасибо! <br><br> наш специалист<br> свяжется с вами<br>в ближайшее время</p>')
+    $(this).fadeIn()
+
+  $('.gray_form').bind 'ajax:success', ->
+    $(this).find('.left').css('visibility','hidden')
+    form_wrapper = $(this)
+    form = $(this).find('.right')
+    form.css('visibility','hidden')
+    $(this).append('<p class="after_text black">спасибо! <br><br> наш специалист<br> свяжется с вами<br>в ближайшее время</p>')
+    $(this).fadeIn()
 
   $('.ask_form').bind 'ajax:success', ->
     form = $(this)
@@ -21,7 +29,7 @@ $ ->
   $('.popup_form').bind 'ajax:success', ->
     $('#popup_form .left, #popup_form .right').fadeOut();
     $('#popup_form').html('<p class="after_text">спасибо! <br><br> наш специалист<br> свяжется с вами<br>в ближайшее время</p>')
-    $('#popup_form').fadeOut(800)
+    $('#popup_form').fadeOut(2500)
 
   $('#order_form_button').click ->
     $('#popup_form').fadeToggle()
