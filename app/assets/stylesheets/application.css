@@ -125,7 +125,7 @@ input[type=checkbox] {display:none;}
 
 /* header */
 
-#header {position: relative; height: 118px; z-index: 1; background-image:url('/images/header_bg.png'); background-repeat:repeat-x;}
+#header {position: relative; height: 129px; z-index: 1; background-image:url('/images/header_bg.png'); background-repeat:repeat-x;}
 .header {}
 .header_logo {width:25%; max-width:280px; height:100px; float:left; padding-left:81px; background-image:url('/images/logo.png'); background-repeat:no-repeat; background-position:3px center; line-height:0.95;}
 .header_logo h1 {font-family:"Jura"; font-size:48px; font-weight:500; padding-top:18px; letter-spacing:-1.2px;}
@@ -259,8 +259,8 @@ input[type=checkbox]:checked + label {background-image:url('/images/calculate_ch
 #questions {}
 .questions {margin:0 auto 0; padding-bottom:50px;}
 .tabs {border-radius:5px; background-color:#78a3e8; float:left; overflow:hidden; margin-bottom:30px;}
-.tabs .tab {background-color:#1e57b3; padding: 11px 15px; float:left; cursor:pointer; font-family:"Open Sans"; margin-right:1px; border:1px solid #1e57b3;}
-.tabs .tab a {text-transform:uppercase; color:white; font-size:14px; font-weight:600;}
+.tabs .tab {background-color:#1e57b3; padding: 11px 15px; float:left; line-height: 18px; cursor:pointer; font-family:"Open Sans"; margin-right:1px; border:1px solid #1e57b3;}
+.tabs .tab a {text-transform:uppercase; color:white; font-size:14px; font-weight:600; line-height: 18px;}
 .tabs .tab:hover {background-color:#3678e3; border:1px solid #3678e3;}
 .tabs .active, .tabs .active:hover {background-color:#ffba00; color:#a34f05; border:1px solid #ffa800; margin-right:0px;}
 .tabs .ui-tabs-active, .tabs .ui-tabs-active:hover {background-color:#ffba00; color:#a34f05; border:1px solid #ffa800; margin-right:0px;}
@@ -270,8 +270,8 @@ input[type=checkbox]:checked + label {background-image:url('/images/calculate_ch
 .questions_list .active {background-image:url('/images/questions.png'); background-repeat:no-repeat; background-position:right center;}
 .questions_list .active a {border-color:rgba(239,060,022,0.5); color:rgba(239,060,022,1);}
 .questions_list .ui-tabs-active {background-image:url('/images/questions.png'); background-repeat:no-repeat; background-position:right center;}
-.questions_list .ui-tabs-active a {border-color:rgba(239,060,022,0.5); color:rgba(239,060,022,1);}
-.answer {padding-top:5px; padding-bottom:10px;}
+.questions_list .ui-tabs-active a {border-color:rgba(239,060,022,0.5); color:rgba(239,060,022,1); line-height: 18px; }
+.answer {padding-top:5px; padding-bottom:10px; line-height: 20px;}
 
 /* catalog */
 
@@ -321,14 +321,16 @@ input[type=checkbox]:checked + label {background-image:url('/images/calculate_ch
 .next_review:active {background-image:url('/images/review_next_active.png'); color:white;}
 
 /* ask form */
-.ask_form {float:right; width:220px; background-color:#f4f3ee; padding:35px;}
+.ask_form {position:relative; float:right; width:220px; height: 366px; background-color:#f4f3ee; padding:35px;}
 .ask_form input[type=text] {text-transform:uppercase; width:200px; height:18px; border:1px solid #adadad; padding:10px; margin-bottom:20px; color:#363636;}
 .ask_form textarea {width:200px; outline:none; border:1px solid #adadad; padding:10px; color:#363636; resize:none; margin-bottom:20px;}
-.ask_form input[type=text]::-webkit-input-placeholder {color:#363636;}
-.ask_form input[type=text]:-moz-placeholder {color:#363636;}
+.ask_form input[type=text]::-webkit-input-placeholder, .ask_form textarea::-webkit-input-placeholder  {color:#363636;}
+.ask_form input[type=text]:-moz-placeholder, .ask_form textarea:-moz-placeholder {color:#363636;}
 .ask_form input[type=submit] {text-transform:uppercase; width:222px; height:50px; border:0; outline:none; background-image:url('/images/ask_form_submit.png'); background-repeat:no-repeat; background-position:center; background-color:transparent; color:#4e4e4e; cursor:pointer;}
 .ask_form input[type=submit]:hover {background-image:url('/images/ask_form_hover.png');}
 .ask_form input[type=submit]:active {background-image:url('/images/ask_form_active.png');}
+
+.after_text {position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; height: 75px; line-height: 24px; text-align: center; text-transform: uppercase; font: 400 11px "Open Sans";}
 
 /* brand */
 
