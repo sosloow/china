@@ -52,8 +52,8 @@ $(document).on 'ready page:load', ->
       @scope.path = [{latitude: 0, longitude: 0}, {latitude: 0, longitude: 0}]
 
       @icon =
-        normal: '/images/point.png'
-        active: '/images/china.png'
+        normal: '/images/map_pointer_blue.png'
+        active: '/images/map_pointer_red.png'
 
       @http.get('/cities')
         .success (data) =>
@@ -75,6 +75,7 @@ $(document).on 'ready page:load', ->
       @scope.marker =
         options:
           cursor: 'pointer'
+          marginLeft: '-3px 0'
 
     countTotalPrice: =>
       kg = @scope.kg || 0
