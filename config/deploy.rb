@@ -42,7 +42,6 @@ ssh_options[:forward_agent] = true
 
 # Имя вашего проекта в панели управления.
 # Не меняйте это значение без необходимости, оно используется дальше.
-set :asset_env, "RAILS_GROUPS=assets DATABASE_URL=sqlite3://db/development.sqlite3"
 set :application,     "china"
 
 # Сервер размещения проекта.
@@ -114,4 +113,4 @@ namespace :deploy do
   end
 end
 
-after "deploy:cold", "deploy:migrate", "deploy:seed"
+before 'deploy:assets:precompile', 'deploy:migrate'

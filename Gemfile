@@ -40,7 +40,7 @@ gem 'devise-i18n-views'
 gem 'rails-i18n'
 
 gem 'friendly_id'
-gem 'geocoder', require: false
+gem 'geocoder'
 
 gem 'jquery-ui-rails'
 gem 'jquery-turbolinks'
