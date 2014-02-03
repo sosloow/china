@@ -1,3 +1,4 @@
+require 'bundler/setup'
 require 'geocoder'
 
 class City < ActiveRecord::Base
