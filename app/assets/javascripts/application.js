@@ -22,3 +22,18 @@
 //= require angular-ui-bootstrap
 //= require turbolinks
 //= require_tree .
+
+angular.module("China", ['Calculator', 'Landing']).run(function($compile, $rootScope, $document) {
+  return $document.on('page:load', function() {
+    var body, compiled;
+    body = angular.element('html');
+    compiled = $compile(body.html())($rootScope);
+    return body.html(compiled);
+  });
+});
+
+// angular.module("China", ['Calculator', 'Landing']);
+
+// $(document).on('ready page:load', function() {
+//   angular.bootstrap("html", ['China']);
+// });

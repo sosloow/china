@@ -38,12 +38,28 @@ $ ->
   $('#how-tabs').tabs(active: 0);
   $('#s-tabs').tabs(active: 0);
 
-  $('.carousel').carousel interval: false
+  $('.carousel').carousel interval: 5000
 
-  @app.controller 'ReviewsCtrl', 
-    class ReviewsCtrl
-      @$inject = ['$scope', '$http']
+@landing = angular.module("Landing", ['ui.bootstrap'])
 
-      constructor: (@scope, @http) ->
-        @scope.myInterval = 5000
-        @scope.reviews = []
+@landing.controller 'ReviewsCtrl', 
+  class ReviewsCtrl
+    @$inject = ['$scope', '$http']
+
+    constructor: (@scope) ->
+      @scope.myInterval = 5000
+      @scope.reviews = []
+
+@landing.controller 'LandingCtrl',
+  class LandingCtrl
+    @$inject = ['$scope', '$http']
+
+    constructor: (@scope, @http) ->
+      @http.get('/cities')
+        .success (data) =>
+          @scope.topCats = data
+
+      @http.get('/cities')
+        .success (data) =>
+          @scope.subCats = data
+      
