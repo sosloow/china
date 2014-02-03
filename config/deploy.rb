@@ -30,7 +30,7 @@ require "bundler/capistrano"
 # сжатых файлов статики при деплое.
 # Если вы не используете assets pipelining в своем проекте,
 # или у вас старая версия rails, закомментируйте эту строку.
-load 'deploy/assets'
+# load 'deploy/assets'
 
 # Для удобства работы мы рекомендуем вам настроить авторизацию
 # SSH по ключу. При работе capistrano будет использоваться
@@ -107,10 +107,10 @@ namespace :deploy do
     run "[ -f #{unicorn_pid} ] && kill -USR2 `cat #{unicorn_pid}` || #{unicorn_start_cmd}"
   end
 
-  desc ""
+  desc "Seed DB"
   task :seed, roles: :db do
     run "RAILS_ENV=#{rails_env} #{bundle} exec rake db:seed"
   end
 end
 
-before 'deploy:assets:precompile', 'deploy:migrate'
+after 'deploy', 'deploy:migrate', 'deploy:seed'
