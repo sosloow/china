@@ -30,7 +30,7 @@ require "bundler/capistrano"
 # сжатых файлов статики при деплое.
 # Если вы не используете assets pipelining в своем проекте,
 # или у вас старая версия rails, закомментируйте эту строку.
-  load 'deploy/assets'
+load 'deploy/assets'
 
 # Для удобства работы мы рекомендуем вам настроить авторизацию
 # SSH по ключу. При работе capistrano будет использоваться
@@ -42,6 +42,7 @@ ssh_options[:forward_agent] = true
 
 # Имя вашего проекта в панели управления.
 # Не меняйте это значение без необходимости, оно используется дальше.
+set :asset_env, "RAILS_GROUPS=assets DATABASE_URL=sqlite3://db/development.sqlite3"
 set :application,     "china"
 
 # Сервер размещения проекта.
@@ -113,4 +114,4 @@ namespace :deploy do
   end
 end
 
-after "deploy", "deploy:migrate", "deploy:seed"
+after "deploy:cold", "deploy:migrate", "deploy:seed"
