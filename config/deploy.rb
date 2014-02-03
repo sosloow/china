@@ -60,6 +60,7 @@ set :bundle_dir,      File.join(fetch(:shared_path), 'gems')
 role :web,            deploy_server
 role :app,            deploy_server
 role :db,             deploy_server, :primary => true
+set :rails_env,        'production'
 
 # Следующие строки необходимы, т.к. ваш проект использует rvm.
 set :rvm_ruby_string, "2.1.0"
@@ -108,9 +109,14 @@ namespace :deploy do
   end
 
   desc "Seed DB"
+  task :migrate, roles: :db do
+    run "cd #{deploy_to}/current; RAILS_ENV=#{rails_env} #{bundle_cmd} exec rake db:migrate"
+  end  
+
+  desc "Seed DB"
   task :seed, roles: :db do
-    run "RAILS_ENV=#{rails_env} #{bundle} exec rake db:seed"
+    run "cd #{deploy_to}/current; RAILS_ENV=#{rails_env} #{bundle_cmd} exec rake db:seed"
   end
 end
 
-after 'deploy', 'deploy:migrate', 'deploy:seed'
+# after 'deploy', 'deploy:migrate', 'deploy:seed'
