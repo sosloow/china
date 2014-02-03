@@ -10,7 +10,7 @@
 </polyline>
 </google-map>
 </div>
-<div id="calculator" class="centered">
+<div id="calculator">
   <div class="calculator">
     <div class="main_form">
       <div class="top">
@@ -247,7 +247,7 @@
       <div class="image">
         <%= image_tag review.photo(:medium) %>
       </div>
-      <div class="review_text"><%= review.body %></div>
+      <div class="review_text">&mdash; <%= review.body %></div>
       <div class="review_author"><%= review.name %></div>
     </div>
     <% end %>

@@ -1,5 +1,5 @@
 class Review < ActiveRecord::Base
-  has_attached_file :photo, styles: {medium: '150x150>'}
+  has_attached_file :photo, styles: {medium: '120x120>'}
 
   attr_accessor :delete_photo
   before_validation { self.image.clear if self.delete_photo == '1' }
