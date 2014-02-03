@@ -106,6 +106,11 @@ namespace :deploy do
   task :restart, :roles => :app do
     run "[ -f #{unicorn_pid} ] && kill -USR2 `cat #{unicorn_pid}` || #{unicorn_start_cmd}"
   end
+
+  desc ""
+  task :seed, roles: :db do
+    run "RAILS_ENV=#{rails_env} #{bundle} exec rake db:seed"
+  end
 end
 
-after "deploy", "deploy:migrate"
+after "deploy", "deploy:migrate", "deploy:seed"
