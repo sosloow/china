@@ -105,15 +105,25 @@ a, a:hover, .clear_link, .clear_link:hover  {text-decoration:none; border-bottom
 									 url('/images/order_form_submit_active.png'),
 									 url('/images/calculate_checkbox_checked.png'),
 									 url('/images/calculate_checkbox_checked.png'),
-									 url('/images/selectors_hover.png'),
+                   url('/images/selectors_hover.png'),
+									 url('/images/selectors_active.png'),
 									 url('/images/blue_form_submit_hover.png'),
 									 url('/images/blue_form_submit_active.png'),
 									 url('/images/how_arrow_hover.png'),
 									 url('/images/how_arrow_active.png'),
-									 url('/images/questions.png'),
+                   url('/images/questions.png'),
+                   url('/images/ship_hover.png'),
+                   url('/images/train_hover.png'),
+                   url('/images/plane_hover.png'),
+                   url('/images/auto_hover.png'),
+                   url('/images/ship_active.png'),
+                   url('/images/train_active.png'),
+                   url('/images/plane_active.png'),
+									 url('/images/auto_active.png'),
 									 url('/images/review_next_hover.png'),
 									 url('/images/review_next_active.png'),
-									 url('/images/ask_form_hover.png'),
+                   url('/images/ask_form_hover.png'),
+									 url('/images/map_pointer_red.png'),
 									 url('/images/ask_form_active.png');
 }
 
@@ -204,6 +214,7 @@ input[type=checkbox]:checked + label {background-image:url('/images/calculate_ch
 .left_part .selectors .image:hover .plane {background-image:url('/images/plane_hover.png');}
 
 .left_part .selectors .images input[type="radio"]:checked + label.image {background-image:url('/images/selectors_active.png') !important; background-position: 2px 52px !important;}
+.left_part .selectors .images input[type="radio"]:checked + label .price {border-color:rgba(255,072,027,0.3); color:rgba(255,072,027,1);}
 .left_part .selectors .images input[type="radio"]:checked + label .ship {background-image:url('/images/ship_active.png');}
 .left_part .selectors .images input[type="radio"]:checked + label .train {background-image:url('/images/train_active.png');}
 .left_part .selectors .images input[type="radio"]:checked + label .auto {background-image:url('/images/auto_active.png');}
@@ -212,7 +223,7 @@ input[type=checkbox]:checked + label {background-image:url('/images/calculate_ch
 .left_part .selectors .visual {position: absolute; top: 50px; width: 480px; height: 39px; background-image: url('/images/selectors.png'); background-repeat: no-repeat; background-position: 16px 50%;}
 .left_part .selectors .visual .active {position: relative; width:39px; height:39px; background-image:url('/images/selectors_active.png'); background-repeat:no-repeat; background-position:left; z-index:5;}
 .left_part .selectors .prices {position: absolute; top:95px;}
-.left_part .selectors .prices .price {float:left; width:120px; font-size:12px; font-weight: 600; line-height: 1.25;}
+.left_part .selectors .images input[type="radio"] + label .price {float:left; margin-top:60px; width:120px; font-size:12px; font-weight: 600; line-height: 1.25;}
 
 .left_part .selector_description {padding-top:10px; padding-bottom:40px; border-bottom:1px solid #c7c7c7; margin-right:80px;}
 .left_part .price_block {padding:40px 80px 20px 0;}
@@ -281,16 +292,16 @@ input[type=checkbox]:checked + label {background-image:url('/images/calculate_ch
 .block .image img {width:115px; height:auto;}
 .block h4 {font-family:"Open Sans"; font-size:14px; font-weight:600; padding-bottom:20px;}
 .block .links {font-family:"Open Sans"; font-size:14px; line-height: 22px;}
-.block .links:hover {}
+.block .links:hover {color:#444444;}
 
 /* docs */
 
 #docs, .services {padding-bottom:50px;}
 #docs .left_part, .services .left_part  {margin-right:470px;}
-#docs .left_part, .services .left_part .questions_container {margin-right:0;}
+#docs .left_part .questions_container, .services .left_part .questions_container {margin-right:0;}
 #docs .right_part, .services .right_part  {width:450px; float:right;}
 .document {position:relative; height: 45px; padding: 10px 0 15px;border-bottom:1px solid #c3c3c3;}
-.document .image {margin-top:5px; width:40px; height:40px; float:left; margin-right:30px;}
+.document .image {margin-top:5px; width:40px; height:40px; float:left; margin-right:30px;  }
 .document .doc_title {display:inline-block; font-size:14px; }
 .document .doc_description {font-size:14px; padding-top:5px; padding-right:50px;}
 .document .download_link {position:absolute; right:20px; top:0; bottom:0; margin:auto 0; width:21px; height:21px; background-image:url('/images/download.png'); background-repeat:no-repeat;}
@@ -298,7 +309,7 @@ input[type=checkbox]:checked + label {background-image:url('/images/calculate_ch
 /* expert */
 
 .expert {width:120px; padding:40px 20px; float:left; background-image:url('/images/small_arrow.png'); background-repeat:no-repeat; background-position:100% 80px;}
-.expert img {width:115px; height:115px; margin-bottom:20px;}
+.expert img {width:115px; height:115px; margin-bottom:20px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;}
 .expert .name {font-style:italic; font-size:14px;}
 
 /* about block */
