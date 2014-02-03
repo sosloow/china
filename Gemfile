@@ -60,3 +60,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'rb-readline'
 end
+
+group :assets do
+  gem 'geocoder'
+end
