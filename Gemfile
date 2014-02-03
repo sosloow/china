@@ -40,7 +40,7 @@ gem 'devise-i18n-views'
 gem 'rails-i18n'
 
 gem 'friendly_id'
-gem 'geocoder'
+gem 'geocoder', require: false
 
 gem 'jquery-ui-rails'
 gem 'jquery-turbolinks'
@@ -59,8 +59,4 @@ group :development, :test do
   gem 'debugger'
   gem 'factory_girl_rails'
   gem 'rb-readline'
-end
-
-group :assets do
-  gem 'geocoder'
 end
