@@ -1,5 +1,14 @@
 <div id="docs" class="content_block centered">
   <h2 class="blue uppercase">Образцы документов</h2>
+  
+  <div class="right_part">
+    <div class="expert">
+      <img src="images/popkov.png" alt="">
+      <div class="name">Попков Р.Е., <br>менеджер</div>
+    </div>
+    <%= render "landing/order_form" %>
+  </div>
+
   <div class="left_part">
     <% @docs.each do |doc| %>
     <div class="document">
@@ -11,13 +20,6 @@
       <%= link_to "", doc.file.url, {class: "download_link"} %>
     </div>
     <% end %>
-  </div>
-  <div class="right_part">
-    <div class="expert">
-      <img src="" alt="">
-      <div class="name">Алексеев А.А., <br>менеджер</div>
-    </div>
-    <%= render "landing/order_form" %>
   </div>
   <div class="clear"></div>
   <br><br>
