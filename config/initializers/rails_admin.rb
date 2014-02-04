@@ -5,6 +5,7 @@ RailsAdmin.config do |config|
   I18n.default_locale = :ru
 
   config.model 'City' do
+    weight 10
     list do
       field :query
       field :latitude
@@ -13,6 +14,8 @@ RailsAdmin.config do |config|
   end
 
   config.model 'Question' do
+    parent 'QuestionCategory'
+    weight 6
     list do
       field :title
       field :body
@@ -20,7 +23,16 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.model 'QuestionCategory' do
+    weight 5
+    list do
+      field :title
+      field :questions
+    end
+  end
+
   config.model 'Brand' do
+    weight 3
     list do
       field :title
       field :description
@@ -29,7 +41,8 @@ RailsAdmin.config do |config|
     end
   end
 
-    config.model 'Document' do
+  config.model 'Document' do
+    weight 9
     list do
       field :title
       field :description
@@ -38,6 +51,7 @@ RailsAdmin.config do |config|
   end
 
   config.model 'Order' do
+    weight -1
     list do
       field :name
       field :phone
@@ -47,6 +61,8 @@ RailsAdmin.config do |config|
   end
 
   config.model 'Product' do
+    parent 'Brand'
+    weight 4
     list do
       field :title
       field :description
@@ -57,6 +73,7 @@ RailsAdmin.config do |config|
   end
 
   config.model 'Review' do
+    weight 7
     list do
       field :name
       field :photo
@@ -65,13 +82,16 @@ RailsAdmin.config do |config|
   end
 
   config.model 'Service' do
+    weight 8
     list do
       field :name
       field :body
     end
   end
 
-    config.model 'SubCategory' do
+  config.model 'SubCategory' do
+    parent 'TopCategory'
+    weight 2
     list do
       field :title
       field :top_category
@@ -80,6 +100,7 @@ RailsAdmin.config do |config|
   end
 
   config.model 'TopCategory' do
+    weight 1
     list do
       field :title
       field :image
@@ -87,4 +108,7 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.model 'User' do
+    weight 12
+  end
 end
