@@ -255,5 +255,3 @@ ru:
   activerecord:
     errors:
       <<: *errors
-    models:
-      brand: Производитель

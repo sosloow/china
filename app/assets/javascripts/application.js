@@ -14,26 +14,13 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require jquery.ui.tabs
-//= require jquery.ui.slider
 //= require underscore
-//= require gmaps/google
 //= require twitter/bootstrap/bootstrap-carousel
 //= require angular
-//= require angular-ui-bootstrap
 //= require turbolinks
 //= require_tree .
 
-angular.module("China", ['Calculator', 'Landing']).run(function($compile, $rootScope, $document) {
-  return $document.on('page:load', function() {
-    var body, compiled;
-    body = angular.element('html');
-    compiled = $compile(body.html())($rootScope);
-    return body.html(compiled);
-  });
+$(document).on('ready page:load', function() {
+  angular.bootstrap('[ng-controller="CalcCtrl"]', ['Calculator']);
+  angular.bootstrap('[ng-controller="LandingCtrl"]', ['Landing']);
 });
-
-// angular.module("China", ['Calculator', 'Landing']);
-
-// $(document).on('ready page:load', function() {
-//   angular.bootstrap("html", ['China']);
-// });

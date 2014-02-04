@@ -40,7 +40,7 @@ $ ->
 
   $('.carousel').carousel interval: 5000
 
-@landing = angular.module("Landing", ['ui.bootstrap'])
+@landing = angular.module("Landing", [])
 
 @landing.controller 'ReviewsCtrl', 
   class ReviewsCtrl

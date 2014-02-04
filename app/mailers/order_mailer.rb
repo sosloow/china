@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 class OrderMailer < ActionMailer::Base
-  default from: "no.reply.sbgroup@gmail.com"
+  default from: 'no-reply@sb-logistics.com'
 
   def new_order(order)
     @order = order
-    mail(to: 'sosloow@gmail.com', subject: 'Новая заявка на сайте')
+    User.all.each do |user|
+      mail(to: user.email, subject: 'Новая заявка на сайте')
+    end
   end
 end

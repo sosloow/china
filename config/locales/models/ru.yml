@@ -4,36 +4,94 @@ ru:
       brand:
         zero: производителей
         one: производитель
-        few: производителя
-        many: производителей
         other: производители
       user:
         zero: пользователей
         one: пользователь
-        few: производителя
-        many: производителей
         other: пользователи
       question:
         zero: вопросов
         one: вопрос
-        few: вопроса
-        many: вопросов
         other: вопросы
       product:
         zero: товаров
         one: товар
-        few: товара
-        many: товаров
         other: товары
       products_category:
         zero: категорий
         one: категория
-        few: категории
-        many: категорий
         other: категории
       question_category:
         zero: категории вопросов
         one: категория вопросов
-        few: категории вопросов
-        many: категорий вопросов
         other: категории вопросов
+      city: 
+        one: город
+        other: города
+      document:
+        one: документ
+        other: документы
+      review:
+        one: отзыв
+        other: отзывы
+      order:
+        one: заказ
+        other: заказы
+      service:
+        one: услуга
+        other: услуги
+      top_category:
+        one: основная категория
+        other: основные категории
+      sub_category:
+        one: подкатегория
+        other: подкатегории
+
+    attributes:
+      city:
+        query: город
+        latitude: широта
+        longitude: долгота
+      question:
+        title: заголовок
+        body: текст
+        question_category: категория
+      review:
+        name: ФИО
+        body: текст
+        photo: фото
+      product:
+        title: название
+        description: описание
+        brand: производитель
+        sub_category: категория
+        image: изображение
+      top_category:
+        title: название
+        sub_categories: подкатегории
+        image: изображение
+      service: 
+        name: название
+        body: описание
+      sub_category:
+        title: название
+        top_category: родительская категория
+        products: товары
+        brands: производители
+      order:
+        name: имя
+        phone: телефон
+        question: вопрос
+        created_at: получен
+      document:
+        title: название
+        description: описание
+        file: файл
+      question_category:
+        title: название
+        questions: вопросы
+      brand:
+        title: название
+        description: описание
+        image: изображение
+        sub_categories: категории товаров

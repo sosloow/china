@@ -1,7 +1,4 @@
-@app = angular.module("Calculator", ['google-maps', 'ui.bootstrap'])
-
-#$(document).on 'ready page:load', ->
-#  angular.bootstrap($('[ng-controller="CalcCtrl"]')[0], ['Calculator'])
+@app = angular.module("Calculator", ['google-maps'])
 
 @app.directive 'integer', ->
   require: 'ngModel'

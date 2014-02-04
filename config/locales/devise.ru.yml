@@ -43,8 +43,11 @@ ru:
       user:
         signed_up: Регистрация прошла успешно
     sessions:
+      user:
+        signed_in: Вы успешно вошли в систему
       new:
         sign_in: Войти
+        remember_me: Запомнить
     shared:
       links:
         didn_t_receive_confirmation_instructions: Не получили подтверждение?
