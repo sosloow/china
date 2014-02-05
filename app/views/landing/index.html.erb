@@ -6,7 +6,7 @@
           icon="city.icon" click="cityClick(city)" 
           options="marker.options">
   </marker>
-  <polyline path="path" geodesic="true">
+  <polyline path="path" geodesic="true" stroke="pathLine.stroke">
   </polyline>
 </google-map>
 </div>
@@ -17,11 +17,15 @@
         <div class="right_part">
           <div class="point">
             <div class="title darkblue uppercase">Откуда</div>
-            <input type="text" ng-model="startPoint.query">
+            <input type="text" 
+                   typeahead="city.query for city in cities | filter:$viewValue | limitTo:8"
+                   ng-model="startPoint">
           </div>
           <div class="point">
             <div class="title darkblue uppercase">Куда</div>
-            <input type="text" ng-model="endPoint.query">
+            <input type="text" 
+                   typeahead="city.query for city in cities | filter:$viewValue | limitTo:8"
+                   ng-model="endPoint">
           </div>
           <div class="clear"></div>
           <div class="checkboxes_line">

@@ -46,6 +46,7 @@ gem 'jquery-ui-rails'
 gem 'jquery-turbolinks'
 gem 'twitter-bootstrap-rails'
 gem 'angularjs-rails'
+gem 'angular-ui-bootstrap-rails'
 gem 'underscore-rails'
 gem 'gmaps4rails'
 

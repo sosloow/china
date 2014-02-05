@@ -1,4 +1,4 @@
-@app = angular.module("Calculator", ['google-maps'])
+@app = angular.module("Calculator", ['google-maps', 'ui.bootstrap'])
 
 @app.directive 'integer', ->
   require: 'ngModel'
@@ -73,6 +73,11 @@
         options:
           cursor: 'pointer'
           marginLeft: '-3px 0'
+
+      @scope.pathLine =
+        stroke:
+          color: '#F62817'
+          opacity: 0.5
 
     countTotalPrice: =>
       kg = @scope.kg || 0

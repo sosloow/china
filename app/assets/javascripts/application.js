@@ -17,6 +17,7 @@
 //= require underscore
 //= require twitter/bootstrap/bootstrap-carousel
 //= require angular
+//= require angular-ui-bootstrap
 //= require turbolinks
 //= require_tree .
 
