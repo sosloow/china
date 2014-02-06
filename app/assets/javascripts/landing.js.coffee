@@ -3,6 +3,10 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 # 
 $ ->
+  $('#catalog .block').hover (ev) -> 
+    $(this).find('a').toggleClass 'darkgray'
+    $(this).find('a').toggleClass 'gray'
+
   $('.order_form').bind 'ajax:success', ->
     $(this).find('.left').css('visibility','hidden')
     form_wrapper = $(this)

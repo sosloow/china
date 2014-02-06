@@ -87,8 +87,10 @@ table {
 .black:hover {		border-color:rgba(000,000,000,0.5); color:rgba(000,000,000,1);}
 .orange {					border-color:rgba(239,060,022,0.3); color:rgba(239,060,022,1);}
 .orange:hover {		border-color:rgba(239,060,022,0.5); color:rgba(239,060,022,1);}
-.gray {						border-color:rgba(130,130,130,0.3); color:rgba(130,130,130,1);}
+.gray {           border-color:rgba(130,130,130,0.3); color:rgba(130,130,130,1);}
 .gray:hover {			border-color:rgba(130,130,130,0.5); color:rgba(130,130,130,1);}
+.darkgray {       border-color:rgba(090,090,090,0.3); color:rgba(090,090,090,1);}
+.darkgray:hover { border-color:rgba(090,090,090,0.5); color:rgba(090,090,090,1);}
 .white {					border-color:rgba(255,255,255,0.5); color:rgba(255,255,255,1);}
 .red {						border-color:rgba(232,046,046,0.5); color:rgba(232,046,046,1);}
 .lightred {				border-color:rgba(255,072,027,0.3); color:rgba(255,072,027,1);}
@@ -291,6 +293,7 @@ input[type=checkbox]:checked + label {background-image:url('/images/calculate_ch
 .block .image {width:115px; height:115px; float:left; margin-right:10px; overflow:hidden; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;}
 .block .image img {width:115px; height:auto;}
 .block h4 {font-family:"Open Sans"; font-size:14px; font-weight:600; padding-bottom:20px;}
+#brand .block .gray p {margin-left: 125px;}
 .block .links {font-family:"Open Sans"; font-size:14px; line-height: 22px;}
 .block .links:hover {color:#444444;}
 
