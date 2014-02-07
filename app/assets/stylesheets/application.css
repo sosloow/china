@@ -227,7 +227,7 @@ input[type=checkbox]:checked + label {background-image:url('/images/calculate_ch
 .left_part .selectors .prices {position: absolute; top:95px;}
 .left_part .selectors .images input[type="radio"] + label .price {float:left; margin-top:60px; width:120px; font-size:12px; font-weight: 600; line-height: 1.25;}
 
-.left_part .selector_description {padding-top:10px; padding-bottom:40px; border-bottom:1px solid #c7c7c7; margin-right:80px;}
+.left_part .selector_description {min-height:40px; padding-top:10px; padding-bottom:40px; border-bottom:1px solid #c7c7c7; margin-right:80px; line-height: 1.25;}
 .left_part .price_block {padding:40px 80px 20px 0;}
 .left_part .price_block .title {width:200px; float:left;}
 .left_part .price_block .price {font-size:47px; text-align: center;}
