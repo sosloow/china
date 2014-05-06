@@ -66,12 +66,12 @@ table {
 /* cancel selection */
 
 .content_block h2, .arrow, .next_review, input[type=checkbox] + label {
-	-webkit-touch-callout:none;
-	-webkit-user-select:none;
-	-khtml-user-select:none;
-	-moz-user-select:none;
-	-ms-user-select:none;
-	user-select:none;
+  -webkit-touch-callout:none;
+  -webkit-user-select:none;
+  -khtml-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
 }
 
 /* common */
@@ -79,40 +79,42 @@ table {
 .underline, .underline:hover {text-decoration:none; border-bottom:1px; border-style:solid; line-height:1.2; cursor:pointer;}
 .dotted, .dotted:hover {text-decoration:none; border-bottom:1px; border-style:dotted; line-height:1.2; cursor:pointer;}
 
-.blue {						border-color:rgba(050,120,234,0.3); color:rgba(050,120,234,1);}
-.blue:hover {			border-color:rgba(050,120,234,0.5); color:rgba(050,120,234,1);}
-.darkblue {				border-color:rgba(030,087,179,0.3); color:rgba(030,087,179,1);}
-.darkblue:hover {	border-color:rgba(030,087,179,0.5); color:rgba(030,087,179,1);}
-.black {					border-color:rgba(000,000,000,0.3); color:rgba(000,000,000,1);}
-.black:hover {		border-color:rgba(000,000,000,0.5); color:rgba(000,000,000,1);}
-.orange {					border-color:rgba(239,060,022,0.3); color:rgba(239,060,022,1);}
-.orange:hover {		border-color:rgba(239,060,022,0.5); color:rgba(239,060,022,1);}
+.blue {           border-color:rgba(050,120,234,0.3); color:rgba(050,120,234,1);}
+.blue:hover {     border-color:rgba(050,120,234,0.5); color:rgba(050,120,234,1);}
+.darkblue {       border-color:rgba(030,087,179,0.3); color:rgba(030,087,179,0.6);}
+.darkblue:hover { border-color:rgba(030,087,179,0.5); color:rgba(030,087,179,1);}
+.black {          border-color:rgba(000,000,000,0.3); color:rgba(000,000,000,1);}
+.black:hover {    border-color:rgba(000,000,000,0.5); color:rgba(000,000,000,1);}
+.orange {         border-color:rgba(239,060,022,0.3); color:rgba(239,060,022,1);}
+.orange:hover {   border-color:rgba(239,060,022,0.5); color:rgba(239,060,022,1);}
 .gray {           border-color:rgba(130,130,130,0.3); color:rgba(130,130,130,1);}
-.gray:hover {			border-color:rgba(130,130,130,0.5); color:rgba(130,130,130,1);}
+.gray:hover {     border-color:rgba(130,130,130,0.5); color:rgba(130,130,130,1);}
 .darkgray {       border-color:rgba(090,090,090,0.3); color:rgba(090,090,090,1);}
 .darkgray:hover { border-color:rgba(090,090,090,0.5); color:rgba(090,090,090,1);}
-.white {					border-color:rgba(255,255,255,0.5); color:rgba(255,255,255,1);}
-.red {						border-color:rgba(232,046,046,0.5); color:rgba(232,046,046,1);}
-.lightred {				border-color:rgba(255,072,027,0.3); color:rgba(255,072,027,1);}
-.lightred:hover {	border-color:rgba(255,072,027,0.5); color:rgba(255,072,027,1);}
+.white {          border-color:rgba(255,255,255,0.5); color:rgba(255,255,255,1);}
+.red {            border-color:rgba(232,046,046,0.5); color:rgba(232,046,046,1);}
+.lightred {       border-color:rgba(255,072,027,0.3); color:rgba(255,072,027,1);}
+.lightred:hover { border-color:rgba(255,072,027,0.5); color:rgba(255,072,027,1);}
 
 body {font-family:"Open Sans";}
+i {font-style: italic;}
 
 .uppercase {text-transform:uppercase; letter-spacing:0.7px;}
 a, a:hover, .clear_link, .clear_link:hover  {text-decoration:none; border-bottom:1px solid white;}
 
+.hidden {display:none;}
 .clear {clear:both;}
 .loader {margin-left:-9999px; 
-	background-image:url('/images/order_form_submit_hover.png'),
-									 url('/images/order_form_submit_active.png'),
-									 url('/images/calculate_checkbox_checked.png'),
-									 url('/images/calculate_checkbox_checked.png'),
+  background-image:url('/images/order_form_submit_hover.png'),
+                   url('/images/order_form_submit_active.png'),
+                   url('/images/calculate_checkbox_checked.png'),
+                   url('/images/calculate_checkbox_checked.png'),
                    url('/images/selectors_hover.png'),
-									 url('/images/selectors_active.png'),
-									 url('/images/blue_form_submit_hover.png'),
-									 url('/images/blue_form_submit_active.png'),
-									 url('/images/how_arrow_hover.png'),
-									 url('/images/how_arrow_active.png'),
+                   url('/images/selectors_active.png'),
+                   url('/images/blue_form_submit_hover.png'),
+                   url('/images/blue_form_submit_active.png'),
+                   url('/images/how_arrow_hover.png'),
+                   url('/images/how_arrow_active.png'),
                    url('/images/questions.png'),
                    url('/images/ship_hover.png'),
                    url('/images/train_hover.png'),
@@ -121,12 +123,12 @@ a, a:hover, .clear_link, .clear_link:hover  {text-decoration:none; border-bottom
                    url('/images/ship_active.png'),
                    url('/images/train_active.png'),
                    url('/images/plane_active.png'),
-									 url('/images/auto_active.png'),
-									 url('/images/review_next_hover.png'),
-									 url('/images/review_next_active.png'),
+                   url('/images/auto_active.png'),
+                   url('/images/review_next_hover.png'),
+                   url('/images/review_next_active.png'),
                    url('/images/ask_form_hover.png'),
-									 url('/images/map_pointer_red.png'),
-									 url('/images/ask_form_active.png');
+                   url('/images/map_pointer_red.png'),
+                   url('/images/ask_form_active.png');
 }
 
 .centered {min-width:930px; max-width:1400px; margin:0 auto 0; padding:0px 30px; clear:both;}
@@ -139,11 +141,17 @@ input[type=checkbox] {display:none;}
 
 #header {position: relative; min-width:960px; padding:0 15px; height: 129px; z-index: 1; background-image:url('/images/header_bg.png'); background-repeat:repeat-x;}
 .header {position: relative; margin:0 auto 0; width:100%;}
-.header_logo {width:27%; max-width:280px; height:100px; float:left; padding-left:81px; background-image:url('/images/logo.png'); background-repeat:no-repeat; background-position:3px center; line-height:0.95;}
+.header_logo {width:23%; max-width:260px; height:100px; float:left; padding-left:81px; background-image:url('/images/logo.png'); background-repeat:no-repeat; background-position:3px center; line-height:0.95;}
 .header_logo h1 {font-family:"Jura"; font-size:48px; font-weight:500; padding-top:18px; letter-spacing:-1.2px;}
 .header_logo h3 {font-family:"Open Sans"; font-size:14px; padding-left:4px; letter-spacing:-0.3px;}
 
-.header .menu {margin-left:340px; height:75px; padding-top:25px; margin-right:230px;}
+.header .menu {margin-left:315px; height:75px; padding-top:25px; margin-right:230px;}
+.header .menu .lenguages {float:right; margin-right:10px;}
+.header .menu .lenguages li {float:left; padding:0 4px; margin:0 2px; color: rgb( 255, 255, 255 ); line-height:21px;}
+.header .menu .lenguages li a {font-family:"Open Sans"; font-size:11px; font-weight:600;}
+.header .menu .lenguages .active {border-radius: 2px; background-color: rgb( 30, 87, 179 );}
+.header .menu .lenguages .active a {border-bottom:0;}
+
 .header .top_menu {line-height:1.5;}
 .header .top_menu li {float:left; margin-right:20px;}
 .header .menu a {font-family:"Open Sans"; font-size:11px; font-weight:600;}
@@ -173,7 +181,7 @@ input[type=checkbox] {display:none;}
 
 /* calculator */
 
-input[type=checkbox] + label {height:24px; background-image:url('/images/calculate_checkbox.png'); background-repeat:no-repeat; background-position:left bottom; cursor:pointer; padding-left:30px; display:inline-block; max-width:32%; vertical-align:top; line-height:24px; font-size:14px;}
+input[type=checkbox] + label {height:24px; background-image:url('/images/calculate_checkbox.png'); background-repeat:no-repeat; background-position:left bottom; cursor:pointer; padding-left:27px; display:inline-block; max-width:38%; vertical-align:top; line-height:24px; font-size:14px;}
 input[type=checkbox]:checked + label {background-image:url('/images/calculate_checkbox_checked.png');}
 
 #calculator {min-width: 980px; padding:0 5px; margin-top:-190px; margin-bottom:85px; position: relative; z-index: 1;}
@@ -195,11 +203,19 @@ input[type=checkbox]:checked + label {background-image:url('/images/calculate_ch
 .calculator .top .right_part {float:right; width: 490px;}
 .calculator .top .point input[type=text] {width:85%;}
 .calculator .top .present {font-family:"Open Sans"; font-size:16px;}
-.calculator .top .left_part input[type=checkbox] + label {margin-right:2%;}
-.checkboxes_line {margin-top:4px; padding-left:21px;}
+.calculator .top .left_part input[type=checkbox] + label {margin-right:1%;}
+
+.down_block {margin-left:21px;}
+.down_block .inputs {float:left; width:145px;}
+.checkboxes_line {padding-left:21px; height:65px; padding-top: 7px;}
+.checkboxes_line input[type=checkbox] + label {width:123px; margin-right:2%;}
+.down_block .checkboxes_line {margin-left:147px;}
 
 .calculator .down {position:relative; padding-top:40px;}
 .calculator .down .left_part {width:54%; float:left;}
+
+.calculator .down {position:relative; padding-top:40px;}
+.calculator .down .left_part {width:63%; float:left;}
 
 .left_part .selectors {position: relative; height:128px; margin-bottom:10px;}
 .left_part .selectors .images {position: absolute; top:0;}
@@ -214,6 +230,8 @@ input[type=checkbox]:checked + label {background-image:url('/images/calculate_ch
 .left_part .selectors .image:hover .auto {background-image:url('/images/auto_hover.png');}
 .left_part .selectors .plane {background-image:url('/images/plane.png'); background-position: 5px 100%;}
 .left_part .selectors .image:hover .plane {background-image:url('/images/plane_hover.png');}
+.left_part .selectors .delivery {background-image:url('/images/del.png'); background-position: 5px 100%;}
+.left_part .selectors .image:hover .delivery {background-image:url('/images/del_hover.png');}
 
 .left_part .selectors .images input[type="radio"]:checked + label.image {background-image:url('/images/selectors_active.png') !important; background-position: 2px 52px !important;}
 .left_part .selectors .images input[type="radio"]:checked + label .price {border-color:rgba(255,072,027,0.3); color:rgba(255,072,027,1);}
@@ -221,8 +239,9 @@ input[type=checkbox]:checked + label {background-image:url('/images/calculate_ch
 .left_part .selectors .images input[type="radio"]:checked + label .train {background-image:url('/images/train_active.png');}
 .left_part .selectors .images input[type="radio"]:checked + label .auto {background-image:url('/images/auto_active.png');}
 .left_part .selectors .images input[type="radio"]:checked + label .plane {background-image:url('/images/plane_active.png');}
+.left_part .selectors .images input[type="radio"]:checked + label .delivery {background-image:url('/images/del_active.png');}
 
-.left_part .selectors .visual {position: absolute; top: 50px; width: 480px; height: 39px; background-image: url('/images/selectors.png'); background-repeat: no-repeat; background-position: 16px 50%;}
+.left_part .selectors .visual {position: absolute; top: 50px; width: 505px; height: 39px; background-image: url('/images/selectors.png'); background-repeat: no-repeat; background-position: 16px 50%;}
 .left_part .selectors .visual .active {position: relative; width:39px; height:39px; background-image:url('/images/selectors_active.png'); background-repeat:no-repeat; background-position:left; z-index:5;}
 .left_part .selectors .prices {position: absolute; top:95px;}
 .left_part .selectors .images input[type="radio"] + label .price {float:left; margin-top:60px; width:120px; font-size:12px; font-weight: 600; line-height: 1.25;}
@@ -232,7 +251,7 @@ input[type=checkbox]:checked + label {background-image:url('/images/calculate_ch
 .left_part .price_block .title {width:200px; float:left;}
 .left_part .price_block .price {font-size:47px; text-align: center;}
 
-.calculator .down .right_part {width:40%; float:left; padding-left:20px;}
+.calculator .down .right_part {width:34%; float:left; padding-left:20px;}
 .calculator .down .right_part .big_title {font-family:"Open Sans"; font-size:24px;  padding-bottom:20px;}
 .calculator .down .right_part input[type=checkbox] + label { max-width:100%; margin-bottom:10px;}
 
@@ -256,11 +275,11 @@ input[type=checkbox]:checked + label {background-image:url('/images/calculate_ch
 
 /* how */
 
-#how {min-width:990px; margin-bottom:40px; background-image:url('/images/map_bg.png'); min-height: 514px; background-repeat: no-repeat; background-size: 100%; background-position: 50% 0%; padding-top: 200px; margin-top: -170px;}
+#how {min-width:990px; margin-bottom:40px; background-image:url('/images/map_bg.png'); min-height: 314px; background-repeat: no-repeat; background-size: 100%; background-position: 50% 0%; padding-top: 200px; margin-top: -170px;}
 .how {}
 .how_picture {width:806px; height:147px; margin-left:-10px; background-image:url('/images/how_picture.png'); background-repeat:no-repeat;}
 .how_menu {margin:10px 0 20px 8px;}
-.how_menu .arrow {width:25%; max-height:84px; max-width:271px; line-height:84px; background-size: 100%; vertical-align:middle; white-space:nowrap; float:left; text-align:center; background-image:url('/images/how_arrow.png'); background-repeat:no-repeat; background-position:center; cursor:pointer; margin-left:-10px;}
+.how_menu .arrow {width:20%; max-height:84px; max-width:271px; line-height:84px; background-size: 100%; vertical-align:middle; white-space:nowrap; float:left; text-align:center; background-image:url('/images/how_arrow.png'); background-repeat:no-repeat; background-position:center; cursor:pointer; margin-left:-10px;}
 .how_menu .arrow:hover {background-image:url('/images/how_arrow_hover.png');}
 .how_menu .arrow:active {background-image:url('/images/how_arrow_active.png');}
 .how_menu .arrow a {text-transform:uppercase; font-size:12px; font-weight:600; color:white;}
@@ -288,7 +307,9 @@ input[type=checkbox]:checked + label {background-image:url('/images/calculate_ch
 
 /* catalog */
 
-#catalog {padding-bottom:50px;}
+#catalog {padding-top:30px;padding-bottom:50px;}
+#catalog .description {padding:10px 0 20px; font-size: 14px; line-height: 1.571; letter-spacing: -0.1px;}
+.catalog {position: relative; height:325px; overflow: hidden;}
 .block {width:48%; float:left; padding:10px 2% 40px 0;}
 .block .image {width:115px; height:115px; float:left; margin-right:10px; overflow:hidden; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;}
 .block .image img {width:115px; height:auto;}
@@ -318,9 +339,10 @@ input[type=checkbox]:checked + label {background-image:url('/images/calculate_ch
 /* about block */
 
 #about {min-width:990px; position:relative; width:100%; height:435px; background-image:url('/images/about_us.jpg'); background-repeat:no-repeat; background-position:left bottom;}
-#about .right {position:absolute; width:45%; height:435px;top:0; right:0; background-color:rgba(255,86,24,0.85);}
-#about .right h2 {font-family:"Open Sans"; font-size:22px; font-weight:600; padding:50px 50px 30px 50px;}
-#about .right p {font-family:"Open Sans"; font-size:15px; margin:0px 100px 10px 50px; padding-top:30px; line-height:1.5; border-top: 1px solid white;}
+#about .right {position:absolute; width:45%; height:435px;top:0; right:0; background-color:rgba(249,192,29,0.902);}
+#about .right h2 {font-family:"Open Sans"; font-size:22px; font-weight:600; padding:50px 0px 30px 0px; margin:0px 100px 10px 50px; border-bottom: 1px solid white;}
+#about .right p {font-family:"Open Sans"; font-size:15px; margin:0px 100px 10px 50px; padding-top:30px; line-height:1.5}
+#about .right p.link {float: right; padding-top:10px;}
 
 /* reviews */
 
@@ -367,35 +389,22 @@ input[type=checkbox]:checked + label {background-image:url('/images/calculate_ch
 
 #footer {min-width:890px; height:200px; background-image:url('/images/footer_bg.png'); background-repeat:repeat-x; background-position:top; padding:50px 50px 0; line-height:20px;}
 #footer h5 {font-family:"Open Sans"; font-size:12px; font-weight:600;}
+#footer .course {margin-top:10px; font-family:"Open Sans"; font-size:13px;}
+#footer .column {float:left; width:20%; font-size:14px; margin-right:20px;}
+#footer .services {width:20%;}
+#footer .help {width:18%;}
 #footer .russia {float:left; width:20%; padding-left:30px; background-image:url('/images/russia.png'); background-repeat:no-repeat; background-position:left top;}
 #footer .china {float:left; width:20%; padding-left:30px; background-image:url('/images/china.png'); background-repeat:no-repeat; background-position:left top;}
 #footer .delimeter {margin:15px 0; width:100px; height:1px; border-bottom:1px solid #cac4b3;}
-#footer .contacts {float:left; line-height:30px; font-size:12px; margin-left:30px;}
-#footer .contacts .phone {display:inline-block; font-family:"Open Sans"; font-size:16px; line-height: 30px;}
+#footer .contacts { font-size:12px; line-height:28px; float:left;}
+#footer .contacts .phone {display:inline-block; font-family:"Open Sans"; font-size:16px; line-height:1;}
 #footer .jam {float:right; height:52px; background-image:url('/images/jam.png'); background-repeat:no-repeat; background-position:left center; padding-left:75px; line-height:26px; font-size:13px;}
 #footer .jam a {font-size:15px;}
+#footer .go_up_block {float:right; width:60px; margin-left:20px;}
+#footer .go_up {opacity:0.85; margin:30px auto 0; width:51px; height:51px; background-image:url('/images/go_up.png'); background-image:url('/images/go_up.png'); cursor:pointer;}
+#footer .go_up:hover {opacity:1;}
 
 /* bootstrap typeahead */
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 1000;
-  display: none;
-  float: left;
-  min-width: 160px;
-  padding: 5px 0;
-  margin: 2px 0 0;
-  font-size: 14px;
-  list-style: none;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #ccc;
-  border: 1px solid rgba(0, 0, 0, .15);
-  border-radius: 4px;
-  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-          box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-}
 .dropdown-menu.pull-right {
   right: 0;
   left: auto;
@@ -455,4 +464,23 @@ input[type=checkbox]:checked + label {background-image:url('/images/calculate_ch
 .dropdown-menu-left {
   right: auto;
   left: 0;
+}
+.dropdown-menu {
+  position:absolute;
+  top:100%;
+  left:0;
+  z-index:1000;
+  display:none;
+  float:left;
+  min-width:160px;
+  padding:5px 0;
+  margin:2px 0 0;
+  font-size:14px;
+  list-style:none;
+  background-color:#fff;
+  background-clip:padding-box;
+  border:1px solid rgba(0, 0, 0, .15);
+  border-radius:4px;
+  -webkit-box-shadow:0 6px 12px rgba(0, 0, 0, .175);
+  box-shadow:0 6px 12px rgba(0, 0, 0, .175);
 }

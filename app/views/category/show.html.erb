@@ -1,16 +1,20 @@
 <div id="catalog" class="content_block centered">
   <h2 class="blue uppercase"><%= @cat.title %></h2>
-  <% @cat.brands.each do |brand| %>
-  <div class="block">
-    <div class="image">
-      <%= image_tag brand.image(:medium) %>
+  <p class="description">Найти поставщика в Китае? С нами это очень просто! Одна из наших наиболее востребованных услуг - это поиск поставщика и товара в Китае. Чтобы нас правильно сориентировать и помочь найти вам именно то, что нужно, задайте нам свои параметры качества, стоимости, количества нужных вам товаров, и мы подберем именно то, что Вы ищете. Мы способны найти практически все! Каталог товаров – это <i>Полная информация об уже  проверенных производителях и их контакты</i></p>
+  <div class="catalog">
+    <% @cat.brands.each do |brand| %>
+    <div class="block">
+      <div class="image">
+        <%= image_tag brand.image(:medium) %>
+      </div>
+      <h4><%= link_to "#{brand.title} →", brand, class: "blue uppercase clear_link" %></h4>
+      <div class="gray">
+        <p><%= brand.description %></p>
+      </div>
     </div>
-    <h4><%= link_to "#{brand.title} →", brand, class: "blue uppercase clear_link" %></h4>
-    <div class="gray">
-      <p><%= brand.description %></p>
-    </div>
+    <% end %>
   </div>
-  <% end %>
   <div class="clear"></div>
-  <span class="blue uppercase dotted">показать еще</span>
+  <span class="blue uppercase dotted show_more">показать еще</span>
+  <span class="blue uppercase dotted hide_more hidden">скрыть</span>
 </div>

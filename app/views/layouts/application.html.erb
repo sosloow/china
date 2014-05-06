@@ -16,9 +16,7 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-
     <div class="loader"></div>
-
     <div id="header">
       <div class="header">
         <div id="popup_form" style="display:none">
@@ -31,14 +29,14 @@
           <%= f.text_field :name, placeholder:
               "имя", required: true %>
           <%= f.text_field :phone, placeholder:
-              "номер телефона", required: true %>
+              "как с вами связаться?", required: true %>
           <%= f.submit "заказать" %>
           <% end %>
         </div>
       </div>
         <a class="black clear_link" href="/">
           <div class="header_logo">
-            <h1>Континент</h1>
+            <h1>SB Group</h1>
             <h3>Грузоперевозки из Китая</h3>
           </div>
         </a>
@@ -49,16 +47,23 @@
         <div class="menu">
           <ul class="top_menu">
             <li>
-              <%= link_to "дополнительные услуги", :services,
+              <%= link_to "услуги", :services,
                   {class: "underline blue uppercase"} %>
             </li>
-            <li><a href="/#catalog" class="underline blue uppercase">производители в Китае</a></li>
-            <li><a href="#footer" class="underline blue uppercase">контакты</a></li>
+            <li><a href="#catalog" class="underline blue uppercase link_to">выставка онлайн</a></li>
+            <li><a href="#footer" class="underline blue uppercase link_to">контакты</a></li>
             <li>
               <span class="docs_example">
                 <%= link_to "образцы документов", :docs,
                     {class: "underline black uppercase"} %>
               </span>
+            </li>
+            <li class="lenguages">
+              <ul class="">
+                <li class="active"><a class="">RUS</a></li>
+                <li class=""><a class="red underline">ENG</a></li>
+                <li class=""><a class="gray underline disabled">CHN</a></li>
+              </ul>
             </li>
           </ul>
         </div>
@@ -68,7 +73,7 @@
     <div class="clear"></div>
 
     <%= yield %>
-
+<!--
     <div id="footer">
       <div class="russia">
 	<h5 class="black uppercase">офис в челябинске</h5>
@@ -92,6 +97,39 @@
       <div class="jam">
 	<a class="red underline" href="1jam.ru">Разработка сайта</a><br>
 	Jam / Интернет-агенство
+      </div>
+    </div>
+-->
+<div id="footer">
+      <div class="column services">
+        <h5 class="black uppercase">Наши услуги</h5>
+        <ul>
+          <li><a href="" class="blue dotted">Сборные грузы</a></li>
+          <li><a href="" class="blue dotted">Поиск товаров</a></li>
+          <li><a href="" class="blue dotted">Проверка качества</a></li>
+          <li><a href="" class="blue dotted">Сертификация товаров из Китая</a></li>
+          <li class="course"><span class="gray">Курс доллара &mdash; 31,00 руб</span></li>
+        </ul>
+      </div>
+      <div class="column help">
+        <h5 class="black uppercase">Помощь</h5>
+        <ul>
+          <li><a href="" class="blue dotted">Ссылка 1</a></li>
+          <li><a href="" class="blue dotted">Ссылка 2</a></li>
+          <li><a href="" class="blue dotted">Ссылка 3</a></li>
+        </ul>
+      </div>
+      <div class="contacts">
+        <span class="phone">8 800 2000 600</span><br>
+        <a href="#header" onclick="$('#popup_form').fadeToggle()" class="order_call blue uppercase underline">заказать звонок</a><br>
+        <a href="/#questions" class="order_call blue uppercase underline">задать вопрос эксперту</a>
+      </div>
+      <div class="go_up_block">
+        <a classs="link_to" href="#header"><div class="go_up"></div></a>
+      </div>
+      <div class="jam">
+  <a class="red underline" href="1jam.ru">Разработка сайта</a><br>
+  Jam / Интернет-агенство
       </div>
     </div>
 

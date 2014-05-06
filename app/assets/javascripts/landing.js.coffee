@@ -3,6 +3,27 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 # 
 $ ->
+
+  $('.show_more').click ->
+    $('.catalog').animate {
+      height: '+=165'
+    }, 1000, ->
+    $('.hide_more').removeClass('hidden') $('.show_more').addClass('hidden') if ($('.catalog .block:last').position().top - 165) < $(".catalog").height()
+    return false
+
+  $('.hide_more').click ->
+    $('.catalog').removeAttr('style')
+    $("html:not(:animated),body:not(:animated)").animate({scrollTop: $('#catalog').offset().top}, 700)
+    $('.show_more').removeClass('hidden')
+    $('.hide_more').addClass('hidden')
+    return false
+
+  $('.link_to').click ->
+    elementClick = $(this).attr('href')
+    destination = $(elementClick).offset().top
+    $("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 700)
+    return false
+
   $('#catalog .block').hover (ev) -> 
     $(this).find('a').toggleClass 'darkgray'
     $(this).find('a').toggleClass 'gray'
