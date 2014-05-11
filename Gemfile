@@ -33,6 +33,7 @@ gem 'therubyracer'
 gem 'thin'
 gem 'unicorn'
 
+gem 'sass-rails', '~> 4.0.0', '>= 4.0.2'
 gem 'cancan'
 gem 'devise'
 gem 'rails_admin'
