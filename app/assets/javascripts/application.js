@@ -19,6 +19,8 @@
 //= require angular
 //= require angular-ui-bootstrap
 //= require turbolinks
+//= require ckeditor/override
+//= require ckeditor/init
 //= require_tree .
 
 $(document).on('ready page:load', function() {

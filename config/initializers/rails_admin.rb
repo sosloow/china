@@ -16,6 +16,11 @@ RailsAdmin.config do |config|
   config.model 'Question' do
     parent 'QuestionCategory'
     weight 6
+    edit do
+      field :title
+      field :body, :ck_editor
+      field :question_category
+    end
     list do
       field :title
       field :body

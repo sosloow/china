@@ -1,4 +1,5 @@
 China::Application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   get "cities/index"
   get "order/create"
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
