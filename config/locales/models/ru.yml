@@ -46,6 +46,33 @@ ru:
       sub_category:
         one: подкатегория
         other: подкатегории
+      top_category_translation:
+        one: перевод
+        other: переводы
+      sub_category_translation:
+        one: перевод
+        other: переводы
+      brand_translation:
+        one: перевод
+        other: переводы
+      product_translation:
+        one: перевод
+        other: переводы
+      question_translation:
+        one: перевод
+        other: переводы
+      question_category_translation:
+        one: перевод
+        other: переводы
+      review_translation:
+        one: перевод
+        other: переводы
+      document_translation:
+        one: перевод
+        other: переводы
+      service_translation:
+        one: перевод
+        other: переводы
 
     attributes:
       city:
@@ -95,3 +122,34 @@ ru:
         description: описание
         image: изображение
         sub_categories: категории товаров
+      top_category_translation:
+        locale: язык
+        title: название
+      sub_category_translation:
+        locale: язык
+        title: название
+      brand_translation:
+        locale: язык
+        title: название
+        description: описание
+      product_translation:
+        locale: язык
+        title: название
+        description: описание
+      question_translation:
+        locale: язык
+        title: название
+        body: текст
+      question_category_translation:
+        locale: язык
+        title: название
+      review_translation:
+        locale: язык
+        name: ФИО
+        body: текст
+      document_translation:
+        locale: язык
+      service_translation:
+        locale: язык
+        name: название
+        body: описание

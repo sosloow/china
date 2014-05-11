@@ -81,6 +81,9 @@ GEM
     friendly_id (5.0.2)
       activerecord (~> 4.0.0)
     geocoder (1.1.9)
+    globalize (4.0.1)
+      activemodel (>= 4.0.0, < 5)
+      activerecord (>= 4.0.0, < 5)
     gmaps4rails (2.1.1)
     haml (4.0.5)
       tilt
@@ -259,6 +262,7 @@ DEPENDENCIES
   factory_girl_rails
   friendly_id
   geocoder
+  globalize
   gmaps4rails
   jbuilder (~> 1.2)
   jquery-rails

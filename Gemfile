@@ -38,6 +38,7 @@ gem 'devise'
 gem 'rails_admin'
 gem 'devise-i18n-views'
 gem 'rails-i18n'
+gem 'globalize'
 gem 'ckeditor'
 
 gem 'friendly_id'
