@@ -31,10 +31,8 @@
           <div class="checkboxes_line">
             <input type="checkbox" id="delivery_from" hidden/>
             <label for="delivery_from">Доставка до пункта отправки</label>
-            <input type="checkbox" id="delivery_to" hidden/>
-            <label for="delivery_to">Доставка по адресу получателя</label>
-            <input type="checkbox" id="delivery_fast" hidden/>
-            <label for="delivery_fast">Срочный</label>
+            <input type="checkbox" id="customs_clearance" hidden/>
+            <label for="customs_clearance">Таможенное оформление</label>
           </div>
         </div>
 
@@ -45,13 +43,20 @@
             <input class="small" type="text" ng-model="kg" integer placeholder="Вес"> кг
             <input class="small" type="text" ng-model="m3" integer placeholder="Объем"> м&sup3;
           </div>
-          <div class="checkboxes_line">
-            <input type="checkbox" id="small" hidden/>
-            <label for="small">Негабаритный</label>
-            <input type="checkbox" id="merged" hidden/>
-            <label for="merged">Сборный</label>
-            <input type="checkbox" id="check" hidden/>
-            <label for="check">Контроль качества и количества</label>
+          <div class="down_block">
+            <div class="inputs">
+            <input class="small" type="text" ng-model="cost" integer placeholder="Стоимость груза"> РУБ
+            </div>
+            <div class="checkboxes_line">
+              <input type="checkbox" id="delicate" hidden/>
+              <label for="delicate" title="Краткое описание для фишки, например для Хрупкого груза">Хрупкий груз</label>
+              <input type="checkbox" id="danger" hidden/>
+              <label for="danger" title="Краткое описание для фишки, например для Опасного груза">Опасный груз</label><br>
+              <input type="checkbox" id="small" hidden/>
+              <label for="small" title="Краткое описание для фишки, например для Негабаритного груза">Негабаритный</label>
+              <input type="checkbox" id="merged" hidden/>
+              <label for="merged" title="Краткое описание для фишки, например для Сборного груза">Сборный</label>
+            </div>
           </div>
         </div>
 
@@ -88,6 +93,11 @@
                 <div class="icon plane"></div>
                 <div class="price">3 дня<br>от 50 000 Р</div>
               </label>
+              <input id="delivery" ng-model="transport" value="delivery" type="radio" hidden/>
+              <label for="delivery" class="image">
+                <div class="icon delivery"></div>
+                <div class="price">3 дня<br>от 3 000 Р</div>
+              </label>
               <div class="clear"></div>
             </div>
           </div>
@@ -114,15 +124,15 @@
           <input type="checkbox" id="search"
                  ng-model="dopSearch" hidden/>
           <label for="search">Поиск товаров и производителей</label><br>
-          <input type="checkbox" id="checking"
-                 ng-model="dopChecking" hidden/>
-          <label for="checking">Экспертиза товара</label><br>
+          <input type="checkbox" id="insurance"
+                 ng-model="dopInsurance" hidden/>
+          <label for="insurance">Страхование груза</label><br>
           <input type="checkbox" id="stock"
                  ng-model="dopStock" hidden/>
-          <label for="stock">Временное складирование</label><br>
-          <input type="checkbox" id="travel"
-                 ng-model="dopTravel" hidden/>
-          <label for="travel">Организация поездки в китай</label>
+          <label for="stock">Временное складирование до 3-х дней</label><br>
+          <input type="checkbox" id="consolidation"
+                 ng-model="dopСonsolidation" hidden/>
+          <label for="consolidation">Консолидация груза</label><br>
         </div>
         <div class="clear"></div>
         <div class="order_form">
@@ -135,7 +145,7 @@
             <%= f.text_field :name, class: "uppercase", placeholder:
             "имя", required: true %>
             <%= f.text_field :phone, class: "uppercase", placeholder:
-            "телефон", required: true %>
+            "ваш телефон", required: true %>
             <%= f.submit "отправить заявку" %>
             <% end %>
           </div>
@@ -150,9 +160,10 @@
   <div class="how content_block centered" id="how-tabs">
     <ul class="how_menu">
       <li class="arrow active"><a href="#how-tabs-1">Поиск товаров</a></li>
-      <li class="arrow hover"><a href="#how-tabs-2">Подготовка груза</a></li>
-      <li class="arrow"><a href="#how-tabs-3">Транспортировка</a></li>
-      <li class="arrow"><a href="#how-tabs-4">Получение товара</a></li>
+      <li class="arrow"><a href="#how-tabs-2">Аудит производителя</a></li>
+      <li class="arrow"><a href="#how-tabs-3">Контроль качества</a></li>
+      <li class="arrow"><a href="#how-tabs-4">Транспортировка</a></li>
+      <li class="arrow"><a href="#how-tabs-5">Получение товара</a></li>
       <div class="clear"></div>
     </ul>
     <div class="how_text" id="how-tabs-1">
@@ -162,9 +173,12 @@
       Ни для кого не секрет, что производство товаров с наименьшими издержками чаще всего находится в китае. Большинство брендов с мировым именем, такие как Microsoft, Apple, Prada уже давно перенесли свои производственные базы в Китай. <br>Наша роль — помочь вам найти необходимый товар и транспортировать его в Россию. Не обладая информацией об уровне внутренних цен на товары  многие иностранные поставщики преобретают продукт по завышенной цене. Договариться с производителями о самых низких оптовых ценах — задача не из простых, наш опыт успешного  сотрудничества в этой сфере поможет вам избежать любых сложностей.
     </div>
     <div class="how_text" id="how-tabs-3">
-      Для желающих лично проконтролировать выбор и доставку товаров — мы организуем туры с переводчиком, проводим экскурсии по Китаю. Мы организуем личное знакомство с производителями, посещение различных ярмарок — таких в Китае достаточно. Вы принемаете решения, мы обеспечиваем вас квалифицированной поддержкой: переводчик, юристы и специалисты по грузоперевозкам.
+      Если Вас интересует качество производимого для Вас в Китае товара – компания SBGroup будет рада помочь Вам в этом вопросе.<br>Для проведения инспекции качества продукции от Вас будут необходимы четкие инструкции, на основании которых будет подписан нашим представителем и представителем завода протокол проведения инспекции качества и ее результаты.<br>Будет сделан полный фотоотчет со всеми проблемными вопросами и репортаж, подтверждающий соответствие проверенных позиций заявленному качеству. После чего, все материалы предоставляются нашему заказчику.<br>Также после проведения инспекции наш менеджер, который будет проводить работу по Вашему поручению, даст собственную рецензию о работе и возможностях завода, как специалист в данной области, что позволит Вам либо пересмотреть свое взаимодействие с данным производителем или поставщиком, либо лишний раз убедиться в правильности своего выбора.
     </div>
     <div class="how_text" id="how-tabs-4">
+      Для желающих лично проконтролировать выбор и доставку товаров — мы организуем туры с переводчиком, проводим экскурсии по Китаю. Мы организуем личное знакомство с производителями, посещение различных ярмарок — таких в Китае достаточно. Вы принемаете решения, мы обеспечиваем вас квалифицированной поддержкой: переводчик, юристы и специалисты по грузоперевозкам.
+    </div>
+    <div class="how_text" id="how-tabs-5">
       Вам необязательно ехать в Китай, чтобы все прошло гладко. Проводимые нами экспертизы и сравнения продуктов от разных производителей, образцы товаров, высылаемые почтой, обеспечат ваше спокойствие за качество преобретаемого продукта. <br>Для желающих лично проконтролировать выбор и доставку товаров — мы организуем туры с переводчиком, проводим экскурсии по Китаю. Мы организуем личное знакомство с производителями, посещение различных ярмарок — таких в Китае достаточно. Вы принемаете решения, мы обеспечиваем вас квалифицированной поддержкой: переводчик, юристы и специалисты по грузоперевозкам.
     </div>
   </div>
@@ -213,32 +227,40 @@
 </div>
 
 <div id="catalog" class="content_block centered">
-  <h2 class="blue uppercase"><a name="catalog">Каталог производителей</a></h2>
-  <% @top_cats.each do |cat| %>
-  <div class="block">
-    <div class="image">
-      <%= image_tag cat.image.url(:medium) %>
+  <h2 class="blue uppercase"><a name="catalog">Выставка онлайн</a></h2>
+  <p class="description">Найти поставщика в Китае? С нами это очень просто! Одна из наших наиболее востребованных услуг - это поиск поставщика и товара в Китае. Чтобы нас правильно сориентировать и помочь найти вам именно то, что нужно, задайте нам свои параметры качества, стоимости, количества нужных вам товаров, и мы подберем именно то, что Вы ищете. Мы способны найти практически все! Каталог товаров – это <i>Полная информация об уже  проверенных производителях и их контакты</i></p>
+  <div class="catalog">
+    <% @top_cats.each do |cat| %>
+    <div class="block">
+      <div class="image">
+        <%= image_tag cat.image.url(:medium) %>
+      </div>
+      <h4 class="blue uppercase"><%= cat.title %></h4>
+      <div class="links">
+        <% cat.sub_categories.each do |subcat| %>
+        <span class="sub_links_level_1">
+          <%= link_to subcat.title,
+              subcat,
+              {class: "gray underline"} %>
+        </span>
+        <% end %>
+      </div>
     </div>
-    <h4 class="blue uppercase"><%= cat.title %></h4>
-    <div class="links">
-      <% cat.sub_categories.each do |subcat| %>
-      <span class="sub_links_level_1">
-        <%= link_to subcat.title,
-            subcat,
-            {class: "gray underline"} %>
-      </span>
-      <% end %>
-    </div>
+    <% end %>
   </div>
-  <% end %>
   <div class="clear"></div>
-  <span class="blue uppercase dotted">показать еще</span>
+  <span class="blue uppercase dotted show_more">показать еще</span>
+  <span class="blue uppercase dotted hide_more hidden">скрыть</span>
 </div>
 
 <div id="about">
   <div class="right" class="content_block">
     <h2 class="white uppercase white_line">О компании</h2>
     <p class="white">Представьте, что вы заказываете комплектующие для своего производства на несколько миллионов рублей. Для вас важно все: сроки, коммиссия за переводы, местонахождение груза. Вы хотите довериться квалифицированным специалистам и быть спокойным за результат? — Мы всегда остаёмся на связи.</p>
+    <p class="link">
+    <%= link_to "Подробнее о нас", :services,
+        {class: "underline white"} %>
+    </p>
   </div>
 </div>
 
