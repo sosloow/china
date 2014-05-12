@@ -266,6 +266,7 @@
 
 <div id="reviews" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
+    <!--
     <% @reviews.each do |review| %>
     <div class="review item <%= 'active' if review==@reviews.first %>">
       <div class="image">
@@ -275,10 +276,25 @@
       <div class="review_author"><%= review.name %></div>
     </div>
     <% end %>
+    -->
+    <div class="review item">
+      <div class="image">
+        <a href="">
+          <img src="/images/add_photo.png" alt="Добавить фотографию">
+        </a>
+      </div>
+      <div class="review_text">
+        <textarea name="review_text" id="review_text" class="new_text" palceholder="Напишите текст отзыва">Напишите текст отзыва</textarea>
+      </div>
+      <div class="review_author">
+        <input type="text" placeholder="Представьтесь" class="new_author">
+      </div>
+    </div>
   </div>
   <a class="right carousel-control" href="#reviews" data-slide="next">
     <div class="next_review uppercase">Следующий отзыв</div>
   </a>
+  <div class="blue underline make_review">Оставить свой отзыв</div>
   <div class="clear"></div>
 </div>
 </div>

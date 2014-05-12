@@ -355,6 +355,9 @@ input[type=checkbox]:checked + label {background-image:url('/images/calculate_ch
 .next_review {position:absolute; width:192px; height:50px; top:100px; right:80px;  background-image:url('/images/review_next.png'); background-repeat:no-repeat; background-position:center; text-align:center; color:#ff481b; line-height:50px; vertical-align:middle; cursor:pointer; font-family:"Open Sans"; font-size:12px; font-weight:600;}
 .next_review:hover {background-image:url('/images/review_next_hover.png'); color:white;}
 .next_review:active {background-image:url('/images/review_next_active.png'); color:white;}
+.make_review {position:absolute; top:165px; right:110px; cursor:pointer; font-family:"Open Sans"; font-size:12px;}
+.review_text .new_text { font-family:"Open Sans"; width: 94%; padding:9px; line-height: 1.5; margin-top: -1px; margin-left:10px; resize: none; padding: 9px; height: 100px;}
+.new_author {width:220px;padding:9px;margin-left:137px;}
 
 /* ask form */
 .ask_form {position:relative; float:right; width:220px; height: 366px; background-color:#f4f3ee; padding:35px;}
@@ -367,6 +370,7 @@ input[type=checkbox]:checked + label {background-image:url('/images/calculate_ch
 .ask_form input[type=submit]:active {background-image:url('/images/ask_form_active.png');}
 
 .after_text {position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; height: 75px; line-height: 24px; text-align: center; text-transform: uppercase; font: 400 11px "Open Sans";}
+
 
 /* brand */
 
