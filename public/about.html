@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Континент - грузоперевозки из китая</title>
+    <meta charset="UTF-8">
+    <style>
+      @import url(http://fonts.googleapis.com/css?family=Jura:500&subset=latin,cyrillic);
+      @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,300&subset=latin,cyrillic);
+    </style>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <script src="//maps.google.com/maps/api/js?v=3.13&sensor=false&libraries=geometry&language=ru" type="text/javascript"></script>
+    <script src='//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js' type='text/javascript'></script>
+    <link data-turbolinks-track="true" href="/assets/application.css?body=1" media="all" rel="stylesheet" />
+<link data-turbolinks-track="true" href="/assets/brand.css?body=1" media="all" rel="stylesheet" />
+<link data-turbolinks-track="true" href="/assets/category.css?body=1" media="all" rel="stylesheet" />
+<link data-turbolinks-track="true" href="/assets/cities.css?body=1" media="all" rel="stylesheet" />
+<link data-turbolinks-track="true" href="/assets/docs.css?body=1" media="all" rel="stylesheet" />
+<link data-turbolinks-track="true" href="/assets/landing.css?body=1" media="all" rel="stylesheet" />
+<link data-turbolinks-track="true" href="/assets/order.css?body=1" media="all" rel="stylesheet" />
+<link data-turbolinks-track="true" href="/assets/scaffolds.css?body=1" media="all" rel="stylesheet" />
+<link data-turbolinks-track="true" href="/assets/users.css?body=1" media="all" rel="stylesheet" />
+    <script data-turbolinks-track="true" src="/assets/jquery.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/jquery.turbolinks.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/jquery_ujs.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/jquery.ui.core.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/jquery.ui.widget.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/jquery.ui.tabs.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/underscore.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/twitter/bootstrap/bootstrap-carousel.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/angular.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/angular-ui-bootstrap.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/turbolinks.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/angular-google-maps.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/brand.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/calculator.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/category.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/cities.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/docs.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/landing.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/order.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/users.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/application.js?body=1"></script>
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="n3PYsYGxsVoVvqCk7ujT98JxY1AVdeO4AlUy4xkE7wo=" name="csrf-token" />
+  </head>
+  <body>
+    <div class="loader"></div>
+    <div id="header">
+      <div class="header">
+        <div id="popup_form" style="display:none">
+        <div class="left">
+          <p>Мы поможем расчитать точную стоимость доставки учитывая все особенности вашего заказа. Наш специалист ответит на все вопросы.</p>
+        </div>
+        <div class="right">
+          <form accept-charset="UTF-8" action="/orders" class="popup_form" data-remote="true" id="new_order" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+          <input id="order_name" name="order[name]" placeholder="имя" required="required" type="text" />
+          <input id="order_phone" name="order[phone]" placeholder="как с вами связаться?" required="required" type="text" />
+          <input name="commit" type="submit" value="заказать" />
+</form>        </div>
+      </div>
+        <a class="black clear_link" href="/">
+          <div class="header_logo">
+            <h1>SB Group</h1>
+            <h3>Грузоперевозки из Китая</h3>
+          </div>
+        </a>
+        <div class="order_part">
+          <div class="phone">8 800 2000 600</div>
+          <a id="order_form_button" class="dotted orange uppercase">заказать звонок</a>
+        </div>
+        <div class="menu">
+          <ul class="top_menu">
+            <li>
+              <a class="underline blue uppercase" href="/services">услуги</a>
+            </li>
+            <li><a href="#catalog" class="underline blue uppercase link_to">выставка онлайн</a></li>
+            <li><a href="#footer" class="underline blue uppercase link_to">контакты</a></li>
+            <li>
+              <span class="docs_example">
+                <a class="underline black uppercase" href="/docs">образцы документов</a>
+              </span>
+            </li>
+            <li class="lenguages">
+              <ul class="">
+                <li class="active"><a class="">RUS</a></li>
+                <li class=""><a class="red underline">ENG</a></li>
+                <li class=""><a class="gray underline disabled">CHN</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div class="clear"></div>
+
+<div id="page" class="content_block centered">
+  <h2 class="blue uppercase">О нас</h2>
+  <div class="block">
+    <div class="gray">
+      <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана.</p>
+
+      <p>Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные члены предложения залетают прямо в рот.</p>
+
+      <p>Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики.</p>
+
+      <p>Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой, но текст не дал сбить себя с толку. Он собрал семь своих заглавных букв, подпоясал инициал за пояс и пустился в дорогу.</p>
+
+      <p>Взобравшись на первую вершину курсивных гор, бросил он последний взгляд назад, на силуэт своего родного города Буквоград, на заголовок деревни Алфавит и на подзаголовок своего переулка Строчка. Грустный реторический вопрос скатился по его щеке и он продолжил свой путь.</p>
+
+      <p>По дороге встретил текст рукопись. Она предупредила его: «В моей стране все переписывается по несколько раз. Единственное, что от меня осталось, это приставка «и». Возвращайся ты лучше в свою безопасную страну». Не послушавшись рукописи, наш текст продолжил свой путь.</p>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="gray_form">
+      <div class="left">
+        <p>Свяжитесь с нами, чтобы получить прайс-лист и узнать условия доставки.</p>
+        <p class="number">Номер специалиста:<br>8 800 2000 600</p>
+      </div>
+      <div class="right">
+        <form accept-charset="UTF-8" action="/orders" class="new_order" data-remote="true" id="new_order" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
+        <input id="order_name" name="order[name]" placeholder="имя" required="required" type="text">
+        <input id="order_phone" name="order[phone]" placeholder="как с вами связаться" required="required" type="text">
+        <input name="commit" type="submit" value="отправить заявку">
+</form>      </div>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+</div>
+
+<div id="footer">
+      <div class="column services">
+        <h5 class="black uppercase">Наши услуги</h5>
+        <ul>
+          <li><a href="" class="blue dotted">Сборные грузы</a></li>
+          <li><a href="" class="blue dotted">Поиск товаров</a></li>
+          <li><a href="" class="blue dotted">Проверка качества</a></li>
+          <li><a href="" class="blue dotted">Сертификация товаров из Китая</a></li>
+          <li class="course"><span class="gray">Курс доллара &mdash; 31,00 руб</span></li>
+        </ul>
+      </div>
+      <div class="column help">
+        <h5 class="black uppercase">Помощь</h5>
+        <ul>
+          <li><a href="" class="blue dotted">Ссылка 1</a></li>
+          <li><a href="" class="blue dotted">Ссылка 2</a></li>
+          <li><a href="" class="blue dotted">Ссылка 3</a></li>
+        </ul>
+      </div>
+      <div class="contacts">
+        <span class="phone">8 800 2000 600</span><br>
+        <a href="#header" onclick="$('#popup_form').fadeToggle()" class="order_call blue uppercase underline">заказать звонок</a><br>
+        <a href="/#questions" class="order_call blue uppercase underline">задать вопрос эксперту</a>
+      </div>
+      <div class="go_up_block">
+        <a classs="link_to" href="#header"><div class="go_up"></div></a>
+      </div>
+      <div class="jam">
+  <a class="red underline" href="1jam.ru">Разработка сайта</a><br>
+  Jam / Интернет-агенство
+      </div>
+    </div>
+
+  </body>
+</html>
