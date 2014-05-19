@@ -46,6 +46,9 @@ ru:
       sub_category:
         one: подкатегория
         other: подкатегории
+      page:
+        one: страница
+        other: страницы
       top_category_translation:
         one: перевод
         other: переводы
@@ -71,6 +74,9 @@ ru:
         one: перевод
         other: переводы
       service_translation:
+        one: перевод
+        other: переводы
+      page_translation:
         one: перевод
         other: переводы
 
@@ -153,3 +159,9 @@ ru:
         locale: язык
         name: название
         body: описание
+      page:
+        link: адрес страницы
+      page_translation:
+        locale: язык
+        body: текст
+        title: название

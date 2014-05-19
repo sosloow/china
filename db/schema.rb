@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140511132918) do
+ActiveRecord::Schema.define(version: 20140511172350) do
 
   create_table "brand_translations", force: true do |t|
     t.integer  "brand_id",    null: false
@@ -100,6 +100,24 @@ ActiveRecord::Schema.define(version: 20140511132918) do
     t.string   "name"
     t.string   "phone"
     t.text     "question"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "page_translations", force: true do |t|
+    t.integer  "page_id",    null: false
+    t.string   "locale",     null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "title"
+    t.text     "body"
+  end
+
+  add_index "page_translations", ["locale"], name: "index_page_translations_on_locale"
+  add_index "page_translations", ["page_id"], name: "index_page_translations_on_page_id"
+
+  create_table "pages", force: true do |t|
+    t.string   "link"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

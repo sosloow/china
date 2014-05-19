@@ -220,4 +220,26 @@ RailsAdmin.config do |config|
   config.model 'User' do
     weight 12
   end
+
+  config.model 'Page' do
+    weight -2
+    edit do
+      exclude_fields :body
+    end
+    list do
+      field :title
+      field :body
+      field :link
+    end
+  end
+
+  config.model 'PageTranslation' do
+    object_label_method :locale
+    visible false
+    edit do
+      include_all_fields
+      field :body, :ck_editor
+      exclude_fields :page
+    end
+  end
 end
