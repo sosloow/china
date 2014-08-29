@@ -27,3 +27,4 @@ $(document).on('ready page:load', function() {
   angular.bootstrap('[ng-controller="CalcCtrl"]', ['Calculator']);
   angular.bootstrap('[ng-controller="LandingCtrl"]', ['Landing']);
 });
+

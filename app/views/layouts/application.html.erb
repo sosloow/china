@@ -14,10 +14,12 @@
     <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
+    <script src="//rate-exchange.appspot.com/currency?from=USD&to=CNY&q=2&callback=chyCallback"></script>
+    <script src="//rate-exchange.appspot.com/currency?from=USD&to=RUB&q=2&callback=rubCallback"></script>
   </head>
   <body>
     <div class="loader"></div>
-    <div id="header">
+    <div id="header" ng-controller="ConverterCtrl">
       <div class="header">
         <div id="popup_form" style="display:none">
         <div class="left">
@@ -56,6 +58,12 @@
               <span class="docs_example">
                 <%= link_to "образцы документов", :docs,
                     {class: "underline black uppercase"} %>
+              </span>
+            </li>
+            <li>
+              <span>
+                <a class="underline black uppercase"
+                   id="converter-button">Конвертер валют</a>
               </span>
             </li>
             <li class="lenguages">

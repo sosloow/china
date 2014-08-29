@@ -65,6 +65,12 @@ $ ->
 
   $('.carousel').carousel interval: 5000
 
+window.chyCallback = (data) ->
+  console.log(data)
+
+window.rubCallback = (data) ->
+  console.log(data)
+
 @landing = angular.module("Landing", [])
 
 @landing.controller 'ReviewsCtrl', 
@@ -87,4 +93,19 @@ $ ->
       @http.get('/cities')
         .success (data) =>
           @scope.subCats = data
-      
+
+@landing.controller 'ConverterCtrl',
+  class ConverterCtrl
+    @$inject = ['$scope', '$http']
+
+    constructor: (@scope, @http) ->
+      console.log('hui')
+      # @http.get('//rate-exchange.appspot.com/currency?from=USD&to=CNY&q=2&callback=jsonpCallback')
+      #   .success(data) =>
+      #     @scope.usdToChy = data.rate
+      #     console.log(@scope.usdToChy)
+
+      # @http.get('//rate-exchange.appspot.com/currency?from=USD&to=RUB&q=2&callback=jsonpCallback')
+      #   .success(data) =>
+      #     @scope.usdToRub = data.rate
+      #     console.log(@scope.usdToRub)
