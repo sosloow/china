@@ -16,13 +16,13 @@
       <div class="top">
         <div class="right_part">
           <div class="point">
-            <div class="title darkblue uppercase">Откуда</div>
+            <div class="title uppercase">Откуда</div>
             <input type="text" 
                    typeahead="city.query for city in cities | filter:$viewValue | limitTo:8"
                    ng-model="startPoint">
           </div>
           <div class="point">
-            <div class="title darkblue uppercase">Куда</div>
+            <div class="title uppercase">Куда</div>
             <input type="text" 
                    typeahead="city.query for city in cities | filter:$viewValue | limitTo:8"
                    ng-model="endPoint">
@@ -38,14 +38,14 @@
 
         <div class="left_part">
           <div class="present">
-            <div class="title darkblue uppercase">Что везем</div>
+            <div class="title uppercase">Что везем</div>
             <input class="big" type="text" placeholder="Описание груза">
-            <input class="small" type="text" ng-model="kg" integer placeholder="Вес"> кг
-            <input class="small" type="text" ng-model="m3" integer placeholder="Объем"> м&sup3;
+            <input class="small" type="text" ng-model="kg" integer placeholder="Вес"> КГ
+            <input class="small" type="text" ng-model="m3" integer placeholder="Объем"> М&sup3;
           </div>
           <div class="down_block">
             <div class="inputs">
-            <input class="small" type="text" ng-model="cost" integer placeholder="Стоимость груза"> РУБ
+            <input class="middle" type="text" ng-model="cost" integer placeholder="Стоимость груза"> РУБ
             </div>
             <div class="checkboxes_line">
               <input type="checkbox" id="delicate" hidden/>
@@ -54,8 +54,6 @@
               <label for="danger" title="Краткое описание для фишки, например для Опасного груза">Опасный груз</label><br>
               <input type="checkbox" id="small" hidden/>
               <label for="small" title="Краткое описание для фишки, например для Негабаритного груза">Негабаритный</label>
-              <input type="checkbox" id="merged" hidden/>
-              <label for="merged" title="Краткое описание для фишки, например для Сборного груза">Сборный</label>
             </div>
           </div>
         </div>
@@ -65,6 +63,7 @@
       <div class="clear"></div>
       <div class="down">
         <div class="left_part">
+          <div class="road title uppercase">Как везем</div>
           <div class="selectors">
             <div class="visual"></div>
 
@@ -76,63 +75,70 @@
               <input id="ship" ng-model="transport" value="ship" type="radio" hidden/>
               <label for="ship" class="image">
                 <div class="icon ship"></div>
-                <div class="price">40 дней<br>от 5 000 Р</div>
+                <div class="price">Морем<br>40 дней</div>
               </label>
               <input id="train" ng-model="transport" value="train" type="radio" hidden/>
               <label for="train" class="image">
                 <div class="icon train"></div>
-                <div class="price">25 дней<br>от 15 000 Р</div>
+                <div class="price">Ж/Д<br>25 дней</div>
               </label>
               <input id="auto" ng-model="transport" value="auto" type="radio" hidden/>
               <label for="auto" class="image">
                 <div class="icon auto"></div>
-                <div class="price">15 дней<br>от 25 000 Р</div>
+                <div class="price">АВТО<br>15 дней</div>
               </label>
               <input id="plain" ng-model="transport" value="plane" type="radio" hidden/>
               <label for="plain" class="image">
                 <div class="icon plane"></div>
-                <div class="price">3 дня<br>от 50 000 Р</div>
+                <div class="price">АВИА<br>7 дней</div>
               </label>
               <input id="delivery" ng-model="transport" value="delivery" type="radio" hidden/>
               <label for="delivery" class="image">
                 <div class="icon delivery"></div>
-                <div class="price">3 дня<br>от 3 000 Р</div>
+                <div class="price">Бандероль<br>14 дней</div>
               </label>
               <div class="clear"></div>
             </div>
           </div>
           <div class="clear"></div>
-          <div class="selector_description lightred" ng-show="transport=='ship'">
-            Перевозка морским путем, это самый дешевый и долгий способ доставки от 40 до 60 дней. Груз перевозится только в контейнерах.
-          </div>
-          <div class="selector_description lightred" ng-show="transport=='train'">
-            Перевозка по железным дорогам занимает от 14 до 26 дней.
-          </div>
-          <div class="selector_description lightred" ng-show="transport=='auto'">
-            Грузовой автотранспорт может забрать и доставить груз из любой точки страны.
-          </div>
-          <div class="selector_description lightred" ng-show="transport=='plane'">
-            Самый дорогой и быстрый способ доставки от 3 до 12 дней.
-          </div>
-          <div class="price_block">
-            <div class="title darkblue uppercase">Предварительная стоимость:</div>
-            <div class="price lightred">~{{countTotalPrice()}} Р</div>
-          </div>
         </div>
         <div class="right_part">
-          <div class="big_title darkblue">Дополнительные услуги</div>
-          <input type="checkbox" id="search"
-                 ng-model="dopSearch" hidden/>
+          <div class="selector_description" ng-show="transport=='ship'">
+            Перевозка морским путем, это самый дешевый и долгий способ доставки от 40 до 60 дней. Груз перевозится только в контейнерах.
+          </div>
+          <div class="selector_description" ng-show="transport=='train'">
+            Перевозка по железным дорогам занимает от 14 до 26 дней.
+          </div>
+          <div class="selector_description" ng-show="transport=='auto'">
+            Грузовой автотранспорт может забрать и доставить груз из любой точки страны.
+          </div>
+          <div class="selector_description" ng-show="transport=='plane'">
+            Самый дорогой и быстрый способ доставки от 3 до 12 дней.
+          </div>
+        </div>
+        <div class="clear"></div>
+        <div class="left_part">
+          <div class="settings title uppercase">Дополнительные услуги</div>
+          <input type="checkbox" id="search" ng-model="dopSearch" hidden/>
           <label for="search">Поиск товаров и производителей</label><br>
-          <input type="checkbox" id="insurance"
-                 ng-model="dopInsurance" hidden/>
+          <input type="checkbox" id="insurance" ng-model="dopInsurance" hidden/>
           <label for="insurance">Страхование груза</label><br>
-          <input type="checkbox" id="stock"
-                 ng-model="dopStock" hidden/>
+          <input type="checkbox" id="stock" ng-model="dopStock" hidden/>
           <label for="stock">Временное складирование до 3-х дней</label><br>
-          <input type="checkbox" id="consolidation"
-                 ng-model="dopConsolidation" hidden/>
+          <input type="checkbox" id="consolidation" ng-model="dopConsolidation" hidden/>
           <label for="consolidation">Консолидация груза</label><br>
+          <input type="checkbox" id="variations" ng-model="dopVariations" hidden/>
+          <label for="variations">Вариация груза</label><br>
+          <input type="checkbox" id="Cleaning" ng-model="dopCleaning" hidden/>
+          <label for="Cleaning">Чиcтка груза </label><br>
+          <input type="checkbox" id="tour" ng-model="dopTour" hidden/>
+          <label for="tour">Тур в Китай для просмотра фабрик</label><br>
+        </div>
+        <div class="right_part">
+          <div class="price_block">
+            <div class="price_icon title darkblue uppercase">Предварительная<br>стоимость (карго):</div>
+            <div class="price lightred">~{{countTotalPrice()}} Р</div>
+          </div>
         </div>
         <div class="clear"></div>
         <div class="order_form">
@@ -142,10 +148,8 @@
           </div>
           <div class="right">
             <%= form_for Order.new, remote: true do |f| %>
-            <%= f.text_field :name, class: "uppercase", placeholder:
-            "имя", required: true %>
-            <%= f.text_field :phone, class: "uppercase", placeholder:
-            "ваш телефон", required: true %>
+            <%= f.text_field :name, class: "uppercase", placeholder: "имя", required: true %>
+            <%= f.text_field :phone, class: "uppercase", placeholder: "номер телефона", required: true %>
             <%= f.submit "отправить заявку" %>
             <% end %>
           </div>
@@ -158,6 +162,9 @@
 <div ng-controller="LandingCtrl">
 <div id="how">
   <div class="how content_block centered" id="how-tabs">
+    <h2 class="blue uppercase">Алгоритм нашей работы</h2>
+    <p class="description">Единая цель всех наших действий направлена на обеспечение удобства ведения вашего бизнеса. <br>
+Доверившись нашей компании, вы обретете надежного партнера и легкость в ведение бизнеса с Китаем</p>
     <ul class="how_menu">
       <li class="arrow active"><a href="#how-tabs-1">Поиск товаров</a></li>
       <li class="arrow"><a href="#how-tabs-2">Аудит производителя</a></li>
@@ -186,7 +193,9 @@
 
 <div id="questions">
   <div class="questions content_block centered" id="q-tabs">
-    <h2 class="blue uppercase">Вопросы</h2>
+    <h2 class="blue uppercase">Вопрос - ответ</h2>
+    <p class="description">Здесь вы найдете поясняющие ответы на часто задаваемые вопросы наших клиентов. <br>
+Не нашли нужной информации? Задайте вопрос нашим экспертам, и они с удовольствием ответят на него.</p>
     <ul class="tabs">
       <% @question_categories.each_with_index do |category, i| %>
       <li class="tab">
@@ -228,7 +237,7 @@
 
 <div id="catalog" class="content_block centered">
   <h2 class="blue uppercase"><a name="catalog">Выставка онлайн</a></h2>
-  <p class="description">Найти поставщика в Китае? С нами это очень просто! Одна из наших наиболее востребованных услуг - это поиск поставщика и товара в Китае. Чтобы нас правильно сориентировать и помочь найти вам именно то, что нужно, задайте нам свои параметры качества, стоимости, количества нужных вам товаров, и мы подберем именно то, что Вы ищете. Мы способны найти практически все! Каталог товаров – это <i>Полная информация об уже  проверенных производителях и их контакты</i></p>
+  <p class="description">Здесь вы найдете полную  информацию о уже  проверенных производителях наиболее ликвидных товаров, по мнению специалистов-аналитиков нашей компании.</p>
   <div class="catalog">
     <% @top_cats.each do |cat| %>
     <div class="block">
@@ -249,13 +258,15 @@
     <% end %>
   </div>
   <div class="clear"></div>
-  <span class="blue uppercase dotted show_more">показать еще</span>
-  <span class="blue uppercase dotted hide_more hidden">скрыть</span>
+  <div class="product_order">Оставить заявку<br>на поиск товара</div>
+  <p class="description">Если после ознакомления с нашей базой производителей и поставщиков, вы не нашли подходящего варианта, <br>оставьте нам заявку на поиск товара и мы предоставим вам новую подробную информацию в короткие сроки.</p>
+  <span class="uppercase show_more">показать еще</span>
+  <span class="uppercase hide_more hidden">скрыть</span>
 </div>
 
 <div id="about">
   <div class="right" class="content_block">
-    <h2 class="white uppercase white_line">О компании</h2>
+    <h2 class="white uppercase white_line">Преимущества работы с нами</h2>
     <p class="white">Представьте, что вы заказываете комплектующие для своего производства на несколько миллионов рублей. Для вас важно все: сроки, коммиссия за переводы, местонахождение груза. Вы хотите довериться квалифицированным специалистам и быть спокойным за результат? — Мы всегда остаёмся на связи.</p>
     <p class="link">
     <%= link_to "Подробнее о нас", :services,
@@ -266,7 +277,6 @@
 
 <div id="reviews" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
-    <!--
     <% @reviews.each do |review| %>
     <div class="review item <%= 'active' if review==@reviews.first %>">
       <div class="image">
@@ -276,15 +286,14 @@
       <div class="review_author"><%= review.name %></div>
     </div>
     <% end %>
-    -->
-    <div class="review item">
+    <div class="review item" style="display:hidden">
       <div class="image">
         <a href="">
           <img src="/images/add_photo.png" alt="Добавить фотографию">
         </a>
       </div>
       <div class="review_text">
-        <textarea name="review_text" id="review_text" class="new_text" palceholder="Напишите текст отзыва">Напишите текст отзыва</textarea>
+        <textarea name="review_text" id="review_text" class="new_text" palceholder="Напишите текст отзыва"></textarea>
       </div>
       <div class="review_author">
         <input type="text" placeholder="Представьтесь" class="new_author">

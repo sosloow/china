@@ -141,21 +141,24 @@ input[type=checkbox] {display:none;}
 
 #header {position: relative; min-width:960px; padding:0 15px; height: 129px; z-index: 1; background-image:url('/images/header_bg.png'); background-repeat:repeat-x;}
 .header {position: relative; margin:0 auto 0; width:100%;}
-.header_logo {width:23%; max-width:260px; height:100px; float:left; padding-left:81px; background-image:url('/images/logo.png'); background-repeat:no-repeat; background-position:3px center; line-height:0.95;}
+.header_logo {width:22%; max-width:260px; height:90px; float:left; background-image:url('/images/logo.jpg'); background-repeat:no-repeat; margin-right:1%; line-height:0.95; background-size: contain; background-position: left center;}
 .header_logo h1 {font-family:"Jura"; font-size:48px; font-weight:500; padding-top:18px; letter-spacing:-1.2px;}
 .header_logo h3 {font-family:"Open Sans"; font-size:14px; padding-left:4px; letter-spacing:-0.3px;}
 
-.header .menu {margin-left:315px; height:75px; padding-top:25px; margin-right:230px;}
-.header .menu .lenguages {float:right; margin-right:10px;}
+.header .menu {margin-left:24%; height:75px; padding-top:25px; margin-right:230px;}
+.header .menu .lenguages {float:right; margin-right:30px;}
 .header .menu .lenguages li {float:left; padding:0 4px; margin:0 2px; color: rgb( 255, 255, 255 ); line-height:21px;}
 .header .menu .lenguages li a {font-family:"Open Sans"; font-size:11px; font-weight:600;}
 .header .menu .lenguages .active {border-radius: 2px; background-color: rgb( 30, 87, 179 );}
-.header .menu .lenguages .active a {border-bottom:0;}
+.header .menu .lenguages .active a {border-bottom:0; color:white;}
 
 .header .top_menu {line-height:1.5;}
 .header .top_menu li {float:left; margin-right:20px;}
 .header .menu a {font-family:"Open Sans"; font-size:11px; font-weight:600;}
+.header .top_menu a:hover {border-color: rgba(232,046,046,0.5);color: rgba(232,046,046,1);}
 .header .docs_example {padding-left:15px; background-image:url('/images/docs_example.png'); background-repeat:no-repeat; background-position:left center;}
+.header .coverter {padding-left:15px; background-image:url('/images/calculator.jpg'); background-repeat:no-repeat; background-position:left center;}
+.header .tracing {padding-left:15px; background-image:url('/images/place.jpg'); background-repeat:no-repeat; background-position:left center;}
 
 .header .order_part {width:200px; height:75px; padding-top:25px; float:right; padding-right:30px; font-size:11px;}
 .header .order_part .phone {margin-bottom:9px; font-family:"Open Sans"; font-size:22px;}
@@ -195,9 +198,13 @@ input[type=checkbox]:checked + label {background-image:url('/images/calculate_ch
 .calculator input[type=text] {margin-top:13px; margin-bottom:13px; background-color:white; border:1px solid #a0a0a0; font-family:"Open Sans"; font-size:16px; padding:8px 5px 8px 10px;}
 .calculator .big {width:30%; margin-right:2%;}
 .calculator .small {width:85px; margin:0 3px 0 1%;}
-.calculator .title {font-family:"Open Sans"; font-size:18px; font-weight:600; padding-top:4px;}
+.calculator .middle {width:90px; margin:0 3px 0 1%;}
+.calculator .title {color: rgb(030,087,179); font-family:"Open Sans"; font-size:18px; font-weight:600; padding-top:4px;}
 .calculator .present {padding-left:25px; min-height:21px; background-image:url('/images/present.png'); background-repeat:no-repeat;}
 .calculator .point {width:44%; float:left; padding-left:21px; min-height:19px; background-image:url('/images/point.png'); background-repeat:no-repeat;}
+.calculator .road {padding:0 0 20px 21px; min-height:17px; background-image:url('/images/road.png'); background-repeat:no-repeat;}
+.calculator .settings {margin-top:20px; padding:0 0 20px 23px; min-height:17px; background-image:url('/images/settings.png'); background-repeat:no-repeat;}
+.calculator .price_icon {padding:0 0 0 21px; min-height:17px; background-image:url('/images/dollar.png'); background-repeat:no-repeat;}
 .calculator .top {height:158px; border-bottom:1px solid #c7c7c7;}
 .calculator .top .left_part {margin-right:490px;}
 .calculator .top .right_part {float:right; width: 490px;}
@@ -205,8 +212,8 @@ input[type=checkbox]:checked + label {background-image:url('/images/calculate_ch
 .calculator .top .present {font-family:"Open Sans"; font-size:16px;}
 .calculator .top .left_part input[type=checkbox] + label {margin-right:1%;}
 
-.down_block {margin-left:21px;}
-.down_block .inputs {float:left; width:145px;}
+.down_block {margin-left:23px;}
+.down_block .inputs {float:left; width:165px;}
 .checkboxes_line {padding-left:21px; height:65px; padding-top: 7px;}
 .checkboxes_line input[type=checkbox] + label {width:123px; margin-right:2%;}
 .down_block .checkboxes_line {margin-left:147px;}
@@ -215,7 +222,8 @@ input[type=checkbox]:checked + label {background-image:url('/images/calculate_ch
 .calculator .down .left_part {width:54%; float:left;}
 
 .calculator .down {position:relative; padding-top:40px;}
-.calculator .down .left_part {width:63%; float:left;}
+.calculator .down .left_part {width:600px; float:left;}
+.calculator .down .left_part input[type=checkbox] + label {margin:5px 0 0 23px; max-width:90%;}
 
 .left_part .selectors {position: relative; height:128px; margin-bottom:10px;}
 .left_part .selectors .images {position: absolute; top:0;}
@@ -244,14 +252,16 @@ input[type=checkbox]:checked + label {background-image:url('/images/calculate_ch
 .left_part .selectors .visual {position: absolute; top: 50px; width: 505px; height: 39px; background-image: url('/images/selectors.png'); background-repeat: no-repeat; background-position: 16px 50%;}
 .left_part .selectors .visual .active {position: relative; width:39px; height:39px; background-image:url('/images/selectors_active.png'); background-repeat:no-repeat; background-position:left; z-index:5;}
 .left_part .selectors .prices {position: absolute; top:95px;}
-.left_part .selectors .images input[type="radio"] + label .price {float:left; margin-top:60px; width:120px; font-size:12px; font-weight: 600; line-height: 1.25;}
+.left_part .selectors .images input[type="radio"] + label .price {float:left; margin-top:60px; width:120px; text-transform: uppercase; font-size:12px; font-weight: 600; line-height: 1.25;}
 
-.left_part .selector_description {min-height:40px; padding-top:10px; padding-bottom:40px; border-bottom:1px solid #c7c7c7; margin-right:80px; line-height: 1.25;}
-.left_part .price_block {padding:40px 80px 20px 0;}
-.left_part .price_block .title {width:200px; float:left;}
-.left_part .price_block .price {font-size:47px; text-align: center;}
+.right_part .selector_description {position: relative; margin-top:40px; min-height:80px; font-size:14px; padding:10px; border:1px solid #ffdf88; line-height: 1.25; border-radius:5px;}
+.right_part .selector_description:before {content:""; position: absolute; border-right: 10px solid #ffdf88; border-top: 10px solid transparent; border-bottom: 10px solid transparent; left: -10px; top: 30px;}
+.right_part .selector_description:after {content:""; position: absolute; border-right: 8px solid #ffdf88; border-top: 9px solid transparent; border-bottom: 9px solid transparent; left: -8px; top: 31px;}
+.right_part .price_block {padding:20px 0;}
+.right_part .price_block .title {width:210px; float:left;}
+.right_part .price_block .price {float:right; font-size:40px; text-align: center;}
 
-.calculator .down .right_part {width:34%; float:left; padding-left:20px;}
+.calculator .down .right_part {width:34%; float:left;}
 .calculator .down .right_part .big_title {font-family:"Open Sans"; font-size:24px;  padding-bottom:20px;}
 .calculator .down .right_part input[type=checkbox] + label { max-width:100%; margin-bottom:10px;}
 
@@ -272,7 +282,7 @@ input[type=checkbox]:checked + label {background-image:url('/images/calculate_ch
 /* content_block */
 
 .content_block h2 {font-family:"Open Sans"; font-size:22px; font-weight:600; padding-bottom:20px;}
-
+.content_block .description {padding:10px 0 20px; font-size: 14px; line-height: 1.571; letter-spacing: -0.1px;}
 /* how */
 
 #how {min-width:990px; margin-bottom:40px; background-image:url('/images/map_bg.png'); min-height: 314px; background-repeat: no-repeat; background-size: 100%; background-position: 50% 0%; padding-top: 200px; margin-top: -170px;}
@@ -308,7 +318,6 @@ input[type=checkbox]:checked + label {background-image:url('/images/calculate_ch
 /* catalog */
 
 #catalog {padding-top:30px;padding-bottom:50px;}
-#catalog .description {padding:10px 0 20px; font-size: 14px; line-height: 1.571; letter-spacing: -0.1px;}
 .catalog {position: relative; height:325px; overflow: hidden;}
 .block {width:48%; float:left; padding:10px 2% 40px 0;}
 .block .image {width:115px; height:115px; float:left; margin-right:10px; overflow:hidden; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;}
@@ -317,6 +326,10 @@ input[type=checkbox]:checked + label {background-image:url('/images/calculate_ch
 #brand .block .gray p {margin-left: 125px;}
 .block .links {font-family:"Open Sans"; font-size:14px; line-height: 22px;}
 .block .links:hover {color:#444444;}
+.show_more, .hide_more {font-family:"Open Sans"; font-size:12px; font-weight: 600; background-color: rgb( 30, 87, 179 ); border-radius:3px; color:#fff; padding:5px 10px; cursor:pointer;}
+.product_order {float:right; width:192px; height:40px; top:100px; right:80px;  background-image:url('/images/review_next.png'); background-repeat:no-repeat; background-position:center; text-align:center; color:#ff481b; line-height:1.25; padding-top:10px; vertical-align:middle; cursor:pointer; font-family:"Open Sans"; font-size:12px; font-weight:600; text-transform: uppercase; margin-right:50px; margin-top:10px;}
+.product_order:hover {background-image:url('/images/review_next_hover.png'); color:white;}
+.product_order:active {background-image:url('/images/review_next_active.png'); color:white;}
 
 /* docs */
 
@@ -339,9 +352,9 @@ input[type=checkbox]:checked + label {background-image:url('/images/calculate_ch
 /* about block */
 
 #about {min-width:990px; position:relative; width:100%; height:435px; background-image:url('/images/about_us.jpg'); background-repeat:no-repeat; background-position:left bottom;}
-#about .right {position:absolute; width:45%; height:435px;top:0; right:0; background-color:rgba(249,192,29,0.902);}
-#about .right h2 {font-family:"Open Sans"; font-size:22px; font-weight:600; padding:50px 0px 30px 0px; margin:0px 100px 10px 50px; border-bottom: 1px solid white;}
-#about .right p {font-family:"Open Sans"; font-size:15px; margin:0px 100px 10px 50px; padding-top:30px; line-height:1.5}
+#about .right {position:absolute; width:45%; height:435px;top:0; right:0; background-color:rgba(255, 72, 27, .85);}
+#about .right h2 {font-family:"Open Sans"; font-size:22px; font-weight:600; padding:50px 0px 20px 0px; margin:0px 100px 10px 50px; border-bottom: 1px solid rgba(255, 255, 255, .8);}
+#about .right p {font-family:"Open Sans"; font-size:14px; margin:0px 100px 10px 50px; padding-top:15px; line-height:1.5}
 #about .right p.link {float: right; padding-top:10px;}
 
 /* reviews */
@@ -398,23 +411,33 @@ input[type=checkbox]:checked + label {background-image:url('/images/calculate_ch
 
 /* footer */
 
-#footer {min-width:890px; height:200px; background-image:url('/images/footer_bg.png'); background-repeat:repeat-x; background-position:top; padding:50px 50px 0; line-height:20px;}
-#footer h5 {font-family:"Open Sans"; font-size:12px; font-weight:600;}
+#footer {min-width:890px; height:200px; background-image:url('/images/footer_bg.png'); background-repeat:repeat-x; background-position:top; padding:50px 50px 40px; line-height:1.5;}
+#footer h5 {font-family:"Open Sans"; font-size:12px; font-weight:600; line-height: 1; padding-bottom:5px;}
 #footer .course {margin-top:10px; font-family:"Open Sans"; font-size:13px;}
-#footer .column {float:left; width:20%; font-size:14px; margin-right:20px;}
-#footer .services {width:20%;}
-#footer .help {width:18%;}
-#footer .russia {float:left; width:20%; padding-left:30px; background-image:url('/images/russia.png'); background-repeat:no-repeat; background-position:left top;}
-#footer .china {float:left; width:20%; padding-left:30px; background-image:url('/images/china.png'); background-repeat:no-repeat; background-position:left top;}
+#footer .column {float:left; width:23%; font-size:14px; margin-right:20px;}
 #footer .delimeter {margin:15px 0; width:100px; height:1px; border-bottom:1px solid #cac4b3;}
-#footer .contacts { font-size:12px; line-height:28px; float:left;}
-#footer .contacts .phone {display:inline-block; font-family:"Open Sans"; font-size:16px; line-height:1;}
+#footer .contacts {line-height: 2; float:left;}
+#footer .contacts .phone {display:inline-block; font-family:"Open Sans"; font-size:16px; line-height: 1.5}
 #footer .jam {float:right; height:52px; background-image:url('/images/jam.png'); background-repeat:no-repeat; background-position:left center; padding-left:75px; line-height:26px; font-size:13px;}
 #footer .jam a {font-size:15px;}
 #footer .go_up_block {float:right; width:60px; margin-left:20px;}
 #footer .go_up {opacity:0.85; margin:30px auto 0; width:51px; height:51px; background-image:url('/images/go_up.png'); background-image:url('/images/go_up.png'); cursor:pointer;}
 #footer .go_up:hover {opacity:1;}
 
+.line_down { clear:both; padding:20px 0 10px; }
+.line_down li {
+  width:40%;
+  float:left;
+  font-size: 14px;
+  color: rgb( 179, 171, 149 );
+}
+.line_down .last {
+  width:20%;
+  text-align: right;
+}
+.line_down a {
+  color: rgb( 179, 171, 149 );
+}
 /* bootstrap typeahead */
 .dropdown-menu.pull-right {
   right: 0;

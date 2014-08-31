@@ -1,8 +1,7 @@
 <%= form_for Order.new, remote: true, html: {class: "ask_form"} do |f| %>
-<%= f.text_field :name, placeholder:
-    "имя", required: true %>
-<%= f.text_field :phone, placeholder:
-    "как с вами связаться?", required: true %>
-<%= f.text_area :question, placeholder: "ВОПРОС", size: "30x10" %>
+<%= f.text_field :name, placeholder: "имя", required: true %>
+<%= f.text_field :phone, placeholder: "номер телефона", required: true %>
+<%= f.text_field :phone, placeholder: "email", required: false %>
+<%= f.text_area :question, placeholder: "ВОПРОС", size: "30x6" %>
 <%= f.submit "спросить у эксперта" %>
 <% end %>

@@ -37,14 +37,11 @@
         </div>
       </div>
         <a class="black clear_link" href="/">
-          <div class="header_logo">
-            <h1>SB Group</h1>
-            <h3>Грузоперевозки из Китая</h3>
-          </div>
+          <div class="header_logo"></div>
         </a>
         <div class="order_part">
           <div class="phone">8 800 2000 600</div>
-          <a id="order_form_button" class="dotted orange uppercase">заказать звонок</a>
+          <a id="order_form_button" class="dashed orange uppercase">заказать обратный звонок</a>
         </div>
         <div class="menu">
           <ul class="top_menu">
@@ -52,18 +49,20 @@
               <%= link_to "услуги", :services,
                   {class: "underline blue uppercase"} %>
             </li>
-            <li><a href="#catalog" class="underline blue uppercase link_to">выставка онлайн</a></li>
-            <li><a href="#footer" class="underline blue uppercase link_to">контакты</a></li>
+            <li><a href="#catalog" class="underline blue uppercase link_to">Производители</a></li>
+            <li><a href="#" class="underline blue uppercase link_to">новости</a></li>
+            <li><a href="#about" class="underline blue uppercase link_to">о компании</a></li>
+            <li><a href="#footer" class="underline blue uppercase link_to">контакты</a></li><br>
             <li>
-              <span class="docs_example">
-                <%= link_to "образцы документов", :docs,
-                    {class: "underline black uppercase"} %>
+              <span class="coverter">
+                <a class="underline black uppercase"
+                   id="converter-button">Конвертер валют</a>
               </span>
             </li>
             <li>
-              <span>
+              <span class="tracing">
                 <a class="underline black uppercase"
-                   id="converter-button">Конвертер валют</a>
+                   id="converter-button">Отслеживание груза</a>
               </span>
             </li>
             <li class="lenguages">
@@ -89,31 +88,41 @@
           <li><a href="" class="blue dotted">Сборные грузы</a></li>
           <li><a href="" class="blue dotted">Поиск товаров</a></li>
           <li><a href="" class="blue dotted">Проверка качества</a></li>
-          <li><a href="" class="blue dotted">Сертификация товаров из Китая</a></li>
           <li class="course"><span class="gray">Курс доллара &mdash; 31,00 руб</span></li>
         </ul>
       </div>
       <div class="column help">
-        <h5 class="black uppercase">Помощь</h5>
+        <h5 class="black uppercase">Полезная информация</h5>
         <ul>
-          <li><a href="" class="blue dotted">Ссылка 1</a></li>
-          <li><a href="" class="blue dotted">Ссылка 2</a></li>
-          <li><a href="" class="blue dotted">Ссылка 3</a></li>
+          <li><a href="" class="blue dotted">Наши преимущества</a></li>
+          <li><a href="" class="blue dotted">Вопрос-ответ</a></li>
+          <li><a href="" class="blue dotted">Расчет доставки on-line</a></li>
+          <li><a href="" class="blue dotted">Отслеживание груза</a></li>
+          <li><a href="" class="blue dotted">Курс валют</a></li>
+          <li><a href="" class="blue dotted">Наши проекты</a></li>
+          <li><a href="" class="blue dotted">Новости о Китае</a></li>
+          <li><a href="" class="blue dotted">Образцы документов</a></li>
         </ul>
       </div>
-      <div class="contacts">
-        <span class="phone">8 800 2000 600</span><br>
+      <div class="column contacts">
+        <h5 class="black uppercase">Контакты</h5>
+        <span class="phone">8 951 4444 2 44</span><br>
         <a href="#header" onclick="$('#popup_form').fadeToggle()" class="order_call blue uppercase underline">заказать звонок</a><br>
-        <a href="/#questions" class="order_call blue uppercase underline">задать вопрос эксперту</a>
+        <a href="mailto:info@lexerasia.com" class="blue uppercase underline">info@lexerasia.com</a><br>
+        <a href="#" class="blue uppercase underline">Представители</a><br>
+        <span class="blue">Viber/ Vchat/ WhatsApp</span><br>
+        <span>+79000222231</span>
       </div>
       <div class="go_up_block">
         <a classs="link_to" href="#header"><div class="go_up"></div></a>
       </div>
-      <div class="jam">
-  <a class="red underline" href="1jam.ru">Разработка сайта</a><br>
-  Jam / Интернет-агенство
+      <div class="line_down">
+      <ul>
+        <li>The Lexer Limited (c) 2014. Все права защищены</li>
+        <li>Следите за новостями: <a href="" class="underline">ВК</a>, <a href="" class="underline">ФБ</a>, <a href="" class="underline">Twitter</a> </li>
+        <li class="last">Создание сайта - <a class="underline" href="http://1jam.ru">Jam</a></li>
+      </ul>
       </div>
     </div>
-
   </body>
 </html>
