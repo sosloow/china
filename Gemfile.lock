@@ -79,7 +79,6 @@ GEM
       railties (>= 3.2, < 5.0)
     friendly_id (5.0.3)
       activerecord (>= 4.0.0)
-    geocoder (1.2.0)
     globalize (4.0.1)
       activemodel (>= 4.0.0, < 5)
       activerecord (>= 4.0.0, < 5)
@@ -261,7 +260,6 @@ DEPENDENCIES
   devise-i18n-views
   factory_girl_rails
   friendly_id
-  geocoder
   globalize
   gmaps4rails
   jbuilder (~> 1.2)

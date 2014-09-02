@@ -43,7 +43,7 @@ gem 'globalize'
 gem 'ckeditor'
 
 gem 'friendly_id'
-gem 'geocoder'
+#gem 'geocoder'
 
 gem 'jquery-ui-rails'
 gem 'jquery-turbolinks'
