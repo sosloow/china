@@ -5,8 +5,6 @@ require File.expand_path('../config/application', __FILE__)
 
 China::Application.load_tasks
  
-set :assets_dependencies, %w(app/assets lib/assets vendor/assets Gemfile.lock config/routes.rb)
- 
 namespace :deploy do
   namespace :assets do
  

@@ -17,11 +17,11 @@ require "bundler/capistrano"
 ## dayabase.yml в shared-каталог проекта на сервере и раскомментируйте
 ## следующие строки.
 
-# after "deploy:update_code", :copy_database_config
-# task :copy_database_config, roles => :app do
-#   db_config = "#{shared_path}/database.yml"
-#   run "cp #{db_config} #{release_path}/config/database.yml"
-# end
+after "deploy:update_code", :copy_database_config
+task :copy_database_config, roles => :app do
+  db_config = "#{shared_path}/database.yml"
+  run "cp #{db_config} #{release_path}/config/database.yml"
+end
 
 # В rails 3 по умолчанию включена функция assets pipelining,
 # которая позволяет значительно уменьшить размер статических
@@ -30,6 +30,8 @@ require "bundler/capistrano"
 # сжатых файлов статики при деплое.
 # Если вы не используете assets pipelining в своем проекте,
 # или у вас старая версия rails, закомментируйте эту строку.
+set :assets_dependencies, %w(app/assets lib/assets vendor/assets Gemfile.lock config/routes.rb)
+
 load 'deploy/assets'
 
 # Для удобства работы мы рекомендуем вам настроить авторизацию
