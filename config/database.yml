@@ -19,7 +19,11 @@ test:
   timeout: 5000
 
 production:
-  adapter: sqlite3
-  database: /home/hosting_sbgroup/projects/china/shared/production.sqlite3
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: sbgroup_china25
   pool: 5
-  timeout: 5000
+  username: sbgroup_china25
+  password: OyQuBekIm
+  host: mysql2.locum.ru
