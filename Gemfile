@@ -26,7 +26,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem "paperclip", "3.4.2"
+gem "paperclip" # , "3.4.2"
 
 gem 'rake', '10.1.1'
 gem 'therubyracer'

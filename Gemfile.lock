@@ -88,7 +88,7 @@ GEM
       tilt
     highline (1.6.21)
     hike (1.2.3)
-    i18n (0.6.9)
+    i18n (0.6.11)
     jbuilder (1.5.3)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2.0)
@@ -112,7 +112,7 @@ GEM
     mime-types (1.25.1)
     mini_portile (0.5.3)
     minitest (4.7.5)
-    multi_json (1.10.0)
+    multi_json (1.10.1)
     mysql2 (0.3.16)
     nested_form (0.3.2)
     net-scp (1.2.1)
@@ -125,11 +125,10 @@ GEM
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
     orm_adapter (0.5.0)
-    paperclip (3.4.2)
+    paperclip (4.2.0)
       activemodel (>= 3.0.0)
-      activerecord (>= 3.0.0)
       activesupport (>= 3.0.0)
-      cocaine (~> 0.5.0)
+      cocaine (~> 0.5.3)
       mime-types
     polyglot (0.3.4)
     rack (1.5.2)
@@ -223,7 +222,7 @@ GEM
       eventmachine (>= 1.0.0)
       rack (>= 1.0.0)
     thor (0.19.1)
-    thread_safe (0.3.3)
+    thread_safe (0.3.4)
     tilt (1.4.1)
     treetop (1.4.15)
       polyglot
@@ -235,7 +234,7 @@ GEM
       execjs
       rails (>= 3.1)
       railties (>= 3.1)
-    tzinfo (0.3.39)
+    tzinfo (0.3.41)
     uglifier (2.5.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
@@ -270,7 +269,7 @@ DEPENDENCIES
   jquery-turbolinks
   jquery-ui-rails
   mysql2
-  paperclip (= 3.4.2)
+  paperclip
   rails (= 4.0.2)
   rails-i18n
   rails_admin
