@@ -90,7 +90,4 @@ China::Application.configure do
     password: "passhmword",
     enable_starttls_auto: true
   }
-
-  config.assets.css_compressor = :yui
-  config.assets.js_compressor = :yui
 end
