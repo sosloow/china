@@ -27,6 +27,7 @@ group :doc do
 end
 
 gem "paperclip" # , "3.4.2"
+gem 'yui-compressor' # for assets precompilation
 
 gem 'rake', '10.1.1'
 gem 'therubyracer'
