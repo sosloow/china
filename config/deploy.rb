@@ -30,7 +30,6 @@ end
 # сжатых файлов статики при деплое.
 # Если вы не используете assets pipelining в своем проекте,
 # или у вас старая версия rails, закомментируйте эту строку.
-set :assets_dependencies, %w(app/assets lib/assets vendor/assets Gemfile.lock config/routes.rb)
 
 load 'deploy/assets'
 
