@@ -4,7 +4,6 @@ RailsAdmin.config do |config|
   I18n.default_locale = :ru
 
   config.model 'City' do
-    visible false
     weight 10
     list do
       field :query
