@@ -43,6 +43,7 @@ gem 'globalize'
 gem 'ckeditor'
 
 gem 'friendly_id'
+#gem 'geocoder'
 
 gem 'jquery-ui-rails'
 gem 'jquery-turbolinks'
@@ -51,8 +52,6 @@ gem 'angularjs-rails'
 gem 'angular-ui-bootstrap-rails'
 gem 'underscore-rails'
 gem 'gmaps4rails'
-
-gem 'geocoder'
 
 group :development do
   gem 'capistrano', '~> 2.15.5'
