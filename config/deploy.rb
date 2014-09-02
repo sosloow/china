@@ -30,7 +30,7 @@ require "bundler/capistrano"
 # сжатых файлов статики при деплое.
 # Если вы не используете assets pipelining в своем проекте,
 # или у вас старая версия rails, закомментируйте эту строку.
-# load 'deploy/assets'
+load 'deploy/assets'
 
 # Для удобства работы мы рекомендуем вам настроить авторизацию
 # SSH по ключу. При работе capistrano будет использоваться
@@ -119,4 +119,4 @@ namespace :deploy do
   end
 end
 
-after 'deploy', 'deploy:migrate', 'deploy:seed'
+after 'deploy', 'deploy:migrate' #, 'deploy:seed'
